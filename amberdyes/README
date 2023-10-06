@@ -1,0 +1,31 @@
+## AMBER-DYES ##
+# AMBER-DYES - Graen, Timo, et al. JCTC (2014) + Schepers, Bastian, and Gohlke, Holger. J Chem Phys (2018) 
+Files:
+there are 2 set of files available:
+      version = 22 - refactoring of AMBER-DYES version distributed from amber20 onwards
+      version = 18 - refactoring of AMBER-DYES version distributed until amber18
+each version includes:
+1. amberdyes{version}.rtf
+2. amberdyes{version}_bond_patch.rtf
+3. amberdyes{version}.prm
+4. modifiedamberdyes{version}.prm
+5. namdrc.amberdyes{version}
+
+PSFGEN usage:
+1. Load rtf into psfgen prior to generating segments
+ - topology $path/to/forcefield/etc/AMBER-DYES/amberdyes{version}.rtf
+2. Load bond patch rtfto bond ldye to linker
+ - topology $path/to/forcefield/etc/AMBER-DYES/amberdyes{version}_bond_patch.rtf
+ 
+NAMD usage:
+1. Call namdrc.AMBER-DYES in the NAMD input file to ensure proper loading and replacement of parameters
+ - source         path/to/forcefield/etc/AMBER-DYES/namdrc.amberdyes{version}
+2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
+        2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the AMBER-DYES forcefield.
+ - exclude        scaled1-4
+ - 1-4scaling     0.83330000133328
+        2.b) Setting up PME, the periodic cell, thermostat, barostat, and output parameters are consistent with a typical NAMD simulation
+
+Notes:
+- modifiedamberdyes{version}.prm represent a faithful refactored of all parameters -comparing with distributed AMBER-DYES{version} does not yield energy matches
+- amberdyes{version}.prm represents a refactored version of AMBER-DYES{version} which yields energy matches
