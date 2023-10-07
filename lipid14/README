@@ -1,0 +1,22 @@
+## LIPIDS ##
+# lipid14 - Dickson, Callum J., et al. JCTC (2014) 
+Files:
+1. lipid14.rtf
+2. namdrc.lipid14
+3. lipid14.prm
+
+Energy Test: lipid14.png
+
+PSFGEN usage:
+1. Load rtf into psfgen prior to generating segments
+ - topology $path/to/forcefield/lipids/lipid14/lipid14.rtf
+
+NAMD usage:
+1. Call namdrc.lipid14 in the NAMD input file to ensure proper loading and replacement of parameters
+ - source         path/to/forcefield/lipids/lipid14/namdrc.lipid14
+2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
+        2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the lipid14 forcefield.
+ - exclude        scaled1-4
+ - 1-4scaling     0.83333333
+        2.b) Setting up PME, the periodic cell, thermostat, barostat, and output parameters are consistent with a typical NAMD simulation
+
