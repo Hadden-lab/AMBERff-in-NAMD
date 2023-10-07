@@ -1,0 +1,52 @@
+* Modification/update of parm99.dat (Hornak & Simmerling)
+* Hornak, Viktor, et al. Proteins (2006)
+*
+* Converted to CHARMM format by Santiago Antolinez Peter Eugene Jones
+* (Insert Citation for AMBERff at Scale)###################################
+* Lab of Dr. Jodi A. Hadden-Perilla (jhadden@udel.edu)
+*
+
+
+ATOMS
+
+BONDS 
+!B1  B2  k  r0 (charmm values, ie. k in kcal/mol/A^2, R0 in A) 
+
+ANGLES 
+!B1  B2  B3  k  theta0 
+
+DIHEDRALS
+!B1 B2 B3 B4 k type phi 
+USC	USN	UUCT	USC	0.0000000000	4	0.0000000000		!C -N -CT-C    1    0.00          0.0            -4.         four amplitudes and
+USC	USN	UUCT	USC	0.4200000000	3	0.0000000000		!C -N -CT-C    1    0.42          0.0            -3.         phases for phi
+USC	USN	UUCT	USC	0.2700000000	2	0.0000000000		!C -N -CT-C    1    0.27          0.0            -2.
+USC	USN	UUCT	USC	0.0000000000	1	0.0000000000		!C -N -CT-C    1    0.00          0.0             1.
+USN	UUCT	USC	USN	0.0000000000	4	0.0000000000		!N -CT-C -N    1    0.00          0.0            -4.         four amplitudes and
+USN	UUCT	USC	USN	0.5500000000	3	180.0000000000		!N -CT-C -N    1    0.55        180.0            -3.         phases for psi
+USN	UUCT	USC	USN	1.5800000000	2	180.0000000000		!N -CT-C -N    1    1.58        180.0            -2.
+USN	UUCT	USC	USN	0.4500000000	1	180.0000000000		!N -CT-C -N    1    0.45        180.0             1.
+UUCT	UUCT	USN	USC	0.0000000000	4	0.0000000000		!CT-CT-N -C    1    0.00          0.0            -4.         four amplitudes and
+UUCT	UUCT	USN	USC	0.4000000000	3	0.0000000000		!CT-CT-N -C    1    0.40          0.0            -3.         phases for phi'
+UUCT	UUCT	USN	USC	2.0000000000	2	0.0000000000		!CT-CT-N -C    1    2.00          0.0            -2.         
+UUCT	UUCT	USN	USC	2.0000000000	1	0.0000000000		!CT-CT-N -C    1    2.00          0.0             1.
+UUCT	UUCT	USC	USN	0.0000000000	4	0.0000000000		!CT-CT-C -N    1    0.00          0.0            -4.         four amplitudes and
+UUCT	UUCT	USC	USN	0.4000000000	3	0.0000000000		!CT-CT-C -N    1    0.40          0.0            -3.         phases for psi'
+UUCT	UUCT	USC	USN	0.2000000000	2	0.0000000000		!CT-CT-C -N    1    0.20          0.0            -2.         
+UUCT	UUCT	USC	USN	0.2000000000	1	0.0000000000		!CT-CT-C -N    1    0.20          0.0             1.
+
+IMPHI
+!B1 B2 B3 B4 k type phi 
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+     CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!          Emin       Rmin/2         Emin/2      Rmin  (for 1-4's)
+!       (kcal/mol)     (A) 
+
+NBFIX
+!               Emin        Rmin
+!            (kcal/mol)     (A)
+!
+
+!HBOND CUTHB 0.5
+
+END
