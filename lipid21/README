@@ -1,0 +1,22 @@
+## LIPIDS ##
+# lipid21 - Dickson, Callum J., et al. JCTC (2022) 
+Files:
+1. lipid21.rtf
+2. namdrc.lipid21
+3. lipid21.prm
+
+Energy Test: lipid21.png
+
+PSFGEN usage:
+1. Load rtf into psfgen prior to generating segments
+ - topology $path/to/forcefield/lipids/lipid21/lipid21.rtf
+
+NAMD usage:
+1. Call namdrc.lipid21 in the NAMD input file to ensure proper loading and replacement of parameters
+ - source         path/to/forcefield/lipids/lipid21/namdrc.lipid21
+2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
+        2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the lipid21 forcefield.
+ - exclude        scaled1-4
+ - 1-4scaling     0.83333333
+        2.b) Setting up PME, the periodic cell, thermostat, barostat, and output parameters are consistent with a typical NAMD simulation
+
