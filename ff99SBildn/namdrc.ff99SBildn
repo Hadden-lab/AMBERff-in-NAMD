@@ -1,0 +1,4 @@
+set dir [file dirname [file normalize [info script]]]
+paraTypeCharmm   on
+parameters   $dir/parm99.prm
+parameters   $dir/frcmod.ff99SBildn.prm
