@@ -1,0 +1,457 @@
+* TIP3P Water Model + Associated Ions 
+* Residue Definitions and Parameters
+* Jorgensen, William L., et al. J Chem Phys (1983) + Neria, Eyal, et al. J Chem Phys (1996) + Chen, Alan A., et al. J Phys Chem B (2007)
+*
+* Converted to CHARMM format by Santiago Antolinez and Peter Eugene Jones
+* (Insert Citation for AMBERff at Scale)###########################
+* Lab of Dr. Jodi A. Hadden-Perilla (jhadden@udel.edu)
+*
+
+! The following residue names were modified to avoid
+! duplicate residues due  to of case sensitivity:
+! changed Ag to Ag2
+! changed Ce to Ce4
+! changed Cr to Cr2
+! changed Sm to Sm2
+! changed Tl to Tl3
+!
+
+read rtf card @app
+* Topology for water and ions
+*
+
+MASS    -1      UUOW     16.000000               !OW    16.0
+MASS    -1      UUHW     1.008000                !HW     1.008   0.000
+MASS    -1      UUEP     0.000000                !EP    0.0
+MASS    -1      ULpLI    6.940000                !Li+   6.94         0.029               lithium   pol: J. Phys. Chem. 11,1541,(1978)
+MASS    -1      ULpNA    22.990000               !Na+  22.99         0.250               sodium    pol: J. Phys. Chem. 11,1541,(1978)
+MASS    -1      UpK      39.100000               !K+   39.10         1.060               potassium
+MASS    -1      ULpRB    85.470000               !Rb+  85.47                             rubidium
+MASS    -1      ULpCS    132.910000              !Cs+ 132.91                             cesium
+MASS    -1      UmF      19.000000               !F-   19.00         0.320               fluorine
+MASS    -1      ULmCL    35.450000               !Cl-  35.45         1.910               chlorine  (Applequist)
+MASS    -1      ULmBR    79.900000               !Br-  79.90         2.880               bromine   (Applequist)
+MASS    -1      UmI      126.900000              !I-   126.9         4.690               iodine    (Applequist)
+MASS    -1      ULNpBE2  9.010000                !Be2+ 9.01
+MASS    -1      ULNpCU2  63.550000               !Cu2+ 63.55
+MASS    -1      ULNpNI2  58.690000               !Ni2+ 58.69
+MASS    -1      ULNpPT2  195.080000              !Pt2+ 195.08
+MASS    -1      ULNpZN2  65.400000               !Zn2+ 65.4
+MASS    -1      ULNpCO2  58.930000               !Co2+ 58.93
+MASS    -1      ULNpPD2  106.420000              !Pd2+ 106.42
+MASS    -1      ULNpAG2  107.870000              !Ag2+ 107.87
+MASS    -1      ULNpCR2  52.000000               !Cr2+ 52.00
+MASS    -1      ULNpFE2  55.850000               !Fe2+ 55.85
+MASS    -1      ULNpMG2  24.305000               !Mg2+ 24.305
+MASS    -1      UNpV2    50.940000               !V2+  50.94
+MASS    -1      ULNpMN2  54.940000               !Mn2+ 54.94
+MASS    -1      ULNpHG2  200.590000              !Hg2+ 200.59
+MASS    -1      ULNpCD2  112.410000              !Cd2+ 112.41
+MASS    -1      ULNpYB2  173.050000              !Yb2+ 173.05
+MASS    -1      ULNpCA2  40.080000               !Ca2+ 40.08
+MASS    -1      ULNpSN2  118.710000              !Sn2+ 118.71
+MASS    -1      ULNpPB2  207.200000              !Pb2+ 207.2
+MASS    -1      ULNpEU2  151.960000              !Eu2+ 151.96
+MASS    -1      ULNpSR2  87.620000               !Sr2+ 87.62
+MASS    -1      ULNpSM2  150.360000              !Sm2+ 150.36 
+MASS    -1      ULNpBA2  137.330000              !Ba2+ 137.33
+MASS    -1      ULNpRA2  226.030000              !Ra2+ 226.03
+MASS    -1      ULNpAL3  26.980000               !Al3+ 26.98
+MASS    -1      ULNpFE3  55.850000               !Fe3+ 55.85
+MASS    -1      ULNpCR3  52.000000               !Cr3+ 52.00
+MASS    -1      ULNpIN3  114.820000              !In3+ 114.82
+MASS    -1      ULNpTL3  204.380000              !Tl3+ 204.38
+MASS    -1      UNpY3    88.910000               !Y3+  88.91
+MASS	-1	UNUpH3O  19.020000		 !H3O+ 19.02
+MASS    -1      ULNpLA3  138.910000              !La3+ 138.91
+MASS    -1      ULNpCE3  140.120000              !Ce3+ 140.12
+MASS    -1      ULNpPR3  140.910000              !Pr3+ 140.91
+MASS    -1      ULNpND3  144.240000              !Nd3+ 144.24
+MASS    -1      ULNpSM3  150.360000              !Sm3+ 150.36
+MASS    -1      ULNpEU3  151.960000              !Eu3+ 151.96
+MASS    -1      ULNpGD3  157.250000              !Gd3+ 157.25
+MASS    -1      ULNpTB3  158.930000              !Tb3+ 158.93
+MASS    -1      ULNpDY3  162.500000              !Dy3+ 162.5
+MASS    -1      ULNpER3  167.260000              !Er3+ 167.26
+MASS    -1      ULNpTM3  168.930000              !Tm3+ 168.93
+MASS    -1      ULNpLU3  174.970000              !Lu3+ 174.97
+MASS    -1      ULNpHF4  178.490000              !Hf4+ 178.49
+MASS    -1      ULNpZR4  91.220000               !Zr4+ 91.22
+MASS    -1      ULNpCE4  140.120000              !Ce4+ 140.12
+MASS    -1      UNpU4    238.030000              !U4+  238.03
+MASS    -1      ULNpPU4  244.060000              !Pu4+ 244.06
+MASS    -1      ULNpTH4  232.040000              !Th4+ 232.04
+
+DEFAULT FIRST NONE LAST NONE
+!
+
+RESI TP3          0.000 
+GROUP
+ATOM O    UUOW    -0.834000
+ATOM H1   UUHW     0.417000
+ATOM H2   UUHW     0.417000
+BOND O H1 O H2 H1 H2   
+!ANGL H1 O H2 
+
+RESI WAT          0.000 
+GROUP
+ATOM O    UUOW    -0.834000
+ATOM H1   UUHW     0.417000
+ATOM H2   UUHW     0.417000
+BOND O H1 O H2 H1 H2   
+!ANGL H1 O H2 
+
+RESI	AG	1.0	!
+ATOM	AG	ULpAG	1.000000	!
+
+RESI	AL	3.0	!
+ATOM	AL	ULNpAL3	3.000000	!
+
+RESI	Ag2	2.0	! changed from Ag to Ag2
+ATOM	Ag	ULNpAG2	2.000000	!
+
+RESI	BA	2.0	!
+ATOM	BA	ULNpBA2	2.000000	!
+
+RESI	BR	-1.0	!
+ATOM	BR	ULmBR	-1.000000	!
+
+RESI	Be	2.0	!
+ATOM	Be	ULNpBE2	2.000000	!
+
+RESI	CA	2.0	!
+ATOM	CA	ULNpCA2	2.000000	!
+
+RESI	CD	2.0	!
+ATOM	CD	ULNpCD2	2.000000	!
+
+RESI	CE	3.0	!
+ATOM	CE	ULNpCE3	3.000000	!
+
+RESI	CL	-1.0	!
+ATOM	CL	ULmCL	-1.000000	!
+
+RESI	CO	2.0	!
+ATOM	CO	ULNpCO2	2.000000	!
+
+RESI	CR	3.0	!
+ATOM	CR	ULNpCR3	3.000000	!
+
+RESI	CS	1.0	!
+ATOM	CS	ULpCS	1.000000	!
+
+RESI	CU	2.0	!
+ATOM	CU	ULNpCU2	2.000000	!
+
+RESI	CU1	1.0	!
+ATOM	CU	ULpCU	1.000000	!
+
+RESI	Ce4	4.0	! changed from Ce to Ce4
+ATOM	Ce	ULNpCE4	4.000000	!
+
+RESI	Cl-	-1.0	!
+ATOM	Cl-	ULmCL	-1.000000	!
+
+RESI	Cr2	2.0	! changed from Cr to Cr2
+ATOM	Cr	ULNpCR2	2.000000	!
+
+RESI	Dy	3.0	!
+ATOM	Dy	ULNpDY3	3.000000	!
+
+RESI	EU	2.0	!
+ATOM	EU	ULNpEU2	2.000000	!
+
+RESI	EU3	3.0	!
+ATOM	EU3	ULNpEU3	3.000000	!
+
+RESI	Er	3.0	!
+ATOM	Er	ULNpER3	3.000000	!
+
+RESI	F	-1.0	!
+ATOM	F	UmF	-1.000000	!
+
+RESI	FE	3.0	!
+ATOM	FE	ULNpFE3	3.000000	!
+
+RESI	FE2	2.0	!
+ATOM	FE2	ULNpFE2	2.000000	!
+
+RESI	GD3	3.0	!
+ATOM	GD	ULNpGD3	3.000000	!
+
+RESI	H3O+	1.0	!
+ATOM	O	UNUpH3O	1.000000	!
+
+RESI	HE+	1.0	!
+ATOM	H	UUpHE	1.000000	!
+
+RESI	HG	2.0	!
+ATOM	HG	ULNpHG2	2.000000	!
+
+RESI	HZ+	1.0	!
+ATOM	H	UUpHZ	1.000000	!
+
+RESI	Hf	4.0	!
+ATOM	Hf	ULNpHF4	4.000000	!
+
+RESI	IN	3.0	!
+ATOM	IN	ULNpIN3	3.000000	!
+
+RESI	IOD	-1.0	!
+ATOM	I	UmI	-1.000000	!
+
+RESI	K	1.0	!
+ATOM	K+	UpK	1.000000	!
+
+RESI	K+	1.0	!
+ATOM	K	UpK	1.000000	!
+
+RESI	LA	3.0	!
+ATOM	LA	ULNpLA3	3.000000	!
+
+RESI	LI	1.0	!
+ATOM	LI	ULpLI	1.000000	!
+
+RESI	LU	3.0	!
+ATOM	LU	ULNpLU3	3.000000	!
+
+RESI	MG	2.0	!
+ATOM	MG	ULNpMG2	2.000000	!
+
+RESI	MN	2.0	!
+ATOM	MN	ULNpMN2	2.000000	!
+
+RESI	NA	1.0	!
+ATOM	NA	ULpNA	1.000000	!
+
+RESI	NH4	1.0	!
+ATOM	N	UUNpNH4	1.000000	!
+
+RESI	NI	2.0	!
+ATOM	NI	ULNpNI2	2.000000	!
+
+RESI	Na+	1.0	!
+ATOM	Na+	ULpNA	1.000000	!
+
+RESI	Nd	3.0	!
+ATOM	Nd	ULNpND3	3.000000	!
+
+RESI	PB	2.0	!
+ATOM	PB	ULNpPB2	2.000000	!
+
+RESI	PD	2.0	!
+ATOM	PD	ULNpPD2	2.000000	!
+
+RESI	PR	3.0	!
+ATOM	PR	ULNpPR3	3.000000	!
+
+RESI	PT	2.0	!
+ATOM	PT	ULNpPT2	2.000000	!
+
+RESI	Pu	4.0	!
+ATOM	Pu	ULNpPU4	4.000000	!
+
+RESI	RB	1.0	!
+ATOM	RB	ULpRB	1.000000	!
+
+RESI	Ra	2.0	!
+ATOM	Ra	ULNpRA2	2.000000	!
+
+RESI	SM	3.0	!
+ATOM	SM	ULNpSM3	3.000000	!
+
+RESI	SR	2.0	!
+ATOM	SR	ULNpSR2	2.000000	!
+
+RESI	Sm2	2.0	! changed from Sm to Sm2
+ATOM	Sm	ULNpSM2	2.000000	!
+
+RESI	Sn	2.0	!
+ATOM	Sn	ULNpSN2	2.000000	!
+
+RESI	TB	3.0	!
+ATOM	TB	ULNpTB3	3.000000	!
+
+RESI	TL	1.0	!
+ATOM	TL	ULpTL	1.000000	!
+
+RESI	Th	4.0	!
+ATOM	Th	ULNpTH4	4.000000	!
+
+RESI	Tl3	3.0	! changed from Tl to Tl3
+ATOM	Tl	ULNpTL3	3.000000	!
+
+RESI	Tm	3.0	!
+ATOM	Tm	ULNpTM3	3.000000	!
+
+RESI	U4+	4.0	!
+ATOM	U	UNNpU4	4.000000	!
+
+RESI	V2+	2.0	!
+ATOM	V2+	UNpV2	2.000000	!
+
+RESI	Y	3.0	!
+ATOM	Y	UNpY3	3.000000	!
+
+RESI	YB2	2.0	!
+ATOM	YB2	ULNpYB2	2.000000	!
+
+RESI	ZN	2.0	!
+ATOM	ZN	ULNpZN2	2.000000	!
+
+RESI	Zr	4.0	!
+ATOM	Zr	ULNpZR4	4.000000	!
+
+
+END
+
+read para card flex @app
+* Parameters
+*
+
+ATOMS
+MASS    -1      UUOW     16.000000               !OW    16.0
+MASS    -1      UUHW     1.008000                !HW     1.008   0.000
+MASS    -1      UUEP     0.000000                !EP    0.0
+MASS    -1      ULpLI    6.940000                !Li+   6.94         0.029               lithium   pol: J. Phys. Chem. 11,1541,(1978)
+MASS    -1      ULpNA    22.990000               !Na+  22.99         0.250               sodium    pol: J. Phys. Chem. 11,1541,(1978)
+MASS    -1      UpK      39.100000               !K+   39.10         1.060               potassium
+MASS    -1      ULpRB    85.470000               !Rb+  85.47                             rubidium
+MASS    -1      ULpCS    132.910000              !Cs+ 132.91                             cesium
+MASS    -1      UmF      19.000000               !F-   19.00         0.320               fluorine
+MASS    -1      ULmCL    35.450000               !Cl-  35.45         1.910               chlorine  (Applequist)
+MASS    -1      ULmBR    79.900000               !Br-  79.90         2.880               bromine   (Applequist)
+MASS    -1      UmI      126.900000              !I-   126.9         4.690               iodine    (Applequist)
+MASS    -1      ULNpBE2  9.010000                !Be2+ 9.01
+MASS    -1      ULNpCU2  63.550000               !Cu2+ 63.55
+MASS    -1      ULNpNI2  58.690000               !Ni2+ 58.69
+MASS    -1      ULNpPT2  195.080000              !Pt2+ 195.08
+MASS    -1      ULNpZN2  65.400000               !Zn2+ 65.4
+MASS    -1      ULNpCO2  58.930000               !Co2+ 58.93
+MASS    -1      ULNpPD2  106.420000              !Pd2+ 106.42
+MASS    -1      ULNpAG2  107.870000              !Ag2+ 107.87
+MASS    -1      ULNpCR2  52.000000               !Cr2+ 52.00
+MASS    -1      ULNpFE2  55.850000               !Fe2+ 55.85
+MASS    -1      ULNpMG2  24.305000               !Mg2+ 24.305
+MASS    -1      UNpV2    50.940000               !V2+  50.94
+MASS    -1      ULNpMN2  54.940000               !Mn2+ 54.94
+MASS    -1      ULNpHG2  200.590000              !Hg2+ 200.59
+MASS    -1      ULNpCD2  112.410000              !Cd2+ 112.41
+MASS    -1      ULNpYB2  173.050000              !Yb2+ 173.05
+MASS    -1      ULNpCA2  40.080000               !Ca2+ 40.08
+MASS    -1      ULNpSN2  118.710000              !Sn2+ 118.71
+MASS    -1      ULNpPB2  207.200000              !Pb2+ 207.2
+MASS    -1      ULNpEU2  151.960000              !Eu2+ 151.96
+MASS    -1      ULNpSR2  87.620000               !Sr2+ 87.62
+MASS    -1      ULNpSM2  150.360000              !Sm2+ 150.36 
+MASS    -1      ULNpBA2  137.330000              !Ba2+ 137.33
+MASS    -1      ULNpRA2  226.030000              !Ra2+ 226.03
+MASS    -1      ULNpAL3  26.980000               !Al3+ 26.98
+MASS    -1      ULNpFE3  55.850000               !Fe3+ 55.85
+MASS    -1      ULNpCR3  52.000000               !Cr3+ 52.00
+MASS    -1      ULNpIN3  114.820000              !In3+ 114.82
+MASS    -1      ULNpTL3  204.380000              !Tl3+ 204.38
+MASS    -1      UNpY3    88.910000               !Y3+  88.91
+MASS	-1	UNUpH3O  19.020000		 !H3O+ 19.02
+MASS    -1      ULNpLA3  138.910000              !La3+ 138.91
+MASS    -1      ULNpCE3  140.120000              !Ce3+ 140.12
+MASS    -1      ULNpPR3  140.910000              !Pr3+ 140.91
+MASS    -1      ULNpND3  144.240000              !Nd3+ 144.24
+MASS    -1      ULNpSM3  150.360000              !Sm3+ 150.36
+MASS    -1      ULNpEU3  151.960000              !Eu3+ 151.96
+MASS    -1      ULNpGD3  157.250000              !Gd3+ 157.25
+MASS    -1      ULNpTB3  158.930000              !Tb3+ 158.93
+MASS    -1      ULNpDY3  162.500000              !Dy3+ 162.5
+MASS    -1      ULNpER3  167.260000              !Er3+ 167.26
+MASS    -1      ULNpTM3  168.930000              !Tm3+ 168.93
+MASS    -1      ULNpLU3  174.970000              !Lu3+ 174.97
+MASS    -1      ULNpHF4  178.490000              !Hf4+ 178.49
+MASS    -1      ULNpZR4  91.220000               !Zr4+ 91.22
+MASS    -1      ULNpCE4  140.120000              !Ce4+ 140.12
+MASS    -1      UNpU4    238.030000              !U4+  238.03
+MASS    -1      ULNpPU4  244.060000              !Pu4+ 244.06
+MASS    -1      ULNpTH4  232.040000              !Th4+ 232.04
+
+BONDS
+UUOW    UUHW    553.000000      0.957200                !OW-HW  553.0    0.9572      TIP3P water
+UUHW    UUHW    553.000000      1.513600                !HW-HW  553.0    1.5136      TIP3P water
+
+
+ANGLES
+
+DIHEDRALS
+
+IMPHI
+
+NONBONDED nbxmod  5 atom cdiel shift vatom vdistance vswitch -
+cutnb 14.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 1.0 wmin 1.5
+UUOW    0.0     -0.1520000      1.7683000       0.0     -0.0760000      1.7683000       !  OW          1.7683  0.1520             TIP3P water model
+UUHW    0.0     -0.0000000      0.0000000       0.0     -0.0000000      0.0000000       !  HW          0.0000  0.0000             TIP3P water model
+ULpTL   0.0     -0.1402180      1.7030000       0.0     -0.0701090      1.7030000       !Tl+   1.703  0.14021803    HFE set for TIP3P water from Li et al., JCTC, 2015, 11, 1645
+ULpCU   0.0     -0.0011230      1.2010000       0.0     -0.0005615      1.2010000       !Cu+   1.201  0.00112300    HFE set for TIP3P water from Li et al., JCTC, 2015, 11, 1645
+ULpAG   0.0     -0.0081843      1.3410000       0.0     -0.0040922      1.3410000       !Ag+   1.341  0.00818431    HFE set for TIP3P water from Li et al., JCTC, 2015, 11, 1645
+UUNpNH4  0.0     -0.1962840      1.7790000       0.0     -0.0981420      1.7790000       !NH4+  1.779  0.19628399    HFE set for TIP3P water from Li et al., JCTC, 2015, 11, 1645
+UNNpH3O  0.0     -0.0078028      1.3370000       0.0     -0.0039014      1.3370000       !H3O+  1.337  0.00780282    HFE set for TIP3P water from Li et al., JCTC, 2015, 11, 1645
+ULpLI   0.0     -0.0279896      1.0250000       0.0     -0.0139948      1.0250000       !  Li+      1.025     0.0279896
+ULpNA   0.0     -0.0874393      1.3690000       0.0     -0.0437196      1.3690000       !  Na+      1.369     0.0874393
+UpK    0.0     -0.1936829      1.7050000       0.0     -0.0968414      1.7050000       !  K+       1.705     0.1936829
+ULpRB   0.0     -0.3278219      1.8130000       0.0     -0.1639109      1.8130000       !  Rb+      1.813     0.3278219
+ULpCS   0.0     -0.4065394      1.9760000       0.0     -0.2032697      1.9760000       !  Cs+      1.976     0.4065394
+UmF    0.0     -0.0033640      2.3030000       0.0     -0.0016820      2.3030000       !  F-       2.303     0.0033640
+ULmCL   0.0     -0.0355910      2.5130000       0.0     -0.0177955      2.5130000       !  Cl-      2.513     0.0355910
+ULmBR   0.0     -0.0586554      2.6080000       0.0     -0.0293277      2.6080000       !  Br-      2.608     0.0586554
+UmI    0.0     -0.0536816      2.8600000       0.0     -0.0268408      2.8600000       !  I-       2.860     0.0536816
+ULNpBE2  0.0     -0.0000040      0.9560000       0.0     -0.0000020      0.9560000       !Be2+  0.956  0.00000395    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpCU2  0.0     -0.0014850      1.2180000       0.0     -0.0007425      1.2180000       !Cu2+  1.218  0.00148497    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpNI2  0.0     -0.0026232      1.2550000       0.0     -0.0013116      1.2550000       !Ni2+  1.255  0.00262320    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpPT2  0.0     -0.0030764      1.2660000       0.0     -0.0015382      1.2660000       !Pt2+  1.266  0.00307642    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpZN2  0.0     -0.0033029      1.2710000       0.0     -0.0016514      1.2710000       !Zn2+  1.271  0.00330286    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpCO2  0.0     -0.0048389      1.2990000       0.0     -0.0024195      1.2990000       !Co2+  1.299  0.00483892    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpPD2  0.0     -0.0050994      1.3030000       0.0     -0.0025497      1.3030000       !Pd2+  1.303  0.00509941    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpAG2  0.0     -0.0077097      1.3360000       0.0     -0.0038548      1.3360000       !Ag2+  1.336  0.00770969    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpCR2  0.0     -0.0086818      1.3460000       0.0     -0.0043409      1.3460000       !Cr2+  1.346  0.00868178    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpFE2  0.0     -0.0094180      1.3530000       0.0     -0.0047090      1.3530000       !Fe2+  1.353  0.00941798    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpMG2  0.0     -0.0102024      1.3600000       0.0     -0.0051012      1.3600000       !Mg2+  1.360  0.01020237    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpMN2  0.0     -0.0168671      1.4070000       0.0     -0.0084335      1.4070000       !Mn2+  1.407  0.01686710    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpHG2  0.0     -0.0168671      1.4070000       0.0     -0.0084335      1.4070000       !Hg2+  1.407  0.01686710    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpCD2  0.0     -0.0177342      1.4120000       0.0     -0.0088671      1.4120000       !Cd2+  1.412  0.01773416    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpYB2  0.0     -0.1018597      1.6420000       0.0     -0.0509299      1.6420000       !Yb2+  1.642  0.10185975    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpCA2  0.0     -0.1059287      1.6490000       0.0     -0.0529644      1.6490000       !Ca2+  1.649  0.10592870    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpSN2  0.0     -0.1161774      1.6660000       0.0     -0.0580887      1.6660000       !Sn2+  1.666  0.11617738    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpPB2  0.0     -0.1701807      1.7450000       0.0     -0.0850904      1.7450000       !Pb2+  1.745  0.17018074    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpEU2  0.0     -0.2147592      1.8020000       0.0     -0.1073796      1.8020000       !Eu2+  1.802  0.21475916    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpSR2  0.0     -0.2213237      1.8100000       0.0     -0.1106619      1.8100000       !Sr2+  1.810  0.22132374    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpSM2  0.0     -0.2287880      1.8190000       0.0     -0.1143940      1.8190000       !Sm2+  1.819  0.22878796    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpBA2  0.0     -0.4066461      2.0190000       0.0     -0.2033230      2.0190000       !Ba2+  2.019  0.40664608    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpRA2  0.0     -0.4066461      2.0190000       0.0     -0.2033230      2.0190000       !Ra2+  2.019  0.40664608    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+ULNpAL3  0.0     -0.0047128      1.2970000       0.0     -0.0023564      1.2970000       !Al3+  1.297  0.00471279    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpFE3  0.0     -0.0135710      1.3860000       0.0     -0.0067855      1.3860000       !Fe3+  1.386  0.01357097    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpCR3  0.0     -0.0084800      1.3440000       0.0     -0.0042400      1.3440000       !Cr3+  1.344  0.00848000    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpIN3  0.0     -0.0280873      1.4610000       0.0     -0.0140436      1.4610000       !In3+  1.461  0.02808726    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpTL3  0.0     -0.0432103      1.5130000       0.0     -0.0216051      1.5130000       !Tl3+  1.513  0.04321029    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpLA3  0.0     -0.1506082      1.7180000       0.0     -0.0753041      1.7180000       !La3+  1.718  0.15060822    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpCE3  0.0     -0.1672134      1.7410000       0.0     -0.0836067      1.7410000       !Ce3+  1.741  0.16721338    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpPR3  0.0     -0.1613481      1.7330000       0.0     -0.0806741      1.7330000       !Pr3+  1.733  0.16134811    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpND3  0.0     -0.1256431      1.6810000       0.0     -0.0628215      1.6810000       !Nd3+  1.681  0.12564307    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpSM3  0.0     -0.1118949      1.6590000       0.0     -0.0559475      1.6590000       !Sm3+  1.659  0.11189491    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpEU3  0.0     -0.1161774      1.6660000       0.0     -0.0580887      1.6660000       !Eu3+  1.666  0.11617738    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpGD3  0.0     -0.0912680      1.6230000       0.0     -0.0456340      1.6230000       !Gd3+  1.623  0.09126804    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpTB3  0.0     -0.0950928      1.6300000       0.0     -0.0475464      1.6300000       !Tb3+  1.630  0.09509276    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpDY3  0.0     -0.0838924      1.6090000       0.0     -0.0419462      1.6090000       !Dy3+  1.609  0.08389240    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpER3  0.0     -0.0803423      1.6020000       0.0     -0.0401712      1.6020000       !Er3+  1.602  0.08034231    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpTM3  0.0     -0.0803423      1.6020000       0.0     -0.0401712      1.6020000       !Tm3+  1.602  0.08034231    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpLU3  0.0     -0.0735189      1.5880000       0.0     -0.0367595      1.5880000       !Lu3+  1.588  0.07351892    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpHF4  0.0     -0.0386866      1.4990000       0.0     -0.0193433      1.4990000       !Hf4+  1.499  0.03868661    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpZR4  0.0     -0.0452550      1.5190000       0.0     -0.0226275      1.5190000       !Zr4+  1.519  0.04525501    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpCE4  0.0     -0.1275827      1.6840000       0.0     -0.0637914      1.6840000       !Ce4+  1.684  0.12758274    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpPU4  0.0     -0.1137196      1.6620000       0.0     -0.0568598      1.6620000       !Pu4+  1.662  0.11371963    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+ULNpTH4  0.0     -0.1436416      1.7080000       0.0     -0.0718208      1.7080000       !Th4+  1.708  0.14364160    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+UNpU4   0.0     -0.1275827      1.6840000       0.0     -0.0637914      1.6840000       !U4+   1.684  0.12758274    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+UNpY3   0.0     -0.0803423      1.6020000       0.0     -0.0401712      1.6020000       !Y3+   1.602  0.08034231    IOD set for TIP3P water from Li et al., JPCB, 2015, 119, 883
+UNpV2   0.0     -0.0106730      1.3640000       0.0     -0.0053365      1.3640000       !V2+   1.364  0.01067299    CM set for TIP3P water from Li et al., JCTC, 2013, 9, 2733
+
+
+END 
+
+return
+
