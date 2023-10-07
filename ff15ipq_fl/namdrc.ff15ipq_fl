@@ -1,0 +1,4 @@
+set dir [file dirname [file normalize [info script]]]
+paraTypeCharmm   on
+parameters   $dir/parm15ipq_10.3.prm
+parameters   $dir/frcmod.ff15ipq-19F.prm
