@@ -1,0 +1,25 @@
+## NUCLEIC ACIDS ##
+# OL15 - Zgarbová, Marie, et al. JCTC (2015) 
+Files:
+1. OL15.rtf
+2. namdrc.OL15
+3. parm10.prm
+4. frcmod.DNA.OL15.prm
+
+Energy Test: OL15.png
+
+PSFGEN usage:
+1. Load rtf into psfgen prior to generating segments
+ - topology $path/to/forcefield/nucleic/OL15/OL15.rtf
+
+NAMD usage:
+1. Call namdrc.OL15 in the NAMD input file to ensure proper loading and replacement of parameters
+ - source         path/to/forcefield/nucleic/OL15/namdrc.OL15
+2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
+        2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the OL15 forcefield.
+ - exclude        scaled1-4
+ - 1-4scaling     0.83333333
+        2.b) Setting up PME, the periodic cell, thermostat, barostat, and output parameters are consistent with a typical NAMD simulation
+
+Notes:
+To get matches with AMBER energies apply patch FIA to the first DA residue in the segment
