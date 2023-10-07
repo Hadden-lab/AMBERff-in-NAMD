@@ -84,7 +84,7 @@ MASS    -1      ULNpPU4  244.060000              !Pu4+ 244.06
 MASS    -1      ULNpTH4  232.040000              !Th4+ 232.04
 
 DEFAULT FIRST NONE LAST NONE
-AUTOGENERATE NONE
+
 
 RESI    SPC     0.0     !
 ATOM    O       UUOW    -0.847600       !

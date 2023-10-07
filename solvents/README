@@ -1,0 +1,47 @@
+## SOLVENTS ##
+
+Topology/Parameter str files included:
+ 1. tip3p_ions.str
+ 2. tip4pew_ions.str
+ 3. fb3_ions.str
+ 4. fb4_ions.str
+ 5. spce_ions.str
+ 6. spceb_ions.str
+ 7. opc_ions.str
+ 
+Additionally, included in solvate_boxes are PSF/PDB of equilibrated water boxes for each model:
+ 1. solvate_boxes/tip3p.(psf/pdb)
+ 2. solvate_boxes/tip4pew.(psf/pdb)
+ 3. solvate_boxes/fb3.(psf/pdb)
+ 4. solvate_boxes/fb4.(psf/pdb)
+ 5. solvate_boxes/spce.(psf/pdb)
+ 6. solvate_boxes/spceb.(psf/pdb)
+ 7. solvate_boxes/opc.(psf/pdb)
+
+SOLVATE USAGE:
+
+To solvate a system with AMBERff using water model $MODEL, in addition to standard arguments ($args)
+include the following flags for solvating with non-standard solvent:
+
+	package require sovate
+  	solvate $args -spsf /path/to/solvate_boxes/$MODEL.psf -spdb /path/to/solvate_boxes/$MODEL.pdb -stop /path/to/${MODEL}_ions.str -ks "name O"
+
+Alternatively, use AMBERSOLVATE package.
+
+AMBERSOLVATE:
+
+AMBERSOLVATE is a wrapper package for SOLVATE for solvating systems with AMBERff water models. It takes all standard
+solvate arguments excluding those related to non-standard solvent and an additional -model flag to specify the model:
+
+	package require ambersolvate
+	ambersolvate $args -model $MODEL
+
+  Possible $MODEL values include:
+   1. tip3p (default)
+   2. tip4pew
+   3. fb3
+   4. fb4
+   5. spce
+   6. spceb
+   7. opc
+	
