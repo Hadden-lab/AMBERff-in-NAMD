@@ -1,0 +1,27 @@
+## NUCLEIC ACIDS ##
+# OL3 - Zgarbová, Marie, et al. JCTC (2011) 
+Files:
+1. OL3.rtf
+2. namdrc.OL3
+3. parm10.prm
+
+Energy Test: OL3.png
+
+PSFGEN usage:
+1. Load rtf into psfgen prior to generating segments
+ - topology $path/to/forcefield/nucleic/OL3/OL3.rtf
+
+NAMD usage:
+1. Call namdrc.OL3 in the NAMD input file to ensure proper loading and replacement of parameters
+ - source         path/to/forcefield/nucleic/OL3/namdrc.OL3
+2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
+        2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the OL3 forcefield.
+ - exclude        scaled1-4
+ - 1-4scaling     0.83333333
+        2.b) Setting up PME, the periodic cell, thermostat, barostat, and output parameters are consistent with a typical NAMD simulation
+
+
+Notes:
+For the first A residue appearing in the sequence, tleap uses defines a particular improper as C4-C8-N9-C1' while the rest of the A residues appearing in the sequence are defined as C8-C4-N9-C1'.
+
+to get energy matches between AMBER and NAMD, use apply FIA patch to the first A residue in the sequence.

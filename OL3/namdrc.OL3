@@ -1,0 +1,3 @@
+set dir [file dirname [file normalize [info script]]]
+paraTypeCharmm   on
+parameters   $dir/parm10.prm
