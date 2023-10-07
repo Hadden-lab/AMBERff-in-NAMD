@@ -1,0 +1,148 @@
+* Parmbsc1 force-field for DNA
+* Ivani, Ivan, et al. Nat Methods (2016)
+*
+* Converted to CHARMM format by Santiago Antolinez and Peter Eugene Jones
+* (Insert Citation for AMBERff at Scale)###########################
+* Lab of Dr. Jodi A. Hadden-Perilla (jhadden@udel.edu)
+*
+
+ATOMS
+MASS	-1	UUCE	12.001000		!CE  12.001
+MASS	-1	UNC1	12.010000		!C1  12.01         0.360               sp2 C purines in pos. 8 Ade (CK)
+MASS	-1	UNC2	12.010000		!C2  12.01         0.360               sp2 C pyrimidines in pos. 5 & 6 Thy Ura (CM)
+
+BONDS 
+!B1  B2  k  r0 (charmm values, ie. k in kcal/mol/A^2, R0 in A) 
+UUCE	UNH1	340.000000	1.090000		!CE-H1  340.0    1.090
+UUCE	UUCT	310.000000	1.526000		!CE-CT  310.0    1.526
+UUOS	UUCE	320.000000	1.410000		!OS-CE  320.0    1.410
+UUCE	UUOH	320.000000	1.410000		!CE-OH  320.0    1.410  
+UNC1	UNH5	367.000000	1.080000		!C1-H5  367.0    1.080       changed from 340. bsd on C6H6 nmodes; ADE 
+UNC1	UAN	440.000000	1.371000		!C1-N*  440.0    1.371       JCC,7,(1986),230; ADE 
+UNC1	UUNB	529.000000	1.304000		!C1-NB  529.0    1.304       JCC,7,(1986),230; ADE 
+USC	UNC2	410.000000	1.444000		!C -C2  410.0    1.444       JCC,7,(1986),230; THY,URA 
+UNC2	UNC2	549.000000	1.350000		!C2-C2  549.0    1.350       JCC,7,(1986),230; THY,URA 
+UNC2	UUCT	317.000000	1.510000		!C2-CT  317.0    1.510       JCC,7,(1986),230; THY 
+UNC2	UUHA	367.000000	1.080000		!C2-HA  367.0    1.080       changed from 340. bsd on C6H6 nmodes; CYT,URA 
+UNC2	UNH4	367.000000	1.080000		!C2-H4  367.0    1.080       changed from 340. bsd on C6H6 nmodes; CYT,URA 
+UNC2	UAN	448.000000	1.365000		!C2-N*  448.0    1.365       JCC,7,(1986),230; CYT,THY,URA 
+
+ANGLES 
+!B1  B2  B3  k  theta0 
+UUCT	UUCE	UUCT	40.0	109.50		!CT-CE-CT    40.0      109.50
+UNH1	UUCE	UUCT	50.0	109.50		!H1-CE-CT    50.0      109.50
+UNH1	UUCE	UUOS	50.0	109.50		!H1-CE-OS    50.0      109.50
+UNH1	UUCT	UUCE	50.0	109.50		!H1-CT-CE    50.0      109.50
+UUCI	UUCT	UUCE	40.0	109.50		!CI-CT-CE    40.0      109.50
+UUCE	UUCT	UUOS	50.0	109.50		!CE-CT-OS    50.0      109.50
+UUCE	UUCT	UNH1	50.0	109.50		!CE-CT-H1    50.0      109.50
+UUCE	UUCT	UUCT	40.0	109.50		!CE-CT-CT    40.0      109.50
+UUCE	UUCT	UUHC	50.0	109.50		!CE-CT-HC    50.0      109.50
+UUOS	UUCE	UNH1	50.0	109.50		!OS-CE-H1    50.0      109.50
+UUOS	UUCE	UUCT	50.0	109.50		!OS-CE-CT    50.0      109.50
+USP	UUOS	UUCE	100.0	120.50		!P -OS-CE   100.0      120.50
+UNH1	UUCE	UUOH	50.0	109.50		!H1-CE-OH    50.0      109.50
+UUCE	UUOH	UUHO	55.0	108.50		!CE-OH-HO    55.0      108.50
+UUCT	UUCE	UUOH	50.0	109.50		!CT-CE-OH    50.0      109.50
+UNH5	UNC1	UAN	50.0	123.05		!H5-C1-N*    50.0      123.05 
+UNH5	UNC1	UUNB	50.0	123.05		!H5-C1-NB    50.0      123.05 
+UAN	UNC1	UUNB	70.0	113.90		!N*-C1-NB    70.0      113.90 
+UUCB	UAN	UNC1	70.0	105.40		!CB-N*-C1    70.0      105.40 
+UNC1	UAN	UUCT	70.0	128.80		!C1-N*-CT    70.0      128.80 
+UUCB	UUNB	UNC1	70.0	103.80		!CB-NB-C1    70.0      103.80 
+UNC2	USC	UUNA	70.0	114.10		!C2-C -NA    70.0      114.10 
+UNC2	USC	USO	80.0	125.30		!C2-C -O     80.0      125.30 
+UUHC	UUCT	UNC2	50.0	109.50		!HC-CT-C2    50.0      109.50    changed based on NMA nmodes
+USC	UAN	UNC2	70.0	121.60		!C -N*-C2    70.0      121.60
+UNC2	UAN	UUCT	70.0	121.20		!C2-N*-CT    70.0      121.20
+USC	UNC2	UNC2	63.0	120.70		!C -C2-C2    63.0      120.70    changed from 85.0  bsd on C6H6 nmodes; NA thy 
+UNC2	UNC2	UUCT	70.0	119.70		!C2-C2-CT    70.0      119.70
+UNC2	UNC2	UUHA	50.0	119.70		!C2-C2-HA    50.0      119.70
+UNC2	UNC2	UNH4	50.0	119.70		!C2-C2-H4    50.0      119.70
+UNC2	UNC2	UAN	70.0	121.20		!C2-C2-N*    70.0      121.20
+USC	UNC2	UUCT	70.0	119.70		!C -C2-CT    70.0      119.70 
+USC	UNC2	UUHA	50.0	119.70		!C -C2-HA    50.0      119.70 
+UNH4	UNC2	UAN	50.0	119.10		!H4-C2-N*    50.0      119.10 
+
+DIHEDRALS
+!B1 B2 B3 B4 k type phi 
+X	UUCE	UUOS	X	0.3833333333	3	0.0000000000		!X -CE-OS-X     3       1.150       0.0         3.0
+X	UUCE	UUOH	X	0.1666666667	3	0.0000000000		!X -CE-OH-X     3       0.500       0.0         3.0
+X	UUCE	UUCT	X	0.1555555556	3	0.0000000000		!X -CE-CT-X     9       1.400       0.0         3.0
+X	UNC1	UAN	X	1.7000000000	2	180.0000000000		!X -C1-N*-X     4       6.80      180.0         2.         JCC,7,(1986),230 
+X	UNC1	UUNB	X	10.0000000000	2	180.0000000000		!X -C1-NB-X     2      20.00      180.0         2.         JCC,7,(1986),230 
+X	USC	UNC2	X	2.1750000000	2	180.0000000000		!X -C -C2-X     4       8.70      180.0         2.         intrpol.bsd.on C6H6 
+X	UNC2	UNC2	X	6.6500000000	2	180.0000000000		!X -C2-C2-X     4      26.60      180.0         2.         intrpol.bsd.on C6H6 
+X	UNC2	UUCT	X	0.0000000000	3	0.0000000000		!X -C2-CT-X     6       0.00        0.0         3.         JCC,7,(1986),230 
+X	UNC2	UAN	X	1.8500000000	2	180.0000000000		!X -C2-N*-X     4       7.40      180.0         2.         JCC,7,(1986),230 
+UUHC	UUCT	UNC2	UNC2	0.3800000000	3	180.0000000000		!HC-CT-C2-C2    1       0.38      180.0        -3.         Junmei et al, 1999 
+UUHC	UUCT	UNC2	UNC2	1.1500000000	1	0.0000000000		!HC-CT-C2-C2    1       1.15        0.0         1.         Junmei et al, 1999 
+UNC2	UNC2	USC	USO	2.1750000000	2	180.0000000000		!C2-C2-C -O     1       2.175     180.0        -2.         Junmei et al, 1999 
+UNC2	UNC2	USC	USO	0.3000000000	3	0.0000000000		!C2-C2-C -O     1       0.30        0.0         3.         Junmei et al, 1999 
+UUCE	UUCT	UUCI	UUOS	1.1780400000	1	190.9765300000		!CE-CT-CI-OS    1       1.178040  190.97653    -1.0	  gamma
+UUCE	UUCT	UUCI	UUOS	0.0921020000	2	295.6327900000		!CE-CT-CI-OS    1       0.092102  295.63279    -2.0	  gamma
+UUCE	UUCT	UUCI	UUOS	0.9628300000	3	348.0953500000		!CE-CT-CI-OS    1       0.962830  348.09535     3.0	  gamma
+UUCE	UUCT	UUCI	UUOH	1.1780400000	1	190.9765300000		!CE-CT-CI-OH    1       1.178040  190.97653    -1.0	  gamma
+UUCE	UUCT	UUCI	UUOH	0.0921020000	2	295.6327900000		!CE-CT-CI-OH    1       0.092102  295.63279    -2.0	  gamma
+UUCE	UUCT	UUCI	UUOH	0.9628300000	3	348.0953500000		!CE-CT-CI-OH    1       0.962830  348.09535     3.0 	  gamma
+UNH1	UUCI	UUCT	UUCE	0.1600000000	3	0.0000000000		!H1-CI-CT-CE    1       0.160       0.0         3.0
+UUCE	UUCT	UUOS	UUCT	0.3833000000	3	0.0000000000		!CE-CT-OS-CT    1       0.3833      0.0        -3.0        comes from X -OS-CT-X, parm99.dat
+UUCE	UUCT	UUOS	UUCT	0.1000000000	2	180.0000000000		!CE-CT-OS-CT    1       0.100     180.0         2.0
+UUOS	UUCE	UUCT	UUOS	0.1440000000	3	0.0000000000		!OS-CE-CT-OS    1       0.144       0.0        -3.0
+UUOS	UUCE	UUCT	UUOS	1.1750000000	2	0.0000000000		!OS-CE-CT-OS    1       1.175       0.0         2.0
+UUOH	UUCE	UUCT	UUOS	0.1440000000	3	0.0000000000		!OH-CE-CT-OS    1       0.144       0.0        -3.0
+UUOH	UUCE	UUCT	UUOS	1.1750000000	2	0.0000000000		!OH-CE-CT-OS    1       1.175       0.0         2.0
+USP	UUOS	UUCE	UUCT	1.0799330000	1	297.7650300000		!P -OS-CE-CT    1       1.079933  297.76503    -1.0	epsilon
+USP	UUOS	UUCE	UUCT	0.3190170000	2	200.6104500000		!P -OS-CE-CT    1       0.319017  200.61045    -2.0  	epsilon
+USP	UUOS	UUCE	UUCT	0.0548360000	3	151.6265800000		!P -OS-CE-CT    1       0.054836  151.62658     3.0  	epsilon
+UUHO	UUOH	UUCE	UUCT	1.0799330000	1	297.7650300000		!HO-OH-CE-CT    1       1.079933  297.76503    -1.0  	epsilon, 3'term
+UUHO	UUOH	UUCE	UUCT	0.3190170000	2	200.6104500000		!HO-OH-CE-CT    1       0.319017  200.61045    -2.0  	epsilon, 3'term
+UUHO	UUOH	UUCE	UUCT	0.0548360000	3	151.6265800000		!HO-OH-CE-CT    1       0.054836  151.62658     3.0  	epsilon, 3'term
+UUOS	USP	UUOS	UUCE	0.3218590000	1	65.9159800000		!OS- P-OS-CE    1       0.321859   65.91598    -1.0  	zeta
+UUOS	USP	UUOS	UUCE	0.5446000000	2	5.4648700000		!OS- P-OS-CE    1       0.544600    5.46487    -2.0  	zeta
+UUOS	USP	UUOS	UUCE	0.7971440000	3	295.4528100000		!OS- P-OS-CE    1       0.797144  295.45281     3.0  	zeta
+UUCT	UUCT	UUCE	UUCT	1.2000000000	1	38.4500000000		!CT-CT-CE-CT    1       1.2       38.45        -1.0  	puckering 
+UUCT	UUCT	UUCE	UUCT	0.9000000000	3	-2.2300000000		!CT-CT-CE-CT    1       0.9       -2.23         3.0  	puckering
+UUCT	UUCE	UUCT	UUOS	1.2000000000	1	322.4100000000		!CT-CE-CT-OS    1       1.2      322.41         1.0 	puckering
+UUOS	UUCT	UAN	UNC1	0.4100000000	3	225.4000000000		!OS-CT-N*-C1    1       0.41     225.4         -3.         bsc1,ade
+UUOS	UUCT	UAN	UNC1	1.9100000000	2	0.7000000000		!OS-CT-N*-C1    1       1.91       0.7         -2.         bsc1,ade
+UUOS	UUCT	UAN	UNC1	0.9100000000	1	120.1000000000		!OS-CT-N*-C1    1       0.91     120.1          1.         bsc1,ade
+UUOS	UUCT	UAN	UUCK	0.4400000000	3	219.8000000000		!OS-CT-N*-CK    1       0.44     219.8         -3.         bsc1,gua
+UUOS	UUCT	UAN	UUCK	1.7300000000	2	4.0000000000		!OS-CT-N*-CK    1       1.73       4.0         -2.         bsc1,gua
+UUOS	UUCT	UAN	UUCK	0.8100000000	1	87.5000000000		!OS-CT-N*-CK    1       0.81      87.5          1.         bsc1,gua
+UUOS	UUCT	UAN	UNC2	0.1700000000	3	210.9000000000		!OS-CT-N*-C2    1       0.17     210.9         -3.         bsc1,ura/thy
+UUOS	UUCT	UAN	UNC2	1.6700000000	2	4.7000000000		!OS-CT-N*-C2    1       1.67       4.7         -2.         bsc1,ura/thy
+UUOS	UUCT	UAN	UNC2	0.9900000000	1	188.0000000000		!OS-CT-N*-C2    1       0.99     188.0          1.         bsc1,ura/thy
+UUOS	UUCT	UAN	UUCM	0.2600000000	3	209.6000000000		!OS-CT-N*-CM    1       0.26     209.6         -3.         bsc1,cyt
+UUOS	UUCT	UAN	UUCM	1.5200000000	2	7.8000000000		!OS-CT-N*-CM    1       1.52       7.8         -2.         bsc1,cyt
+UUOS	UUCT	UAN	UUCM	1.0300000000	1	184.8000000000		!OS-CT-N*-CM    1       1.03     184.8          1.         bsc1,cyt
+
+IMPHI
+!B1 B2 B3 B4 k type phi 
+X	X	UNC1	UNH5	1.1000000000	2	180.0000000000		!X -X -C1-H5         1.1          180.          2. 
+UUCB	UNC1	UAN	UUCT	1.0000000000	2	180.0000000000		!CB-C1-N*-CT         1.0          180.          2. 
+UNC1	UUCB	UAN	UUCT	1.0000000000	2	180.0000000000		!CB-C1-N*-CT         1.0          180.          2. 
+X	X	UNC2	UNH4	1.1000000000	2	180.0000000000		!X -X -C2-H4         1.1          180.          2. 
+X	X	UNC2	UUHA	1.1000000000	2	180.0000000000		!X -X -C2-HA         1.1          180.          2. 
+USC	UNC2	UAN	UUCT	1.0000000000	2	180.0000000000		!C -C2-N*-CT         1.0          180.          2.           dac guess, 9/94 
+USC	UNC2	UNC2	UUCT	1.1000000000	2	180.0000000000		!C -C2-C2-CT         1.1          180.          2.           dac guess, 9/94 
+UNC2	UNN2	UUCA	UUNC	1.1000000000	2	180.0000000000		!C2-N2-CA-NC         1.1          180.          2.           dac guess, 9/94 
+UNC2	UUCT	UNC2	UUHA	1.1000000000	2	180.0000000000		!C2-CT-C2-HA         1.1          180.          2.           Junmei et al, 1999
+UNC2	UNH4	USC	USO	1.1000000000	2	180.0000000000		!C2-H4-C -O          1.1          180.          2.           Junmei et al, 1999
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+     CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!          Emin       Rmin/2         Emin/2      Rmin  (for 1-4's)
+!       (kcal/mol)     (A) 
+UUCE	0.0	-0.1094000	1.9080000	0.0	-0.0547000	1.9080000	!CE          1.9080  0.1094
+UNC1	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!C1          1.9080  0.0860             Spellmeyer 
+UNC2	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!C2          1.9080  0.0860             Spellmeyer 
+
+NBFIX
+!               Emin        Rmin
+!            (kcal/mol)     (A)
+!
+
+!HBOND CUTHB 0.5
+
+END

@@ -1,0 +1,23 @@
+## NUCLEIC ACIDS ##
+# bsc1 - Ivani, Ivan, et al. Nat Methods (2016) 
+Files:
+1. bsc1.rtf
+2. namdrc.bsc1
+3. parm10.prm
+4. frcmod.parmbsc1.prm
+
+Energy Test: bsc1.png
+
+PSFGEN usage:
+1. Load rtf into psfgen prior to generating segments
+ - topology $path/to/forcefield/nucleic/bsc1/bsc1.rtf
+
+NAMD usage:
+1. Call namdrc.bsc1 in the NAMD input file to ensure proper loading and replacement of parameters
+ - source         path/to/forcefield/nucleic/bsc1/namdrc.bsc1
+2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
+        2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the bsc1 forcefield.
+ - exclude        scaled1-4
+ - 1-4scaling     0.83333333
+        2.b) Setting up PME, the periodic cell, thermostat, barostat, and output parameters are consistent with a typical NAMD simulation
+
