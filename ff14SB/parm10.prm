@@ -1,0 +1,1047 @@
+* PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+* Maier, James A., et al. JCTC (2015)
+*
+* Converted to CHARMM format by Santiago Antolinez and Peter Eugene Jones
+* (Insert Citation for AMBERff at Scale)###################################
+* Lab of Dr. Jodi A. Hadden-Perilla (jhadden@udel.edu)
+*
+
+
+
+ATOMS
+MASS	-1	USC	12.010000		!C  12.01         0.616  !            sp2 C carbonyl group 
+MASS	-1	UUCA	12.010000		!CA 12.01         0.360               sp2 C pure aromatic (benzene)
+MASS	-1	UUCB	12.010000		!CB 12.01         0.360               sp2 aromatic C, 5&6 membered ring junction
+MASS	-1	UUCC	12.010000		!CC 12.01         0.360               sp2 aromatic C, 5 memb. ring HIS
+MASS	-1	UUCD	12.010000		!CD 12.01         0.360               sp2 C atom in the middle of: C=CD-CD=C
+MASS	-1	UUCI	12.010000		!CI 12.01                             parmbsc0
+MASS	-1	UUCK	12.010000		!CK 12.01         0.360               sp2 C 5 memb.ring in purines (dA,dG)
+MASS	-1	UUCP	12.010000		!CP 12.01         0.360               sp2 C 5 memb.ring in purines (G)
+MASS	-1	UUCM	12.010000		!CM 12.01         0.360               sp2 C  pyrimidines in pos. 5 & 6 (dT,dC)
+MASS	-1	UUCS	12.010000		!CS 12.01         0.360               sp2 C  pyrimidines in pos. 5 & 6 (U)
+MASS	-1	UUCN	12.010000		!CN 12.01         0.360               sp2 C aromatic 5&6 memb.ring junct.(TRP)
+MASS	-1	UUCQ	12.010000		!CQ 12.01         0.360               sp2 C in 5 mem.ring of purines between 2 N
+MASS	-1	UUCR	12.010000		!CR 12.01         0.360               sp2 arom as CQ but in HIS
+MASS	-1	UUCT	12.010000		!CT 12.01         0.878               sp3 aliphatic C
+MASS	-1	UUCV	12.010000		!CV 12.01         0.360               sp2 arom. 5 memb.ring w/1 N and 1 H (HIS)
+MASS	-1	UUCW	12.010000		!CW 12.01         0.360               sp2 arom. 5 memb.ring w/1 N-H and 1 H (HIS)
+MASS	-1	UAC	12.010000		!C* 12.01         0.360               sp2 arom. 5 memb.ring w/1 subst. (TRP)
+MASS	-1	UUCX	12.010000		!CX 12.01         0.360               protein C-alpha (new to ff10)
+MASS	-1	UUCY	12.010000		!CY 12.01         0.360               nitrile C (Howard et al.JCC,16,243,1995)
+MASS	-1	UUCZ	12.010000		!CZ 12.01         0.360               sp C (Howard et al.JCC,16,243,1995)
+MASS	-1	UNC5	12.010000		!C5 12.01         0.360               sp2 C 5 memb.ring in purines (A)
+MASS	-1	UNC4	12.010000		!C4 12.01         0.360               sp2 C  pyrimidines in pos. 5 & 6 (C)
+MASS	-1	UNC0	40.080000		!C0 40.08                             calcium
+MASS	-1	USH	1.008000		!H  1.008         0.161               H bonded to nitrogen atoms
+MASS	-1	UUHC	1.008000		!HC 1.008         0.135               H aliph. bond. to C without electrwd.group
+MASS	-1	UNH1	1.008000		!H1 1.008         0.135               H aliph. bond. to C with 1 electrwd. group
+MASS	-1	UNH2	1.008000		!H2 1.008         0.135               H aliph. bond. to C with 2 electrwd.groups
+MASS	-1	UNH3	1.008000		!H3 1.008         0.135               H aliph. bond. to C with 3 eletrwd.groups
+MASS	-1	UUHA	1.008000		!HA 1.008         0.167               H arom. bond. to C without elctrwd. groups
+MASS	-1	UNH4	1.008000		!H4 1.008         0.167               H arom. bond. to C with 1 electrwd. group
+MASS	-1	UNH5	1.008000		!H5 1.008         0.167               H arom.at C with 2 elctrwd. gr,+HCOO group
+MASS	-1	UUHO	1.008000		!HO 1.008         0.135               hydroxyl group
+MASS	-1	UUHS	1.008000		!HS 1.008         0.135               hydrogen bonded to sulphur (pol?)
+MASS	-1	UUHW	1.008000		!HW 1.008         0.000               H in TIP3P water
+MASS	-1	UUHP	1.008000		!HP 1.008         0.135               H bonded to C next to positively charged gr
+MASS	-1	UUHZ	1.008000		!HZ 1.008         0.161               H bond sp C (Howard et al.JCC,16,243,1995)
+MASS	-1	USF	19.000000		!F  19.00         0.320               fluorine (not fluoride!)
+MASS	-1	ULCL	35.450000		!Cl 35.45         1.910               chlorine  (Applequist) (not chloride!)
+MASS	-1	ULBR	79.900000		!Br 79.90         2.880               bromine  (Applequist) (not bromide!)
+MASS	-1	USI	126.900000		!I  126.9         4.690               iodine   (Applequist) (not iodide!)
+MASS	-1	UUMG	24.305000		!MG 24.305        0.120               magnesium
+MASS	-1	USN	14.010000		!N  14.01         0.530               sp2 nitrogen in amide groups
+MASS	-1	UUNA	14.010000		!NA 14.01         0.530               sp2 N in 5 memb.ring w/H atom (HIS)
+MASS	-1	UUNB	14.010000		!NB 14.01         0.530               sp2 N in 5 memb.ring w/LP (HIS,ADE,GUA)
+MASS	-1	UUNC	14.010000		!NC 14.01         0.530               sp2 N in 6 memb.ring w/LP (ADE,GUA)
+MASS	-1	UNN2	14.010000		!N2 14.01         0.530               sp2 N in amino groups
+MASS	-1	UNN3	14.010000		!N3 14.01         0.530               sp3 N for charged amino groups (Lys, etc)
+MASS	-1	UUNT	14.010000		!NT 14.01         0.530               sp3 N for amino groups amino groups 
+MASS	-1	UAN	14.010000		!N* 14.01         0.530               sp2 N 
+MASS	-1	UUNY	14.010000		!NY 14.01         0.530               nitrile N (Howard et al.JCC,16,243,1995)
+MASS	-1	USO	16.000000		!O  16.00         0.434               carbonyl group oxygen
+MASS	-1	UNO2	16.000000		!O2 16.00         0.434               carboxyl and phosphate group oxygen
+MASS	-1	UUOW	16.000000		!OW 16.00         0.000               oxygen in TIP3P water
+MASS	-1	UUOH	16.000000		!OH 16.00         0.465               oxygen in hydroxyl group
+MASS	-1	UUOS	16.000000		!OS 16.00         0.465               ether and ester oxygen
+MASS	-1	UUOP	16.000000		!OP 16.00         0.465               2- phosphate oxygen
+MASS	-1	USP	30.970000		!P  30.97         1.538               phosphate,pol:JACS,112,8543,90,K.J.Miller
+MASS	-1	USS	32.060000		!S  32.06         2.900               S in disulfide linkage,pol:JPC,102,2399,98
+MASS	-1	UUSH	32.060000		!SH 32.06         2.900               S in cystine
+MASS	-1	UUCU	63.550000		!CU 63.55                             copper
+MASS	-1	UUFE	55.000000		!FE 55.00                             iron
+
+BONDS 
+!B1  B2  k  r0 (charmm values, ie. k in kcal/mol/A^2, R0 in A) 
+UUOW	UUHW	553.000000	0.957200		!OW-HW  553.0    0.9572    ! TIP3P water
+UUHW	UUHW	553.000000	1.513600		!HW-HW  553.0    1.5136      TIP3P water
+USC	USC	310.000000	1.525000		!C -C   310.0    1.525       Junmei et al, 1999
+USC	UUCA	469.000000	1.409000		!C -CA  469.0    1.409       JCC,7,(1986),230; (not used any more in TYR)
+USC	UUCB	447.000000	1.419000		!C -CB  447.0    1.419       JCC,7,(1986),230; GUA
+USC	UUCM	410.000000	1.444000		!C -CM  410.0    1.444       JCC,7,(1986),230; THY,URA
+USC	UUCS	410.000000	1.444000		!C -CS  410.0    1.444       JCC,7,(1986),230; THY,URA
+USC	UUCT	317.000000	1.522000		!C -CT  317.0    1.522       JCC,7,(1986),230; AA
+USC	UUCX	317.000000	1.522000		!C -CX  317.0    1.522       JCC,7,(1986),230; AA (was C-CT)
+USC	USN	490.000000	1.335000		!C -N   490.0    1.335       JCC,7,(1986),230; AA
+USC	UAN	424.000000	1.383000		!C -N*  424.0    1.383       JCC,7,(1986),230; CYT,URA
+USC	UUNA	418.000000	1.388000		!C -NA  418.0    1.388       JCC,7,(1986),230; GUA.URA
+USC	UUNC	457.000000	1.358000		!C -NC  457.0    1.358       JCC,7,(1986),230; CYT
+USC	USO	570.000000	1.229000		!C -O   570.0    1.229       JCC,7,(1986),230; AA,CYT,GUA,THY,URA
+USC	UNO2	656.000000	1.250000		!C -O2  656.0    1.250       JCC,7,(1986),230; GLU,ASP
+USC	UUOH	450.000000	1.364000		!C -OH  450.0    1.364       JCC,7,(1986),230; (not used any more for TYR) 
+USC	UUOS	450.000000	1.323000		!C -OS  450.0    1.323       Junmei et al, 1999
+USC	UNH4	367.000000	1.080000		!C -H4  367.0    1.080       Junmei et al, 1999
+USC	UNH5	367.000000	1.080000		!C -H5  367.0    1.080       Junmei et al, 1999
+UUCA	UUCA	469.000000	1.400000		!CA-CA  469.0    1.400       JCC,7,(1986),230; BENZENE,PHE,TRP,TYR
+UUCA	UUCB	469.000000	1.404000		!CA-CB  469.0    1.404       JCC,7,(1986),230; ADE,TRP
+UUCA	UUCM	427.000000	1.433000		!CA-CM  427.0    1.433       JCC,7,(1986),230; CYT
+UUCA	UUCS	427.000000	1.433000		!CA-CS  427.0    1.433       JCC,7,(1986),230; CYT
+UUCA	UUCN	469.000000	1.400000		!CA-CN  469.0    1.400       JCC,7,(1986),230; TRP
+UUCA	UUCT	317.000000	1.510000		!CA-CT  317.0    1.510       JCC,7,(1986),230; PHE,TYR
+UUCA	UUHA	367.000000	1.080000		!CA-HA  367.0    1.080       changed from 340. bsd on C6H6 nmodes; PHE,TRP,TYR
+UUCA	UNH4	367.000000	1.080000		!CA-H4  367.0    1.080       changed from 340. bsd on C6H6 nmodes; no assigned
+UUCA	UNN2	481.000000	1.340000		!CA-N2  481.0    1.340       JCC,7,(1986),230; ARG,CYT,GUA
+UUCA	UUNA	427.000000	1.381000		!CA-NA  427.0    1.381       JCC,7,(1986),230; GUA
+UUCA	UUNC	483.000000	1.339000		!CA-NC  483.0    1.339       JCC,7,(1986),230; ADE,CYT,GUA
+UUCA	UUOH	450.000000	1.364000		!CA-OH  450.0    1.364       substituted for C-OH in tyr 
+UUCB	UUCB	520.000000	1.370000		!CB-CB  520.0    1.370       JCC,7,(1986),230; ADE,GUA
+UUCB	UAN	436.000000	1.374000		!CB-N*  436.0    1.374       JCC,7,(1986),230; ADE,GUA
+UUCB	UUNB	414.000000	1.391000		!CB-NB  414.0    1.391       JCC,7,(1986),230; ADE,GUA
+UUCB	UUNC	461.000000	1.354000		!CB-NC  461.0    1.354       JCC,7,(1986),230; ADE,GUA
+UUCD	UUHA	367.000000	1.080000		!CD-HA  367.0    1.080       Junmei et al, 1999 
+UUCD	UUCD	469.000000	1.400000		!CD-CD  469.0    1.400       Junmei et al, 1999
+UUCD	UUCM	549.000000	1.350000		!CD-CM  549.0    1.350       Junmei et al, 1999
+UUCD	UUCS	549.000000	1.350000		!CD-CS  549.0    1.350       Junmei et al, 1999
+UUCD	UUCT	317.000000	1.510000		!CD-CT  317.0    1.510       Junmei et al, 1999
+UUCK	UNH5	367.000000	1.080000		!CK-H5  367.0    1.080       changed from 340. bsd on C6H6 nmodes; ADE,GUA
+UUCK	UAN	440.000000	1.371000		!CK-N*  440.0    1.371       JCC,7,(1986),230; ADE,GUA
+UUCK	UUNB	529.000000	1.304000		!CK-NB  529.0    1.304       JCC,7,(1986),230; ADE,GUA
+UUCP	UNH5	367.000000	1.080000		!CP-H5  367.0    1.080       changed from 340. bsd on C6H6 nmodes; ADE,GUA
+UUCP	UAN	440.000000	1.371000		!CP-N*  440.0    1.371       JCC,7,(1986),230; ADE,GUA
+UUCP	UUNB	529.000000	1.304000		!CP-NB  529.0    1.304       JCC,7,(1986),230; ADE,GUA
+UUCM	UUCM	549.000000	1.350000		!CM-CM  549.0    1.350       JCC,7,(1986),230; CYT,THY,URA
+UUCM	UUCT	317.000000	1.510000		!CM-CT  317.0    1.510       JCC,7,(1986),230; THY
+UUCM	UUHA	367.000000	1.080000		!CM-HA  367.0    1.080       changed from 340. bsd on C6H6 nmodes; CYT,URA
+UUCM	UNH4	367.000000	1.080000		!CM-H4  367.0    1.080       changed from 340. bsd on C6H6 nmodes; CYT,URA
+UUCM	UNH5	367.000000	1.080000		!CM-H5  367.0    1.080       changed from 340. bsd on C6H6 nmodes; not assigned
+UUCM	UAN	448.000000	1.365000		!CM-N*  448.0    1.365       JCC,7,(1986),230; CYT,THY,URA
+UUCM	UUOS	480.000000	1.240000		!CM-OS  480.0    1.240       Junmei et al, 1999
+UUCS	UUCS	549.000000	1.350000		!CS-CS  549.0    1.350       JCC,7,(1986),230; CYT,THY,URA
+UUCS	UUCT	317.000000	1.510000		!CS-CT  317.0    1.510       JCC,7,(1986),230; THY
+UUCS	UUHA	367.000000	1.080000		!CS-HA  367.0    1.080       changed from 340. bsd on C6H6 nmodes; CYT,URA
+UUCS	UNH4	367.000000	1.080000		!CS-H4  367.0    1.080       changed from 340. bsd on C6H6 nmodes; CYT,URA
+UUCS	UNH5	367.000000	1.080000		!CS-H5  367.0    1.080       changed from 340. bsd on C6H6 nmodes; not assigned
+UUCS	UAN	448.000000	1.365000		!CS-N*  448.0    1.365       JCC,7,(1986),230; CYT,THY,URA
+UUCS	UUOS	480.000000	1.240000		!CS-OS  480.0    1.240       Junmei et al, 1999
+UUCQ	UNH5	367.000000	1.080000		!CQ-H5  367.0    1.080       changed from 340. bsd on C6H6 nmodes; ADE
+UUCQ	UUNC	502.000000	1.324000		!CQ-NC  502.0    1.324       JCC,7,(1986),230; ADE
+UUCT	UUCT	310.000000	1.526000		!CT-CT  310.0    1.526       JCC,7,(1986),230; AA, SUGARS
+UUCX	UUCT	310.000000	1.526000		!CX-CT  310.0    1.526       JCC,7,(1986),230; AA, SUGARS (was CT-CT)
+UUCT	UUHC	340.000000	1.090000		!CT-HC  340.0    1.090       changed from 331 bsd on NMA nmodes; AA, SUGARS
+UUCT	UNH1	340.000000	1.090000		!CT-H1  340.0    1.090       changed from 331 bsd on NMA nmodes; AA, RIBOSE
+UUCX	UNH1	340.000000	1.090000		!CX-H1  340.0    1.090       changed from 331 bsd on NMA nmodes; AA, RIBOSE (was CT-H1)
+UUCT	UNH2	340.000000	1.090000		!CT-H2  340.0    1.090       changed from 331 bsd on NMA nmodes; SUGARS
+UUCT	UNH3	340.000000	1.090000		!CT-H3  340.0    1.090       changed from 331 bsd on NMA nmodes; not assigned
+UUCT	UUHP	340.000000	1.090000		!CT-HP  340.0    1.090       changed from 331; AA-lysine, methyl ammonium cation
+UUCX	UUHP	340.000000	1.090000		!CX-HP  340.0    1.090       changed from 331; AA-lysine, methyl ammonium cation (was CT-HP)
+UUCT	UAN	337.000000	1.475000		!CT-N*  337.0    1.475       JCC,7,(1986),230; ADE,CYT,GUA,THY,URA
+UUCT	UNN2	337.000000	1.463000		!CT-N2  337.0    1.463       JCC,7,(1986),230; ARG
+UUCT	UUOH	320.000000	1.410000		!CT-OH  320.0    1.410       JCC,7,(1986),230; SUGARS
+UUCT	UUOS	320.000000	1.410000		!CT-OS  320.0    1.410       JCC,7,(1986),230; NUCLEIC ACIDS
+UAC	UUHC	367.000000	1.080000		!C*-HC  367.0    1.080       changed from 340. bsd on C6H6 nmodes, not needed AA
+UAC	UUCB	388.000000	1.459000		!C*-CB  388.0    1.459       JCC,7,(1986),230; TRP
+UAC	UUCT	317.000000	1.495000		!C*-CT  317.0    1.495       JCC,7,(1986),230; TRP
+UAC	UUCW	546.000000	1.352000		!C*-CW  546.0    1.352       JCC,7,(1986),230; TRP
+UUCB	UUCN	447.000000	1.419000		!CB-CN  447.0    1.419       JCC,7,(1986),230; TRP
+UUCC	UUCT	317.000000	1.504000		!CC-CT  317.0    1.504       JCC,7,(1986),230; HIS
+UUCC	UUCV	512.000000	1.375000		!CC-CV  512.0    1.375       JCC,7,(1986),230; HIS(delta)
+UUCC	UUCW	518.000000	1.371000		!CC-CW  518.0    1.371       JCC,7,(1986),230; HIS(epsilon)
+UUCC	UUNA	422.000000	1.385000		!CC-NA  422.0    1.385       JCC,7,(1986),230; HIS
+UUCC	UUNB	410.000000	1.394000		!CC-NB  410.0    1.394       JCC,7,(1986),230; HIS
+UUCN	UUNA	428.000000	1.380000		!CN-NA  428.0    1.380       JCC,7,(1986),230; TRP
+UUCR	UNH5	367.000000	1.080000		!CR-H5  367.0    1.080       changed from 340. bsd on C6H6 nmodes;HIS
+UUCR	UUNA	477.000000	1.343000		!CR-NA  477.0    1.343       JCC,7,(1986),230; HIS
+UUCR	UUNB	488.000000	1.335000		!CR-NB  488.0    1.335       JCC,7,(1986),230; HIS
+UUCT	USN	337.000000	1.449000		!CT-N   337.0    1.449       JCC,7,(1986),230; AA
+UUCX	USN	337.000000	1.449000		!CX-N   337.0    1.449       JCC,7,(1986),230; AA  (was CT-N)
+UUCT	UNN3	367.000000	1.471000		!CT-N3  367.0    1.471       JCC,7,(1986),230; LYS
+UUCX	UNN3	367.000000	1.471000		!CX-N3  367.0    1.471       JCC,7,(1986),230; LYS (was CT-N3)
+UUCT	UUNT	367.000000	1.471000		!CT-NT  367.0    1.471       for neutral amines 
+UUCT	USS	227.000000	1.810000		!CT-S   227.0    1.810       changed from 222.0 based on dimethylS nmodes
+UUCT	UUSH	237.000000	1.810000		!CT-SH  237.0    1.810       changed from 222.0 based on methanethiol nmodes
+UUCT	UUCY	400.000000	1.458000		!CT-CY  400.0    1.458       Howard et al JCC.16,243,1995
+UUCT	UUCZ	400.000000	1.459000		!CT-CZ  400.0    1.459       Howard et al JCC,16,243,1995
+UUCV	UNH4	367.000000	1.080000		!CV-H4  367.0    1.080       changed from 340. bsd on C6H6 nmodes; HIS
+UUCV	UUNB	410.000000	1.394000		!CV-NB  410.0    1.394       JCC,7,(1986),230; HIS
+UUCW	UNH4	367.000000	1.080000		!CW-H4  367.0    1.080       changed from 340. bsd on C6H6 nmodes;HIS(epsilon,+)
+UUCW	UUNA	427.000000	1.381000		!CW-NA  427.0    1.381       JCC,7,(1986),230; HIS,TRP
+UUCY	UUNY	600.000000	1.150000		!CY-NY  600.0    1.150       Howard et al JCC,16,243,1995
+UUCZ	UUCZ	600.000000	1.206000		!CZ-CZ  600.0    1.206       Howard et al JCC,16,243,1995
+UUCZ	UUHZ	400.000000	1.056000		!CZ-HZ  400.0    1.056       Howard et al JCC,16,243,1995
+UUOP	USP	525.000000	1.480000		!OP-P   525.0    1.480       JCC,7,(1986),230; NA PHOSPHATES
+UNO2	USP	525.000000	1.480000		!O2-P   525.0    1.480       JCC,7,(1986),230; NA PHOSPHATES
+UUOH	USP	230.000000	1.610000		!OH-P   230.0    1.610       JCC,7,(1986),230; NA PHOSPHATES
+UUOS	USP	230.000000	1.610000		!OS-P   230.0    1.610       JCC,7,(1986),230; NA PHOSPHATES
+UUNA	USP	250.000000	1.840000		!NA-P   250.0    1.840       phosphohistidine
+USH	UNN2	434.000000	1.010000		!H -N2  434.0    1.010       JCC,7,(1986),230; ADE,CYT,GUA,ARG
+USH	UAN	434.000000	1.010000		!H -N*  434.0    1.010       for plain unmethylated bases ADE,CYT,GUA,ARG
+USH	UUNA	434.000000	1.010000		!H -NA  434.0    1.010       JCC,7,(1986),230; GUA,URA,HIS
+USH	USN	434.000000	1.010000		!H -N   434.0    1.010       JCC,7,(1986),230; AA
+USH	UNN3	434.000000	1.010000		!H -N3  434.0    1.010       JCC,7,(1986),230; LYS    
+USH	UUNT	434.000000	1.010000		!H -NT  434.0    1.010       for neutral amines 
+UUHO	UUOH	553.000000	0.960000		!HO-OH  553.0    0.960       JCC,7,(1986),230; SUGARS,SER,TYR
+UUHO	UUOS	553.000000	0.960000		!HO-OS  553.0    0.960       JCC,7,(1986),230; NUCLEOTIDE ENDS
+UUHS	UUSH	274.000000	1.336000		!HS-SH  274.0    1.336       JCC,7,(1986),230; CYS
+USS	USS	166.000000	2.038000		!S -S   166.0    2.038       JCC,7,(1986),230; CYX   (SCHERAGA)
+USF	UUCT	367.000000	1.380000		!F -CT  367.0    1.380       JCC,13,(1992),963;CF4; R0=1.332 FOR CHF3
+ULCL	UUCT	232.000000	1.766000		!Cl-CT  232.0    1.766       6-31g* opt
+ULBR	UUCT	159.000000	1.944000		!Br-CT  159.0    1.944       Junmei et al,99 
+USI	UUCT	148.000000	2.166000		!I -CT  148.0    2.166       Junmei et al,99 
+USF	UUCA	386.000000	1.359000		!F -CA  386.0    1.359       Junmei et al,99 
+ULCL	UUCA	193.000000	1.727000		!Cl-CA  193.0    1.727       Junmei et al,99 
+USI	UUCA	171.000000	2.075000		!I -CA  171.0    2.075       Junmei et al,99 
+ULBR	UUCA	172.000000	1.890000		!Br-CA  172.0    1.890       Junmei et al,99
+UUEP	USO	600.000000	0.200000		!EP-O   600.0    0.200       or 0.35
+UUEP	UUOH	600.000000	0.200000		!EP-OH  600.0    0.200       or 0.35
+UUEP	UUOS	600.000000	0.200000		!EP-OS  600.0    0.200       or 0.35
+UUEP	UNN3	600.000000	0.200000		!EP-N3  600.0    0.200       or 0.35
+UUEP	UUNT	600.000000	0.200000		!EP-NT  600.0    0.200       or 0.35
+UUEP	UUNB	600.000000	0.200000		!EP-NB  600.0    0.200       or 0.35 histidines, nucleic acids
+UUEP	UUNC	600.000000	0.200000		!EP-NC  600.0    0.200       or 0.35 nucleic acids
+UUEP	USS	600.000000	0.700000		!EP-S   600.0    0.700       cys,cyx,met
+UUEP	UUSH	600.000000	0.700000		!EP-SH  600.0    0.700       cys,cyx
+UUCI	UNH1	340.000000	1.090000		!CI-H1  340.0    1.090       parmbsc0
+UUCI	UUCT	310.000000	1.526000		!CI-CT  310.0    1.526       parmbsc0
+UUOS	UUCI	320.000000	1.410000		!OS-CI  320.0    1.410       parmbsc0
+UUOH	UUCI	320.000000	1.410000		!OH-CI  320.0    1.410       parmbsc0
+UNC5	UNH5	367.000000	1.080000		!C5-H5  367.0    1.080       changed from 340. bsd on C6H6 nmodes; ADE,GUA
+UNC5	UAN	440.000000	1.371000		!C5-N*  440.0    1.371       JCC,7,(1986),230; ADE,GUA
+UNC5	UUNB	529.000000	1.304000		!C5-NB  529.0    1.304       JCC,7,(1986),230; ADE,GUA
+USC	UNC4	410.000000	1.444000		!C -C4  410.0    1.444       JCC,7,(1986),230; THY,URA
+UUCA	UNC4	427.000000	1.433000		!CA-C4  427.0    1.433       JCC,7,(1986),230; CYT
+UNC4	UNC4	549.000000	1.350000		!C4-C4  549.0    1.350       JCC,7,(1986),230; CYT,THY,URA
+UNC4	UUCT	317.000000	1.510000		!C4-CT  317.0    1.510       JCC,7,(1986),230; THY
+UNC4	UUHA	367.000000	1.080000		!C4-HA  367.0    1.080       changed from 340. bsd on C6H6 nmodes; CYT,URA
+UNC4	UNH4	367.000000	1.080000		!C4-H4  367.0    1.080       changed from 340. bsd on C6H6 nmodes; CYT,URA
+UNC4	UAN	448.000000	1.365000		!C4-N*  448.0    1.365       JCC,7,(1986),230; CYT,THY,URA
+
+ANGLES 
+!B1  B2  B3  k  theta0 
+UUHW	UUOW	UUHW	100.	104.52		!HW-OW-HW    100.      104.52    TIP3P water
+UUHW	UUHW	UUOW	0.	127.74		!HW-HW-OW      0.      127.74    (found in crystallographic water with 3 bonds)
+USC	USC	USO	80.0	120.00		!C -C -O     80.0      120.00    Junmei et al, 1999 acrolein
+USC	USC	UUOH	80.0	120.00		!C -C -OH    80.0      120.00    Junmei et al, 1999
+UUCA	USC	UUCA	63.0	120.00		!CA-C -CA    63.0      120.00    changed from 85.0  bsd on C6H6 nmodes; AA
+UUCA	USC	UUOH	70.0	120.00		!CA-C -OH    70.0      120.00    AA (not used in tyr)
+UUCA	USC	UUOS	70.0	120.00		!CA-C -OS    70.0      120.00    phosphotyrosine
+UUCC	UUNA	USP	76.7	125.10		!CC-NA-P     76.7      125.10    phosphohistidine
+UUCR	UUNA	USP	76.7	125.10		!CR-NA-P     76.7      125.10    phosphohistidine
+UUNA	USP	UUOP	42.9	102.38		!NA-P -OP    42.9      102.38    phosphohistidine
+UUCB	USC	UUNA	70.0	111.30		!CB-C -NA    70.0      111.30    NA
+UUCB	USC	USO	80.0	128.80		!CB-C -O     80.0      128.80
+UUCM	USC	UUNA	70.0	114.10		!CM-C -NA    70.0      114.10
+UUCM	USC	USO	80.0	125.30		!CM-C -O     80.0      125.30
+UUCS	USC	UUNA	70.0	114.10		!CS-C -NA    70.0      114.10
+UUCS	USC	USO	80.0	125.30		!CS-C -O     80.0      125.30
+UUCT	USC	USO	80.0	120.40		!CT-C -O     80.0      120.40
+UUCX	USC	USO	80.0	120.40		!CX-C -O     80.0      120.40    (was CT-C-O)
+UUCT	USC	UNO2	70.0	117.00		!CT-C -O2    70.0      117.00
+UUCX	USC	UNO2	70.0	117.00		!CX-C -O2    70.0      117.00    (was CT-C -O2)
+UUCT	USC	USN	70.0	116.60		!CT-C -N     70.0      116.60    AA general
+UUCX	USC	USN	70.0	116.60		!CX-C -N     70.0      116.60    AA general  (was CT-C-N)
+UUCT	USC	UUCT	63.0	117.00		!CT-C -CT    63.0      117.00    Junmei et al, 1999
+UUCT	USC	UUOS	80.0	115.00		!CT-C -OS    80.0      115.00    Junmei et al, 1999
+UUCT	USC	UUOH	80.0	110.00		!CT-C -OH    80.0      110.00    Junmei et al, 1999
+UUCX	USC	UUOH	80.0	110.00		!CX-C -OH    80.0      110.00    Junmei et al, 1999 (was CT-C-OH)
+UAN	USC	UUNA	70.0	115.40		!N*-C -NA    70.0      115.40
+UAN	USC	UUNC	70.0	118.60		!N*-C -NC    70.0      118.60
+UAN	USC	USO	80.0	120.90		!N*-C -O     80.0      120.90
+UUNA	USC	USO	80.0	120.60		!NA-C -O     80.0      120.60
+UUNC	USC	USO	80.0	122.50		!NC-C -O     80.0      122.50
+USN	USC	USO	80.0	122.90		!N -C -O     80.0      122.90    AA general
+USO	USC	USO	80.0	126.00		!O -C -O     80.0      126.00    AA COO- terminal residues
+USO	USC	UUOH	80.0	120.00		!O -C -OH    80.0      120.00    (check with Junmei for: theta0:120.0?)
+USO	USC	UUOS	80.0	125.00		!O -C -OS    80.0      125.00    Junmei et al, 1999
+UNO2	USC	UNO2	80.0	126.00		!O2-C -O2    80.0      126.00    AA GLU            (SCH JPC 79,2379)
+UNH4	USC	USC	50.0	120.00		!H4-C -C     50.0      120.00    Junmei et al, 1999 
+UNH4	USC	UUCM	50.0	115.00		!H4-C -CM    50.0      115.00    Junmei et al, 1999 
+UNH4	USC	UUCS	50.0	115.00		!H4-C -CS    50.0      115.00    Junmei et al, 1999 
+UNH4	USC	UUCT	50.0	115.00		!H4-C -CT    50.0      115.00    Junmei et al, 1999
+UNH4	USC	USO	50.0	120.00		!H4-C -O     50.0      120.00    Junmei et al, 1999
+UNH4	USC	UUOH	50.0	120.00		!H4-C -OH    50.0      120.00    Junmei et al, 1999
+UNH5	USC	USN	50.0	120.00		!H5-C -N     50.0      120.00    Junmei et al, 1999
+UNH5	USC	USO	50.0	119.00		!H5-C -O     50.0      119.00    Junmei et al, 1999
+UNH5	USC	UUOH	50.0	107.00		!H5-C -OH    50.0      107.00    Junmei et al, 1999
+UNH5	USC	UUOS	50.0	107.00		!H5-C -OS    50.0      107.00    Junmei et al, 1999
+USC	UUCA	UUCA	63.0	120.00		!C -CA-CA    63.0      120.00    changed from 85.0  bsd on C6H6 nmodes
+USC	UUCA	UUHA	50.0	120.00		!C -CA-HA    50.0      120.00    AA (not used in tyr)
+UUCA	UUCA	UUCA	63.0	120.00		!CA-CA-CA    63.0      120.00    changed from 85.0  bsd on C6H6 nmodes
+UUCA	UUCA	UUCB	63.0	120.00		!CA-CA-CB    63.0      120.00    changed from 85.0  bsd on C6H6 nmodes
+UUCA	UUCA	UUCT	70.0	120.00		!CA-CA-CT    70.0      120.00
+UUCA	UUCA	UUHA	50.0	120.00		!CA-CA-HA    50.0      120.00
+UUCA	UUCA	UNH4	50.0	120.00		!CA-CA-H4    50.0      120.00
+UUCA	UUCA	UUOH	70.0	120.00		!CA-CA-OH    70.0      120.00    replacement in tyr
+UUCA	UUCA	UUCN	63.0	120.00		!CA-CA-CN    63.0      120.00    changed from 85.0  bsd on C6H6 nmodes; AA trp
+UUCB	UUCA	UUHA	50.0	120.00		!CB-CA-HA    50.0      120.00
+UUCB	UUCA	UNH4	50.0	120.00		!CB-CA-H4    50.0      120.00
+UUCB	UUCA	UNN2	70.0	123.50		!CB-CA-N2    70.0      123.50
+UUCB	UUCA	UUNC	70.0	117.30		!CB-CA-NC    70.0      117.30
+UUCM	UUCA	UNN2	70.0	120.10		!CM-CA-N2    70.0      120.10
+UUCM	UUCA	UUNC	70.0	121.50		!CM-CA-NC    70.0      121.50
+UUCS	UUCA	UNN2	70.0	120.10		!CS-CA-N2    70.0      120.10
+UUCS	UUCA	UUNC	70.0	121.50		!CS-CA-NC    70.0      121.50
+UUCN	UUCA	UUHA	50.0	120.00		!CN-CA-HA    50.0      120.00    AA trp
+UUNA	UUCA	UUNC	70.0	123.30		!NA-CA-NC    70.0      123.30
+UNN2	UUCA	UUNA	70.0	116.00		!N2-CA-NA    70.0      116.00
+UNN2	UUCA	UUNC	70.0	119.30		!N2-CA-NC    70.0      119.30
+UNN2	UUCA	UNN2	70.0	120.00		!N2-CA-N2    70.0      120.00    AA arg
+USF	UUCA	UUCA	70.0	121.00		!F -CA-CA    70.0      121.00    Junmei et al,99 
+ULCL	UUCA	UUCA	70.0	118.80		!Cl-CA-CA    70.0      118.80    Junmei et al,99 
+ULBR	UUCA	UUCA	70.0	118.80		!Br-CA-CA    70.0      118.80    Junmei et al,99
+USI	UUCA	UUCA	70.0	118.80		!I -CA-CA    70.0      118.80    Junmei et al,99 
+USC	UUCB	UUCB	63.0	119.20		!C -CB-CB    63.0      119.20    changed from 85.0  bsd on C6H6 nmodes; NA gua
+USC	UUCB	UUNB	70.0	130.00		!C -CB-NB    70.0      130.00
+UUCA	UUCB	UUCB	63.0	117.30		!CA-CB-CB    63.0      117.30    changed from 85.0  bsd on C6H6 nmodes; NA ade
+UUCA	UUCB	UUNB	70.0	132.40		!CA-CB-NB    70.0      132.40    
+UUCB	UUCB	UAN	70.0	106.20		!CB-CB-N*    70.0      106.20
+UUCB	UUCB	UUNB	70.0	110.40		!CB-CB-NB    70.0      110.40
+UUCB	UUCB	UUNC	70.0	127.70		!CB-CB-NC    70.0      127.70
+UAC	UUCB	UUCA	63.0	134.90		!C*-CB-CA    63.0      134.90    changed from 85.0  bsd on C6H6 nmodes; AA trp
+UAC	UUCB	UUCN	63.0	108.80		!C*-CB-CN    63.0      108.80    changed from 85.0  bsd on C6H6 nmodes; AA trp
+UUCA	UUCB	UUCN	63.0	116.20		!CA-CB-CN    63.0      116.20    changed from 85.0  bsd on C6H6 nmodes; AA trp
+UAN	UUCB	UUNC	70.0	126.20		!N*-CB-NC    70.0      126.20
+UUCD	UUCD	UUCM	63.0	120.00		!CD-CD-CM    63.0      120.00    Junmei et al, 1999
+UUCD	UUCD	UUCS	63.0	120.00		!CD-CD-CS    63.0      120.00    Junmei et al, 1999
+UUCD	UUCD	UUCT	70.0	120.00		!CD-CD-CT    70.0      120.00    Junmei et al, 1999
+UUCM	UUCD	UUCT	70.0	120.00		!CM-CD-CT    70.0      120.00    Junmei et al, 1999
+UUCS	UUCD	UUCT	70.0	120.00		!CS-CD-CT    70.0      120.00    Junmei et al, 1999
+UUHA	UUCD	UUHA	35.0	119.00		!HA-CD-HA    35.0      119.00    Junmei et al, 1999
+UUHA	UUCD	UUCD	50.0	120.00		!HA-CD-CD    50.0      120.00    Junmei et al, 1999
+UUHA	UUCD	UUCM	50.0	120.00		!HA-CD-CM    50.0      120.00    Junmei et al, 1999
+UUHA	UUCD	UUCS	50.0	120.00		!HA-CD-CS    50.0      120.00    Junmei et al, 1999
+UNH5	UUCK	UAN	50.0	123.05		!H5-CK-N*    50.0      123.05
+UNH5	UUCK	UUNB	50.0	123.05		!H5-CK-NB    50.0      123.05
+UAN	UUCK	UUNB	70.0	113.90		!N*-CK-NB    70.0      113.90
+UNH5	UUCP	UAN	50.0	123.05		!H5-CP-N*    50.0      123.05
+UNH5	UUCP	UUNB	50.0	123.05		!H5-CP-NB    50.0      123.05
+UAN	UUCP	UUNB	70.0	113.90		!N*-CP-NB    70.0      113.90
+USC	UUCM	UUCM	63.0	120.70		!C -CM-CM    63.0      120.70    changed from 85.0  bsd on C6H6 nmodes; NA thy
+USC	UUCM	UUCT	70.0	119.70		!C -CM-CT    70.0      119.70
+USC	UUCM	UUHA	50.0	119.70		!C -CM-HA    50.0      119.70
+USC	UUCM	UNH4	50.0	119.70		!C -CM-H4    50.0      119.70
+UUCA	UUCM	UUCM	63.0	117.00		!CA-CM-CM    63.0      117.00    changed from 85.0  bsd on C6H6 nmodes; NA cyt
+UUCA	UUCM	UUHA	50.0	123.30		!CA-CM-HA    50.0      123.30
+UUCA	UUCM	UNH4	50.0	123.30		!CA-CM-H4    50.0      123.30
+UUCM	UUCM	UUCT	70.0	119.70		!CM-CM-CT    70.0      119.70
+UUCM	UUCM	UUHA	50.0	119.70		!CM-CM-HA    50.0      119.70
+UUCM	UUCM	UNH4	50.0	119.70		!CM-CM-H4    50.0      119.70
+UUCM	UUCM	UAN	70.0	121.20		!CM-CM-N*    70.0      121.20
+UUCM	UUCM	UUOS	80.0	125.00		!CM-CM-OS    80.0      125.00    Junmei et al, 1999
+UNH4	UUCM	UAN	50.0	119.10		!H4-CM-N*    50.0      119.10
+UNH4	UUCM	UUOS	50.0	113.00		!H4-CM-OS    50.0      113.00    Junmei et al, 1999
+UUHA	UUCM	UUHA	35.0	120.00		!HA-CM-HA    35.0      120.00    Junmei et al, 1999
+UUHA	UUCM	UUCD	50.0	120.00		!HA-CM-CD    50.0      120.00    Junmei et al, 1999
+UUHA	UUCM	UUCT	50.0	120.00		!HA-CM-CT    50.0      120.00    Junmei et al, 1999
+USC	UUCS	UUCS	63.0	120.70		!C -CS-CS    63.0      120.70    changed from 85.0  bsd on C6H6 nmodes; NA thy
+USC	UUCS	UUCT	70.0	119.70		!C -CS-CT    70.0      119.70
+USC	UUCS	UUHA	50.0	119.70		!C -CS-HA    50.0      119.70
+USC	UUCS	UNH4	50.0	119.70		!C -CS-H4    50.0      119.70
+UUCA	UUCS	UUCS	63.0	117.00		!CA-CS-CS    63.0      117.00    changed from 85.0  bsd on C6H6 nmodes; NA cyt
+UUCA	UUCS	UUHA	50.0	123.30		!CA-CS-HA    50.0      123.30
+UUCA	UUCS	UNH4	50.0	123.30		!CA-CS-H4    50.0      123.30
+UUCM	UUCS	UUCT	70.0	119.70		!CM-CS-CT    70.0      119.70
+UUCS	UUCS	UUHA	50.0	119.70		!CS-CS-HA    50.0      119.70
+UUCS	UUCS	UNH4	50.0	119.70		!CS-CS-H4    50.0      119.70
+UUCS	UUCS	UAN	70.0	121.20		!CS-CS-N*    70.0      121.20
+UUCS	UUCS	UUOS	80.0	125.00		!CS-CS-OS    80.0      125.00    Junmei et al, 1999
+UNH4	UUCS	UAN	50.0	119.10		!H4-CS-N*    50.0      119.10
+UNH4	UUCS	UUOS	50.0	113.00		!H4-CS-OS    50.0      113.00    Junmei et al, 1999
+UUHA	UUCS	UUHA	35.0	120.00		!HA-CS-HA    35.0      120.00    Junmei et al, 1999
+UUHA	UUCS	UUCD	50.0	120.00		!HA-CS-CD    50.0      120.00    Junmei et al, 1999
+UUHA	UUCS	UUCT	50.0	120.00		!HA-CS-CT    50.0      120.00    Junmei et al, 1999
+UUNC	UUCQ	UUNC	70.0	129.10		!NC-CQ-NC    70.0      129.10
+UNH5	UUCQ	UUNC	50.0	115.45		!H5-CQ-NC    50.0      115.45
+UNH1	UUCT	UNH1	35.0	109.50		!H1-CT-H1    35.0      109.50
+UNH1	UUCX	UNH1	35.0	109.50		!H1-CX-H1    35.0      109.50    (was H1-CT-H1)
+UNH1	UUCT	UAN	50.0	109.50		!H1-CT-N*    50.0      109.50    changed based on NMA nmodes
+UNH1	UUCT	UUOH	50.0	109.50		!H1-CT-OH    50.0      109.50    changed based on NMA nmodes 
+UNH1	UUCT	UUOS	50.0	109.50		!H1-CT-OS    50.0      109.50    changed based on NMA nmodes 
+UNH1	UUCT	UUCM	50.0	109.50		!H1-CT-CM    50.0      109.50    Junmei et al, 1999 
+UNH1	UUCT	UUCS	50.0	109.50		!H1-CT-CS    50.0      109.50    Junmei et al, 1999 
+UNH1	UUCT	UUCY	50.0	110.00		!H1-CT-CY    50.0      110.00    Junmei et al, 1999
+UNH1	UUCT	UUCZ	50.0	110.00		!H1-CT-CZ    50.0      110.00    Junmei et al, 1999
+UNH1	UUCT	USN	50.0	109.50		!H1-CT-N     50.0      109.50    AA general  changed based on NMA nmodes
+UNH1	UUCX	USN	50.0	109.50		!H1-CX-N     50.0      109.50    AA general  (was H1-CT-N)
+UNH1	UUCT	USS	50.0	109.50		!H1-CT-S     50.0      109.50    AA cys     changed based on NMA nmodes
+UNH1	UUCT	UUSH	50.0	109.50		!H1-CT-SH    50.0      109.50    AA cyx     changed based on NMA nmodes
+UNH1	UUCT	UNN2	50.0	109.50		!H1-CT-N2    50.0      109.50    AA arg     changed based on NMA nmodes
+UNH1	UUCT	UUNT	50.0	109.50		!H1-CT-NT    50.0      109.50    neutral amines 
+UNH2	UUCT	UNH2	35.0	109.50		!H2-CT-H2    35.0      109.50    AA lys
+UNH2	UUCT	UAN	50.0	109.50		!H2-CT-N*    50.0      109.50    changed based on NMA nmodes
+UNH2	UUCT	UUOS	50.0	109.50		!H2-CT-OS    50.0      109.50    changed based on NMA nmodes
+UUHP	UUCT	UUHP	35.0	109.50		!HP-CT-HP    35.0      109.50    AA lys, ch3nh4+
+UUHP	UUCX	UUHP	35.0	109.50		!HP-CX-HP    35.0      109.50    AA lys, ch3nh4+ (was HP-CT-HP)
+UUHP	UUCT	UNN3	50.0	109.50		!HP-CT-N3    50.0      109.50    AA lys, ch3nh3+, changed based on NMA nmodes
+UUHP	UUCX	UNN3	50.0	109.50		!HP-CX-N3    50.0      109.50    AA lys, ch3nh3+, changed based on NMA nmodes (was HP-CT-N3)
+UUHC	UUCT	UUHC	35.0	109.50		!HC-CT-HC    35.0      109.50
+UUHC	UUCT	UUCM	50.0	109.50		!HC-CT-CM    50.0      109.50    changed based on NMA nmodes
+UUHC	UUCT	UUCS	50.0	109.50		!HC-CT-CS    50.0      109.50    changed based on NMA nmodes
+UUHC	UUCT	UUCD	50.0	109.50		!HC-CT-CD    50.0      109.50    Junmei et al, 1999
+UUHC	UUCT	UUCZ	50.0	110.00		!HC-CT-CZ    50.0      110.00    Junmei et al, 1999
+USC	UUCT	UNH1	50.0	109.50		!C -CT-H1    50.0      109.50    AA general  changed based on NMA nmodes
+USC	UUCX	UNH1	50.0	109.50		!C -CX-H1    50.0      109.50    AA general  (was C-CT-H1)
+USC	UUCT	UUHP	50.0	109.50		!C -CT-HP    50.0      109.50    AA zwitterion  changed based on NMA nmodes
+USC	UUCX	UUHP	50.0	109.50		!C -CX-HP    50.0      109.50    AA zwitterion  changed based on NMA nmodes (was C -CT-HP)
+USC	UUCT	UUHC	50.0	109.50		!C -CT-HC    50.0      109.50    AA gln      changed based on NMA nmodes
+USC	UUCT	USN	63.0	110.10		!C -CT-N     63.0      110.10    AA general
+USC	UUCX	USN	63.0	110.10		!C -CX-N     63.0      110.10    AA general  (was C-CT-N)
+USC	UUCT	UNN3	80.0	111.20		!C -CT-N3    80.0      111.20    AA amino terminal residues
+USC	UUCX	UNN3	80.0	111.20		!C -CX-N3    80.0      111.20    AA amino terminal residues (was C -CT-N3)
+USC	UUCT	UUCT	63.0	111.10		!C -CT-CT    63.0      111.10    AA general
+USC	UUCT	UUCX	63.0	111.10		!C -CT-CX    63.0      111.10    AA general (was C -CT-CT)
+USC	UUCX	UUCT	63.0	111.10		!C -CX-CT    63.0      111.10    AA general  (was C-CT-CT)
+USC	UUCT	UUOS	60.0	109.50		!C -CT-OS    60.0      109.50    Junmei et al, 1999
+UUCA	UUCT	UUHC	50.0	109.50		!CA-CT-HC    50.0      109.50    AA tyr     changed based on NMA nmodes
+UUCC	UUCT	UUCT	63.0	113.10		!CC-CT-CT    63.0      113.10    AA his
+UUCC	UUCT	UUCX	63.0	113.10		!CC-CT-CX    63.0      113.10    AA his (was CC-CT-CT)
+UUCC	UUCT	UUHC	50.0	109.50		!CC-CT-HC    50.0      109.50    AA his     changed based on NMA nmodes
+UUCM	UUCT	UUCT	63.0	111.00		!CM-CT-CT    63.0      111.00    Junmei et al, 1999 (last change: Mar24,99)
+UUCM	UUCT	UUOS	50.0	109.50		!CM-CT-OS    50.0      109.50    Junmei et al, 1999
+UUCS	UUCT	UUCT	63.0	111.00		!CS-CT-CT    63.0      111.00    Junmei et al, 1999 (last change: Mar24,99)
+UUCS	UUCT	UUOS	50.0	109.50		!CS-CT-OS    50.0      109.50    Junmei et al, 1999
+UUCT	UUCT	UUCT	40.0	109.50		!CT-CT-CT    40.0      109.50
+UUCT	UUCT	UUCX	40.0	109.50		!CT-CT-CX    40.0      109.50    (was CT-CT-CT)
+UUCT	UUCT	UUHC	50.0	109.50		!CT-CT-HC    50.0      109.50    changed based on NMA nmodes
+UUCX	UUCT	UUHC	50.0	109.50		!CX-CT-HC    50.0      109.50    changed based on NMA nmodes (was CT-CT-HC)
+UUCT	UUCT	UNH1	50.0	109.50		!CT-CT-H1    50.0      109.50    changed based on NMA nmodes
+UUCT	UUCX	UNH1	50.0	109.50		!CT-CX-H1    50.0      109.50    changed based on NMA nmodes (was CT-CT-H1)
+UUCX	UUCT	UNH1	50.0	109.50		!CX-CT-H1    50.0      109.50    changed based on NMA nmodes (was CT-CT-H1)
+UUCT	UUCT	UNH2	50.0	109.50		!CT-CT-H2    50.0      109.50    changed based on NMA nmodes
+UUCT	UUCT	UUHP	50.0	109.50		!CT-CT-HP    50.0      109.50    changed based on NMA nmodes
+UUCT	UUCX	UUHP	50.0	109.50		!CT-CX-HP    50.0      109.50    changed based on NMA nmodes (was CT-CT-HP)
+UUCT	UUCT	UAN	50.0	109.50		!CT-CT-N*    50.0      109.50
+UUCT	UUCT	UUOH	50.0	109.50		!CT-CT-OH    50.0      109.50
+UUCX	UUCT	UUOH	50.0	109.50		!CX-CT-OH    50.0      109.50    (was CT-CT-OH)
+UUCT	UUCT	UUOS	50.0	109.50		!CT-CT-OS    50.0      109.50
+UUCT	UUCT	USS	50.0	114.70		!CT-CT-S     50.0      114.70    AA cyx            (SCHERAGA  JPC 79,1428)
+UUCX	UUCT	USS	50.0	114.70		!CX-CT-S     50.0      114.70    AA cyx            (SCHERAGA  JPC 79,1428) (was CT-CT-S )
+UUCT	UUCT	UUSH	50.0	108.60		!CT-CT-SH    50.0      108.60    AA cys
+UUCX	UUCT	UUSH	50.0	108.60		!CX-CT-SH    50.0      108.60    AA cys (was CT-CT-SH)
+UUCT	UUCT	UUCA	63.0	114.00		!CT-CT-CA    63.0      114.00    AA phe tyr          (SCH JPC  79,2379)
+UUCX	UUCT	UUCA	63.0	114.00		!CX-CT-CA    63.0      114.00    AA phe tyr          (SCH JPC  79,2379) (was CT-CT-CA)
+UUCT	UUCT	UNN2	80.0	111.20		!CT-CT-N2    80.0      111.20    AA arg             (JCP 76, 1439)
+UUCT	UUCT	USN	80.0	109.70		!CT-CT-N     80.0      109.70    AA ala, general    (JACS 94, 2657)
+UUCT	UUCX	USN	80.0	109.70		!CT-CX-N     80.0      109.70    AA ala, general    (was CT-CT-N)
+UUCT	UUCT	UNN3	80.0	111.20		!CT-CT-N3    80.0      111.20    AA lys             (JCP 76, 1439)
+UUCT	UUCX	UNN3	80.0	111.20		!CT-CX-N3    80.0      111.20    AA lys             (JCP 76, 1439) (was CT-CT-N3)
+UUCT	UUCT	UUNT	80.0	111.20		!CT-CT-NT    80.0      111.20    neutral amines 
+UUCT	UUCT	UUCY	63.0	110.00		!CT-CT-CY    63.0      110.00    Junmei et al, 1999    
+UUCT	UUCT	UUCZ	63.0	110.00		!CT-CT-CZ    63.0      110.00    Junmei et al, 1999
+UAC	UUCT	UUCT	63.0	115.60		!C*-CT-CT    63.0      115.60    AA trp
+UAC	UUCT	UUCX	63.0	115.60		!C*-CT-CX    63.0      115.60    AA trp (was C*-CT-CT)
+UAC	UUCT	UUHC	50.0	109.50		!C*-CT-HC    50.0      109.50    AA trp    changed based on NMA nmodes
+UUOS	UUCT	UUOS	160.0	101.00		!OS-CT-OS   160.0      101.00    Junmei et al, 1999
+UUOS	UUCT	UUCY	50.0	110.00		!OS-CT-CY    50.0      110.00    Junmei et al, 1999
+UUOS	UUCT	UUCZ	50.0	110.00		!OS-CT-CZ    50.0      110.00    Junmei et al, 1999
+UUOS	UUCT	UAN	50.0	109.50		!OS-CT-N*    50.0      109.50
+USF	UUCT	USF	77.0	109.10		!F -CT-F     77.0      109.10    JCC,13,(1992),963;
+USF	UUCT	UNH1	50.0	109.50		!F -CT-H1    50.0      109.50    JCC,13,(1992),963;
+USF	UUCT	UUCT	50.0	109.00		!F -CT-CT    50.0      109.00    
+USF	UUCT	UNH2	50.0	109.50		!F -CT-H2    50.0      109.50  
+ULCL	UUCT	UUCT	50.0	108.50		!Cl-CT-CT    50.0      108.50    (6-31g* opt value)
+ULCL	UUCT	UNH1	50.0	108.50		!Cl-CT-H1    50.0      108.50    (6-31g* opt value)  
+ULBR	UUCT	UUCT	50.0	108.00		!Br-CT-CT    50.0      108.00    Junmei et al 99 
+ULBR	UUCT	UNH1	50.0	106.50		!Br-CT-H1    50.0      106.50    Junmei et al 99 
+USI	UUCT	UUCT	50.0	106.00		!I -CT-CT    50.0      106.00    Junmei et al,99 
+UUCT	UUCC	UUNA	70.0	120.00		!CT-CC-NA    70.0      120.00    AA his
+UUCT	UUCC	UUCV	70.0	120.00		!CT-CC-CV    70.0      120.00    AA his
+UUCT	UUCC	UUNB	70.0	120.00		!CT-CC-NB    70.0      120.00    AA his
+UUCV	UUCC	UUNA	70.0	120.00		!CV-CC-NA    70.0      120.00    AA his
+UUCW	UUCC	UUNA	70.0	120.00		!CW-CC-NA    70.0      120.00    AA his
+UUCW	UUCC	UUNB	70.0	120.00		!CW-CC-NB    70.0      120.00    AA his
+UUCT	UUCC	UUCW	70.0	120.00		!CT-CC-CW    70.0      120.00    AA his
+UNH5	UUCR	UUNA	50.0	120.00		!H5-CR-NA    50.0      120.00    AA his
+UNH5	UUCR	UUNB	50.0	120.00		!H5-CR-NB    50.0      120.00    AA his
+UUNA	UUCR	UUNA	70.0	120.00		!NA-CR-NA    70.0      120.00    AA his
+UUNA	UUCR	UUNB	70.0	120.00		!NA-CR-NB    70.0      120.00    AA his
+UUCC	UUCV	UNH4	50.0	120.00		!CC-CV-H4    50.0      120.00    AA his
+UUCC	UUCV	UUNB	70.0	120.00		!CC-CV-NB    70.0      120.00    AA his
+UNH4	UUCV	UUNB	50.0	120.00		!H4-CV-NB    50.0      120.00    AA his
+UUCC	UUCW	UNH4	50.0	120.00		!CC-CW-H4    50.0      120.00    AA his
+UUCC	UUCW	UUNA	70.0	120.00		!CC-CW-NA    70.0      120.00    AA his
+UAC	UUCW	UNH4	50.0	120.00		!C*-CW-H4    50.0      120.00    AA trp
+UAC	UUCW	UUNA	70.0	108.70		!C*-CW-NA    70.0      108.70    AA trp
+UNH4	UUCW	UUNA	50.0	120.00		!H4-CW-NA    50.0      120.00    AA his
+UUCB	UAC	UUCT	70.0	128.60		!CB-C*-CT    70.0      128.60    AA trp
+UUCB	UAC	UUCW	63.0	106.40		!CB-C*-CW    63.0      106.40    changed from 85.0  bsd on C6H6 nmodes; AA trp
+UUCT	UAC	UUCW	70.0	125.00		!CT-C*-CW    70.0      125.00    AA trp
+UUCA	UUCN	UUCB	63.0	122.70		!CA-CN-CB    63.0      122.70    changed from 85.0  bsd on C6H6 nmodes; AA trp
+UUCA	UUCN	UUNA	70.0	132.80		!CA-CN-NA    70.0      132.80    AA trp
+UUCB	UUCN	UUNA	70.0	104.40		!CB-CN-NA    70.0      104.40    AA trp
+UUCT	UUCY	UUNY	80.0	180.00		!CT-CY-NY    80.0      180.00    Junmei et al, 1999
+UUCT	UUCZ	UUCZ	80.0	180.00		!CT-CZ-CZ    80.0      180.00    Junmei et al, 1999
+UUCZ	UUCZ	UUHZ	50.0	180.00		!CZ-CZ-HZ    50.0      180.00    Junmei et al, 1999
+USC	USN	UUCT	50.0	121.90		!C -N -CT    50.0      121.90    AA general
+USC	USN	UUCX	50.0	121.90		!C -N -CX    50.0      121.90    AA general  (was C-N-CT)
+USC	USN	USH	50.0	120.00		!C -N -H     50.0      120.00    AA general, gln, asn,changed based on NMA nmodes
+UUCT	USN	USH	50.0	118.04		!CT-N -H     50.0      118.04    AA general,     changed based on NMA nmodes
+UUCX	USN	USH	50.0	118.04		!CX-N -H     50.0      118.04    AA general,     (was CT-N-H)
+UUCT	USN	UUCT	50.0	118.00		!CT-N -CT    50.0      118.00    AA pro             (DETAR JACS 99,1232)
+UUCT	USN	UUCX	50.0	118.00		!CT-N -CX    50.0      118.00    AA pro             (DETAR JACS 99,1232) (was CT-N -CT)
+USH	USN	USH	35.0	120.00		!H -N -H     35.0      120.00    ade,cyt,gua,gln,asn     **
+USC	UAN	UUCM	70.0	121.60		!C -N*-CM    70.0      121.60
+USC	UAN	UUCS	70.0	121.60		!C -N*-CS    70.0      121.60
+USC	UAN	UUCT	70.0	117.60		!C -N*-CT    70.0      117.60
+USC	UAN	USH	50.0	119.20		!C -N*-H     50.0      119.20    changed based on NMA nmodes
+UUCB	UAN	UUCK	70.0	105.40		!CB-N*-CK    70.0      105.40
+UUCB	UAN	UUCP	70.0	105.40		!CB-N*-CP    70.0      105.40
+UUCB	UAN	UUCT	70.0	125.80		!CB-N*-CT    70.0      125.80
+UUCB	UAN	USH	50.0	125.80		!CB-N*-H     50.0      125.80    for unmethylated n.a. bases,chngd bsd NMA nmodes
+UUCK	UAN	UUCT	70.0	128.80		!CK-N*-CT    70.0      128.80
+UUCK	UAN	USH	50.0	128.80		!CK-N*-H     50.0      128.80    for unmethylated n.a. bases,chngd bsd NMA nmodes
+UUCP	UAN	UUCT	70.0	128.80		!CP-N*-CT    70.0      128.80
+UUCP	UAN	USH	50.0	128.80		!CP-N*-H     50.0      128.80    for unmethylated n.a. bases,chngd bsd NMA nmodes
+UUCM	UAN	UUCT	70.0	121.20		!CM-N*-CT    70.0      121.20
+UUCM	UAN	USH	50.0	121.20		!CM-N*-H     50.0      121.20    for unmethylated n.a. bases,chngd bsd NMA nmodes
+UUCS	UAN	UUCT	70.0	121.20		!CS-N*-CT    70.0      121.20
+UUCS	UAN	USH	50.0	121.20		!CS-N*-H     50.0      121.20    for unmethylated n.a. bases,chngd bsd NMA nmodes
+UUCA	UNN2	USH	50.0	120.00		!CA-N2-H     50.0      120.00    
+UUCA	UNN2	UUCT	50.0	123.20		!CA-N2-CT    50.0      123.20    AA arg
+UUCT	UNN2	USH	50.0	118.40		!CT-N2-H     50.0      118.40    AA arg
+USH	UNN2	USH	35.0	120.00		!H -N2-H     35.0      120.00    
+UUCT	UNN3	USH	50.0	109.50		!CT-N3-H     50.0      109.50    AA lys,     changed based on NMA nmodes
+UUCX	UNN3	USH	50.0	109.50		!CX-N3-H     50.0      109.50    AA lys,     changed based on NMA nmodes (was CT-N3-H )
+UUCT	UNN3	UUCT	50.0	109.50		!CT-N3-CT    50.0      109.50    AA pro/nt
+UUCT	UNN3	UUCX	50.0	109.50		!CT-N3-CX    50.0      109.50    AA pro/nt (was CT-N3-CT)
+USH	UNN3	USH	35.0	109.50		!H -N3-H     35.0      109.50    AA lys, AA(end)
+UUCT	UUNT	USH	50.0	109.50		!CT-NT-H     50.0      109.50    neutral amines 
+UUCT	UUNT	UUCT	50.0	109.50		!CT-NT-CT    50.0      109.50    neutral amines 
+USH	UUNT	USH	35.0	109.50		!H -NT-H     35.0      109.50    neutral amines 
+USC	UUNA	USC	70.0	126.40		!C -NA-C     70.0      126.40
+USC	UUNA	UUCA	70.0	125.20		!C -NA-CA    70.0      125.20
+USC	UUNA	USH	50.0	116.80		!C -NA-H     50.0      116.80    changed based on NMA nmodes
+UUCA	UUNA	USH	50.0	118.00		!CA-NA-H     50.0      118.00    changed based on NMA nmodes
+UUCC	UUNA	UUCR	70.0	120.00		!CC-NA-CR    70.0      120.00    AA his
+UUCC	UUNA	USH	50.0	120.00		!CC-NA-H     50.0      120.00    AA his,    changed based on NMA nmodes
+UUCR	UUNA	UUCW	70.0	120.00		!CR-NA-CW    70.0      120.00    AA his
+UUCR	UUNA	USH	50.0	120.00		!CR-NA-H     50.0      120.00    AA his,    changed based on NMA nmodes
+UUCW	UUNA	USH	50.0	120.00		!CW-NA-H     50.0      120.00    AA his,    changed based on NMA nmodes
+UUCN	UUNA	UUCW	70.0	111.60		!CN-NA-CW    70.0      111.60    AA trp
+UUCN	UUNA	USH	50.0	123.10		!CN-NA-H     50.0      123.10    AA trp,    changed based on NMA nmodes
+UUCB	UUNB	UUCK	70.0	103.80		!CB-NB-CK    70.0      103.80
+UUCB	UUNB	UUCP	70.0	103.80		!CB-NB-CP    70.0      103.80
+UUCC	UUNB	UUCR	70.0	117.00		!CC-NB-CR    70.0      117.00    AA his
+UUCR	UUNB	UUCV	70.0	117.00		!CR-NB-CV    70.0      117.00    AA his
+USC	UUNC	UUCA	70.0	120.50		!C -NC-CA    70.0      120.50
+UUCA	UUNC	UUCB	70.0	112.20		!CA-NC-CB    70.0      112.20
+UUCA	UUNC	UUCQ	70.0	118.60		!CA-NC-CQ    70.0      118.60
+UUCB	UUNC	UUCQ	70.0	111.00		!CB-NC-CQ    70.0      111.00
+USC	UUOH	UUHO	50.0	113.00		!C -OH-HO    50.0      113.00    (not used in tyr anymore)
+UUCA	UUOH	UUHO	50.0	113.00		!CA-OH-HO    50.0      113.00    replacement in tyr
+UUCT	UUOH	UUHO	55.0	108.50		!CT-OH-HO    55.0      108.50
+UUHO	UUOH	USP	45.0	108.50		!HO-OH-P     45.0      108.50
+USC	UUOS	UUCT	60.0	117.00		!C -OS-CT    60.0      117.00    Junmei et al, 1999
+UUCM	UUOS	UUCT	60.0	117.00		!CM-OS-CT    60.0      117.00    Junmei et al, 1999
+UUCS	UUOS	UUCT	60.0	117.00		!CS-OS-CT    60.0      117.00    Junmei et al, 1999
+UUCT	UUOS	UUCT	60.0	109.50		!CT-OS-CT    60.0      109.50
+UUCT	UUOS	USP	100.0	120.50		!CT-OS-P    100.0      120.50
+USC	UUOS	USP	100.0	120.50		!C -OS-P    100.0      120.50    phosphotyrosine
+USP	UUOS	USP	100.0	120.50		!P -OS-P    100.0      120.50
+UNO2	USP	UUOH	45.0	108.23		!O2-P -OH    45.0      108.23
+UNO2	USP	UNO2	140.0	119.90		!O2-P -O2   140.0      119.90
+UUOP	USP	UUOP	140.0	119.90		!OP-P -OP   140.0      119.90
+UUOP	USP	UUOS	100.0	108.23		!OP-P -OS   100.0      108.23
+UNO2	USP	UUOS	100.0	108.23		!O2-P -OS   100.0      108.23
+UUOH	USP	UUOS	45.0	102.60		!OH-P -OS    45.0      102.60
+UUOS	USP	UUOS	45.0	102.60		!OS-P -OS    45.0      102.60
+UUCT	USS	UUCT	62.0	98.90		!CT-S -CT    62.0       98.90    AA met
+UUCT	USS	USS	68.0	103.70		!CT-S -S     68.0      103.70    AA cyx             (SCHERAGA  JPC 79,1428)
+UUCT	UUSH	UUHS	43.0	96.00		!CT-SH-HS    43.0       96.00    changed from 44.0 based on methanethiol nmodes
+UUHS	UUSH	UUHS	35.0	92.07		!HS-SH-HS    35.0       92.07    AA cys
+UUCB	UUNB	UUEP	150.0	126.0		!CB-NB-EP   150.0       126.0    NA
+UUCC	UUNB	UUEP	150.0	126.0		!CC-NB-EP   150.0       126.0    his,NA
+UUCK	UUNB	UUEP	150.0	126.0		!CK-NB-EP   150.0       126.0    NA
+UUCP	UUNB	UUEP	150.0	126.0		!CP-NB-EP   150.0       126.0    NA
+UUCR	UUNB	UUEP	150.0	126.0		!CR-NB-EP   150.0       126.0    his,NA
+UUCV	UUNB	UUEP	150.0	126.0		!CV-NB-EP   150.0       126.0    his,NA
+USC	UUNC	UUEP	150.0	120.0		!C -NC-EP   150.0       120.0    NA
+UUCA	UUNC	UUEP	150.0	120.0		!CA-NC-EP   150.0       120.0    NA
+UUCB	UUNC	UUEP	150.0	120.0		!CB-NC-EP   150.0       120.0    NA
+UUCQ	UUNC	UUEP	150.0	120.0		!CQ-NC-EP   150.0       120.0    NA
+UUCT	UNN3	UUEP	150.0	109.5		!CT-N3-EP   150.0       109.5    in neutral lysine
+USH	UNN3	UUEP	150.0	109.5		!H -N3-EP   150.0       109.5    in neutral lysine
+UUCT	UUNT	UUEP	150.0	109.5		!CT-NT-EP   150.0       109.5
+USH	UUNT	UUEP	150.0	109.5		!H -NT-EP   150.0       109.5
+USC	USO	UUEP	150.0	120.0		!C -O -EP   150.0       120.0
+UUEP	USO	UUEP	150.0	120.0		!EP-O -EP   150.0       120.0
+USC	UUOH	UUEP	150.0	120.0		!C -OH-EP   150.0       120.0
+UUCT	UUOH	UUEP	150.0	109.5		!CT-OH-EP   150.0       109.5
+UUHO	UUOH	UUEP	150.0	109.5		!HO-OH-EP   150.0       109.5
+UUEP	UUOH	UUEP	150.0	109.5		!EP-OH-EP   150.0       109.5
+USC	UUOS	UUEP	150.0	109.5		!C -OS-EP   150.0       109.5 
+UUCM	UUOS	UUEP	150.0	109.5		!CM-OS-EP   150.0       109.5    methyl vinyl ether
+UUCS	UUOS	UUEP	150.0	109.5		!CS-OS-EP   150.0       109.5    methyl vinyl ether
+UUCT	UUOS	UUEP	150.0	109.5		!CT-OS-EP   150.0       109.5
+UUEP	UUOS	UUEP	150.0	109.5		!EP-OS-EP   150.0       109.5
+UUCT	USS	UUEP	150.0	90.0		!CT-S -EP   150.0        90.0    cys,cyx,met
+UUCT	UUSH	UUEP	150.0	90.0		!CT-SH-EP   150.0        90.0    cys,cyx,met
+USP	UUOS	UUEP	150.0	109.5		!P -OS-EP   150.0       109.5    NA
+UUEP	USS	UUEP	150.0	180.0		!EP-S -EP   150.0       180.0    cys,cyx,met
+UUEP	UUSH	UUEP	150.0	180.0		!EP-SH-EP   150.0       180.0    cys,cyx,met
+UUHS	UUSH	UUEP	150.0	90.0		!HS-SH-EP   150.0        90.0    cys  
+UNH1	UUCI	UUCT	50.0	109.50		!H1-CI-CT    50.0      109.50    parmbsc0
+UNH1	UUCI	UNH1	35.0	109.50		!H1-CI-H1    35.0      109.50    parmbsc0
+UUCI	UUCT	UNH1	50.0	109.50		!CI-CT-H1    50.0      109.50    parmbsc0
+UUCI	UUCT	UUOS	50.0	109.50		!CI-CT-OS    50.0      109.50    parmbsc0
+UUCI	UUCT	UUCT	40.0	109.50		!CI-CT-CT    40.0      109.50    parmbsc0
+UUOS	UUCI	UNH1	50.0	109.50		!OS-CI-H1    50.0      109.50   parmbsc0
+UUOS	UUCI	UUCT	50.0	109.50		!OS-CI-CT    50.0      109.50   parmbsc0
+USP	UUOS	UUCI	100.0	120.50		!P -OS-CI   100.0      120.50   parmbsc0
+UUOH	UUCI	UNH1	50.0	109.50		!OH-CI-H1    50.0      109.50   parmbsc0
+UUOH	UUCI	UUCT	50.0	109.50		!OH-CI-CT    50.0      109.50   parmbsc0
+UUHO	UUOH	UUCI	55.0	108.50		!HO-OH-CI    55.0      108.50   parmbsc0
+UNH5	UNC5	UAN	50.0	123.05		!H5-C5-N*    50.0      123.05
+UNH5	UNC5	UUNB	50.0	123.05		!H5-C5-NB    50.0      123.05
+UAN	UNC5	UUNB	70.0	113.90		!N*-C5-NB    70.0      113.90
+UUCB	UAN	UNC5	70.0	105.40		!CB-N*-C5    70.0      105.40
+UNC5	UAN	UUCT	70.0	128.80		!C5-N*-CT    70.0      128.80
+UUCB	UUNB	UNC5	70.0	103.80		!CB-NB-C5    70.0      103.80
+UNC4	USC	UUNA	70.0	114.10		!C4-C -NA    70.0      114.10
+UNC4	USC	USO	80.0	125.30		!C4-C -O     80.0      125.30
+UNC4	UUCA	UNN2	70.0	120.10		!C4-CA-N2    70.0      120.10
+UNC4	UUCA	UUNC	70.0	121.50		!C4-CA-NC    70.0      121.50
+USC	UNC4	UNC4	63.0	120.70		!C -C4-C4    63.0      120.70    changed from 85.0  bsd on C6H6 nmodes; NA thy
+USC	UNC4	UUCT	70.0	119.70		!C -C4-CT    70.0      119.70
+USC	UNC4	UUHA	50.0	119.70		!C -C4-HA    50.0      119.70
+USC	UNC4	UNH4	50.0	119.70		!C -C4-H4    50.0      119.70
+UUCA	UNC4	UNC4	63.0	117.00		!CA-C4-C4    63.0      117.00    changed from 85.0  bsd on C6H6 nmodes; NA cyt
+UUCA	UNC4	UUHA	50.0	123.30		!CA-C4-HA    50.0      123.30
+UUCA	UNC4	UNH4	50.0	123.30		!CA-C4-H4    50.0      123.30
+UNC4	UNC4	UUCT	70.0	119.70		!C4-C4-CT    70.0      119.70
+UNC4	UNC4	UUHA	50.0	119.70		!C4-C4-HA    50.0      119.70
+UNC4	UNC4	UNH4	50.0	119.70		!C4-C4-H4    50.0      119.70
+UNC4	UNC4	UAN	70.0	121.20		!C4-C4-N*    70.0      121.20
+UNH4	UNC4	UAN	50.0	119.10		!H4-C4-N*    50.0      119.10
+UNH1	UUCT	UNC4	50.0	109.50		!H1-CT-C4    50.0      109.50    Junmei et al, 1999 
+UUHC	UUCT	UNC4	50.0	109.50		!HC-CT-C4    50.0      109.50    changed based on NMA nmodes
+USC	UAN	UNC4	70.0	121.60		!C -N*-C4    70.0      121.60
+UNC4	UAN	UUCT	70.0	121.20		!C4-N*-CT    70.0      121.20
+UUEP	USS	USS	150.0	96.70		!EP-S -S    150.0       96.70    AA cyx (dac, from parm91 LP-S-S)
+
+DIHEDRALS
+!B1 B2 B3 B4 k type phi 
+X	USC	USC	X	3.6250000000	2	180.0000000000		!X -C -C -X    4   14.50        180.0             2.         Junmei et al, 1999
+X	USC	UUCA	X	3.6250000000	2	180.0000000000		!X -C -CA-X    4   14.50        180.0             2.         intrpol.bsd.on C6H6
+X	USC	UUCB	X	3.0000000000	2	180.0000000000		!X -C -CB-X    4   12.00        180.0             2.         intrpol.bsd.on C6H6
+X	USC	UUCM	X	2.1750000000	2	180.0000000000		!X -C -CM-X    4    8.70        180.0             2.         intrpol.bsd.on C6H6
+X	USC	UUCS	X	2.1750000000	2	180.0000000000		!X -C -CS-X    4    8.70        180.0             2.         intrpol.bsd.on C6H6
+X	USC	UUCT	X	0.0000000000	2	0.0000000000		!X -C -CT-X    6    0.00          0.0             2.         JCC,7,(1986),230
+X	USC	UUCX	X	0.0000000000	2	0.0000000000		!X -C -CX-X    6    0.00          0.0             2.         JCC,7,(1986),230 (was X -C -CT-X )
+X	USC	USN	X	2.5000000000	2	180.0000000000		!X -C -N -X    4   10.00        180.0             2.         AA,NMA
+X	USC	UAN	X	1.4500000000	2	180.0000000000		!X -C -N*-X    4    5.80        180.0             2.         JCC,7,(1986),230
+X	USC	UUNA	X	1.3500000000	2	180.0000000000		!X -C -NA-X    4    5.40        180.0             2.         JCC,7,(1986),230
+X	USC	UUNC	X	4.0000000000	2	180.0000000000		!X -C -NC-X    2    8.00        180.0             2.         JCC,7,(1986),230
+X	USC	USO	X	2.8000000000	2	180.0000000000		!X -C -O -X    4   11.20        180.0             2.         Junmei et al, 1999
+X	USC	UUOH	X	2.3000000000	2	180.0000000000		!X -C -OH-X    2    4.60        180.0             2.         Junmei et al, 1999
+X	USC	UUOS	X	2.7000000000	2	180.0000000000		!X -C -OS-X    2    5.40        180.0             2.         Junmei et al, 1999
+X	UUCA	UUCA	X	3.6250000000	2	180.0000000000		!X -CA-CA-X    4   14.50        180.0             2.         intrpol.bsd.on C6H6
+X	UUCA	UUCB	X	3.5000000000	2	180.0000000000		!X -CA-CB-X    4   14.00        180.0             2.         intrpol.bsd.on C6H6
+X	UUCA	UUCM	X	2.5500000000	2	180.0000000000		!X -CA-CM-X    4   10.20        180.0             2.         intrpol.bsd.on C6H6
+X	UUCA	UUCS	X	2.5500000000	2	180.0000000000		!X -CA-CS-X    4   10.20        180.0             2.         intrpol.bsd.on C6H6
+X	UUCA	UUCN	X	3.6250000000	2	180.0000000000		!X -CA-CN-X    4   14.50        180.0             2.         reinterpolated 93'
+X	UUCA	UUCT	X	0.0000000000	2	0.0000000000		!X -CA-CT-X    6    0.00          0.0             2.         JCC,7,(1986),230
+X	UUCA	UNN2	X	2.4000000000	2	180.0000000000		!X -CA-N2-X    4    9.60        180.0             2.         reinterpolated 93'
+X	UUCA	UUNA	X	1.5000000000	2	180.0000000000		!X -CA-NA-X    4    6.00        180.0             2.         JCC,7,(1986),230
+X	UUCA	UUNC	X	4.8000000000	2	180.0000000000		!X -CA-NC-X    2    9.60        180.0             2.         JCC,7,(1986),230
+X	UUCA	UUOH	X	0.9000000000	2	180.0000000000		!X -CA-OH-X    2    1.80        180.0             2.         Junmei et al, 99
+X	UUCB	UUCB	X	5.4500000000	2	180.0000000000		!X -CB-CB-X    4   21.80        180.0             2.         intrpol.bsd.on C6H6
+X	UUCB	UUCN	X	3.0000000000	2	180.0000000000		!X -CB-CN-X    4   12.00        180.0             2.         reinterpolated 93'
+X	UUCB	UAN	X	1.6500000000	2	180.0000000000		!X -CB-N*-X    4    6.60        180.0             2.         JCC,7,(1986),230
+X	UUCB	UUNB	X	2.5500000000	2	180.0000000000		!X -CB-NB-X    2    5.10        180.0             2.         JCC,7,(1986),230
+X	UUCB	UUNC	X	4.1500000000	2	180.0000000000		!X -CB-NC-X    2    8.30        180.0             2.         JCC,7,(1986),230
+X	UUCC	UUCT	X	0.0000000000	2	0.0000000000		!X -CC-CT-X    6    0.00          0.0             2.         JCC,7,(1986),230
+X	UUCC	UUCV	X	5.1500000000	2	180.0000000000		!X -CC-CV-X    4   20.60        180.0             2.         intrpol.bsd.on C6H6
+X	UUCC	UUCW	X	5.3750000000	2	180.0000000000		!X -CC-CW-X    4   21.50        180.0             2.         intrpol.bsd.on C6H6
+X	UUCC	UUNA	X	1.4000000000	2	180.0000000000		!X -CC-NA-X    4    5.60        180.0             2.         JCC,7,(1986),230
+X	UUCC	UUNB	X	2.4000000000	2	180.0000000000		!X -CC-NB-X    2    4.80        180.0             2.         JCC,7,(1986),230
+X	UUCD	UUCD	X	1.0000000000	2	180.0000000000		!X -CD-CD-X    4    4.00        180.0             2.         Junmei et al, 1999
+X	UUCD	UUCT	X	0.0000000000	2	0.0000000000		!X -CD-CT-X    6    0.00          0.0             2.         Junmei et al, 1999
+X	UUCD	UUCM	X	6.6500000000	2	180.0000000000		!X -CD-CM-X    4   26.60        180.0             2.         Junmei et al, 1999
+X	UUCD	UUCS	X	6.6500000000	2	180.0000000000		!X -CD-CS-X    4   26.60        180.0             2.         Junmei et al, 1999
+X	UUCK	UAN	X	1.7000000000	2	180.0000000000		!X -CK-N*-X    4    6.80        180.0             2.         JCC,7,(1986),230
+X	UUCK	UUNB	X	10.0000000000	2	180.0000000000		!X -CK-NB-X    2   20.00        180.0             2.         JCC,7,(1986),230
+X	UUCP	UAN	X	1.7000000000	2	180.0000000000		!X -CP-N*-X    4    6.80        180.0             2.         JCC,7,(1986),230
+X	UUCP	UUNB	X	10.0000000000	2	180.0000000000		!X -CP-NB-X    2   20.00        180.0             2.         JCC,7,(1986),230
+X	UUCM	UUCM	X	6.6500000000	2	180.0000000000		!X -CM-CM-X    4   26.60        180.0             2.         intrpol.bsd.on C6H6
+X	UUCM	UUCT	X	0.0000000000	3	0.0000000000		!X -CM-CT-X    6    0.00          0.0             3.         JCC,7,(1986),230
+X	UUCM	UAN	X	1.8500000000	2	180.0000000000		!X -CM-N*-X    4    7.40        180.0             2.         JCC,7,(1986),230
+X	UUCM	UUOS	X	1.0500000000	2	180.0000000000		!X -CM-OS-X    2    2.10        180.0             2.         Junmei et al, 1999
+X	UUCS	UUCS	X	6.6500000000	2	180.0000000000		!X -CS-CS-X    4   26.60        180.0             2.         intrpol.bsd.on C6H6
+X	UUCS	UUCT	X	0.0000000000	3	0.0000000000		!X -CS-CT-X    6    0.00          0.0             3.         JCC,7,(1986),230
+X	UUCS	UAN	X	1.8500000000	2	180.0000000000		!X -CS-N*-X    4    7.40        180.0             2.         JCC,7,(1986),230
+X	UUCS	UUOS	X	1.0500000000	2	180.0000000000		!X -CS-OS-X    2    2.10        180.0             2.         Junmei et al, 1999
+X	UUCN	UUNA	X	1.5250000000	2	180.0000000000		!X -CN-NA-X    4    6.10        180.0             2.         reinterpolated 93'
+X	UUCQ	UUNC	X	6.8000000000	2	180.0000000000		!X -CQ-NC-X    2   13.60        180.0             2.         JCC,7,(1986),230
+X	UUCT	UUCT	X	0.1555555556	3	0.0000000000		!X -CT-CT-X    9    1.40          0.0             3.         JCC,7,(1986),230
+X	UUCT	UUCX	X	0.1555555556	3	0.0000000000		!X -CT-CX-X    9    1.40          0.0             3.         JCC,7,(1986),230 (was X -CT-CT-X )
+X	UUCT	UUCY	X	0.0000000000	1	0.0000000000		!X -CT-CY-X    3    0.00          0.0             1.         Junmei et al, 1999
+X	UUCT	UUCZ	X	0.0000000000	1	0.0000000000		!X -CT-CZ-X    3    0.00          0.0             1.         Junmei et al, 1999
+X	UUCT	USN	X	0.0000000000	2	0.0000000000		!X -CT-N -X    6    0.00          0.0             2.         JCC,7,(1986),230
+X	UUCX	USN	X	0.0000000000	2	0.0000000000		!X -CX-N -X    6    0.00          0.0             2.         JCC,7,(1986),230 (was X -CT-N -X )
+X	UUCT	UAN	X	0.0000000000	2	0.0000000000		!X -CT-N*-X    6    0.00          0.0             2.         JCC,7,(1986),230
+X	UUCT	UNN2	X	0.0000000000	3	0.0000000000		!X -CT-N2-X    6    0.00          0.0             3.         JCC,7,(1986),230
+X	UUCT	UUNT	X	0.3000000000	3	0.0000000000		!X -CT-NT-X    6    1.80          0.0             3.         Junmei et al, 1999
+X	UUCT	UNN3	X	0.1555555556	3	0.0000000000		!X -CT-N3-X    9    1.40          0.0             3.         JCC,7,(1986),230
+X	UUCX	UNN3	X	0.1555555556	3	0.0000000000		!X -CX-N3-X    9    1.40          0.0             3.         JCC,7,(1986),230 (was X -CT-N3-X )
+X	UUCT	UUOH	X	0.1666666667	3	0.0000000000		!X -CT-OH-X    3    0.50          0.0             3.         JCC,7,(1986),230
+X	UUCT	UUOS	X	0.3833333333	3	0.0000000000		!X -CT-OS-X    3    1.15          0.0             3.         JCC,7,(1986),230
+X	UUCT	USS	X	0.3333333333	3	0.0000000000		!X -CT-S -X    3    1.00          0.0             3.         JCC,7,(1986),230
+X	UUCT	UUSH	X	0.2500000000	3	0.0000000000		!X -CT-SH-X    3    0.75          0.0             3.         JCC,7,(1986),230
+X	UAC	UUCB	X	1.6750000000	2	180.0000000000		!X -C*-CB-X    4    6.70        180.0             2.         intrpol.bsd.onC6H6aa
+X	UAC	UUCT	X	0.0000000000	2	0.0000000000		!X -C*-CT-X    6    0.00          0.0             2.         JCC,7,(1986),230
+X	UAC	UUCW	X	6.5250000000	2	180.0000000000		!X -C*-CW-X    4   26.10        180.0             2.         intrpol.bsd.on C6H6
+X	UUCR	UUNA	X	2.3250000000	2	180.0000000000		!X -CR-NA-X    4    9.30        180.0             2.         JCC,7,(1986),230
+X	UUCR	UUNB	X	5.0000000000	2	180.0000000000		!X -CR-NB-X    2   10.00        180.0             2.         JCC,7,(1986),230
+X	UUCV	UUNB	X	2.4000000000	2	180.0000000000		!X -CV-NB-X    2    4.80        180.0             2.         JCC,7,(1986),230
+X	UUCW	UUNA	X	1.5000000000	2	180.0000000000		!X -CW-NA-X    4    6.00        180.0             2.         JCC,7,(1986),230
+X	UUOH	USP	X	0.2500000000	3	0.0000000000		!X -OH-P -X    3    0.75          0.0             3.         JCC,7,(1986),230
+X	UUOS	USP	X	0.2500000000	3	0.0000000000		!X -OS-P -X    3    0.75          0.0             3.         JCC,7,(1986),230
+X	UUCI	UUOS	X	0.3833333333	3	0.0000000000		!X -CI-OS-X    3    1.150         0.0             3.
+X	UUCI	UUOH	X	0.1666666667	3	0.0000000000		!X -CI-OH-X    3    0.500         0.0             3.
+X	UUCI	UUCT	X	0.1555555556	3	0.0000000000		!X -CI-CT-X    9    1.400         0.0             3.
+X	UNC5	UAN	X	1.7000000000	2	180.0000000000		!X -C5-N*-X    4    6.80        180.0             2.         JCC,7,(1986),230
+X	UNC5	UUNB	X	10.0000000000	2	180.0000000000		!X -C5-NB-X    2   20.00        180.0             2.         JCC,7,(1986),230
+X	USC	UNC4	X	2.1750000000	2	180.0000000000		!X -C -C4-X    4    8.70        180.0             2.         intrpol.bsd.on C6H6
+X	UUCA	UNC4	X	2.5500000000	2	180.0000000000		!X -CA-C4-X    4   10.20        180.0             2.         intrpol.bsd.on C6H6
+X	UNC4	UNC4	X	6.6500000000	2	180.0000000000		!X -C4-C4-X    4   26.60        180.0             2.         intrpol.bsd.on C6H6
+X	UNC4	UUCT	X	0.0000000000	3	0.0000000000		!X -C4-CT-X    6    0.00          0.0             3.         JCC,7,(1986),230
+X	UNC4	UAN	X	1.8500000000	2	180.0000000000		!X -C4-N*-X    4    7.40        180.0             2.         JCC,7,(1986),230
+UUCT	UUOS	UUCT	UUCI	0.3830000000	3	0.0000000000		!CT-OS-CT-CI   1    0.383         0.0            -3.
+UUCT	UUOS	UUCT	UUCI	0.1000000000	2	180.0000000000		!CT-OS-CT-CI   1    0.100       180.0             2.
+UNH1	UUCI	UUCT	UUOS	0.0000000000	3	0.0000000000		!H1-CI-CT-OS   1    0.00          0.0            -3.
+UNH1	UUCI	UUCT	UUOS	0.2500000000	1	0.0000000000		!H1-CI-CT-OS   1    0.250         0.0             1.
+UNH1	UUCI	UUCT	UUOH	0.0000000000	3	0.0000000000		!H1-CI-CT-OH   1    0.000         0.0            -3.
+UNH1	UUCI	UUCT	UUOH	0.2500000000	1	0.0000000000		!H1-CI-CT-OH   1    0.250         0.0             1.
+UNH1	UUCT	UUCI	UUOS	0.0000000000	3	0.0000000000		!H1-CT-CI-OS   1    0.00          0.0            -3.
+UNH1	UUCT	UUCI	UUOS	0.2500000000	1	0.0000000000		!H1-CT-CI-OS   1    0.250         0.0             1.
+UNH1	UUCT	UUCI	UUOH	0.0000000000	3	0.0000000000		!H1-CT-CI-OH   1    0.00          0.0            -3.
+UNH1	UUCT	UUCI	UUOH	0.2500000000	1	0.0000000000		!H1-CT-CI-OH   1    0.250         0.0             1.
+UUCI	UUCT	UUCT	UUCT	0.1800000000	3	0.0000000000		!CI-CT-CT-CT   1    0.180         0.0            -3.
+UUCI	UUCT	UUCT	UUCT	0.2500000000	2	180.0000000000		!CI-CT-CT-CT   1    0.250       180.0            -2.
+UUCI	UUCT	UUCT	UUCT	0.2000000000	1	180.0000000000		!CI-CT-CT-CT   1    0.200       180.0             1.
+UUOP	USP	UUOS	UUCA	0.0000000000	3	180.0000000000		!OP-P -OS-CA   1    0.0         180.0            -3.         phosphotyrosine
+UUOP	USP	UUOS	UUCA	0.0000000000	1	180.0000000000		!OP-P -OS-CA   1    0.0         180.0             1.         phosphotyrosine
+UUCC	UUNA	USP	UUOP	0.2400000000	3	0.0000000000		!CC-NA-P -OP   1    0.24          0.0             3.         phosphohistidine
+UUCR	UUNA	USP	UUOP	0.0000000000	3	0.0000000000		!CR-NA-P -OP   1    0.00          0.0             3.         phosphohistidine
+UUOS	USP	UUOS	UUCI	0.1851810000	1	31.7950800000		!OS-P -OS-CI   1    0.185181     31.79508        -1.         alfa
+UUOS	USP	UUOS	UUCI	1.2565310000	2	351.9596000000		!OS-P -OS-CI   1    1.256531    351.95960        -2.         alfa
+UUOS	USP	UUOS	UUCI	0.3548580000	3	357.2474800000		!OS-P -OS-CI   1    0.354858    357.24748         3.         alfa
+UUOH	USP	UUOS	UUCI	0.1851810000	1	31.7950800000		!OH-P -OS-CI   1    0.185181     31.79508        -1.         alfa
+UUOH	USP	UUOS	UUCI	1.2565310000	2	351.9596000000		!OH-P -OS-CI   1    1.256531    351.95960        -2.         alfa
+UUOH	USP	UUOS	UUCI	0.3548580000	3	357.2474800000		!OH-P -OS-CI   1    0.354858    357.24748         3.         alfa
+UUCT	UUCT	UUCI	UUOS	1.1780400000	1	190.9765300000		!CT-CT-CI-OS   1    1.178040    190.97653        -1.         gamma
+UUCT	UUCT	UUCI	UUOS	0.0921020000	2	295.6327900000		!CT-CT-CI-OS   1    0.092102    295.63279        -2.         gamma
+UUCT	UUCT	UUCI	UUOS	0.9628300000	3	348.0953500000		!CT-CT-CI-OS   1    0.962830    348.09535         3.         gamma
+UUCT	UUCT	UUCI	UUOH	1.1780400000	1	190.9765300000		!CT-CT-CI-OH   1    1.178040    190.97653        -1.         gamma
+UUCT	UUCT	UUCI	UUOH	0.0921020000	2	295.6327900000		!CT-CT-CI-OH   1    0.092102    295.63279        -2.         gamma
+UUCT	UUCT	UUCI	UUOH	0.9628300000	3	348.0953500000		!CT-CT-CI-OH   1    0.962830    348.09535         3.         gamma
+UUHC	UUCT	UNC4	UNC4	0.3800000000	3	180.0000000000		!HC-CT-C4-C4   1    0.38        180.0            -3.         Junmei et al, 1999
+UUHC	UUCT	UNC4	UNC4	1.1500000000	1	0.0000000000		!HC-CT-C4-C4   1    1.15          0.0             1.         Junmei et al, 1999
+UNC4	UNC4	USC	USO	2.1750000000	2	180.0000000000		!C4-C4-C -O    1    2.175       180.0            -2.         Junmei et al, 1999
+UNC4	UNC4	USC	USO	0.3000000000	3	0.0000000000		!C4-C4-C -O    1    0.30          0.0             3.         Junmei et al, 1999
+UUOS	UUCT	UAN	UNC5	0.9656100000	1	68.7902000000		!OS-CT-N*-C5   1    0.96561      68.7902         -1.         ol3 chi ade
+UUOS	UUCT	UAN	UNC5	1.0740300000	2	15.6360000000		!OS-CT-N*-C5   1    1.07403      15.6360         -2.         ol3 chi ade
+UUOS	UUCT	UAN	UNC5	0.4575400000	3	171.5787000000		!OS-CT-N*-C5   1    0.45754     171.5787         -3.         ol3 chi ade
+UUOS	UUCT	UAN	UNC5	0.3091700000	4	19.0921000000		!OS-CT-N*-C5   1    0.30917      19.0921          4.         ol3 chi ade
+UUOS	UUCT	UAN	UUCP	0.7051000000	1	74.7558000000		!OS-CT-N*-CP   1    0.70510      74.7558         -1.         ol3 chi gua
+UUOS	UUCT	UAN	UUCP	1.0654600000	2	6.2286000000		!OS-CT-N*-CP   1    1.06546       6.2286         -2.         ol3 chi gua
+UUOS	UUCT	UAN	UUCP	0.4427300000	3	168.6503000000		!OS-CT-N*-CP   1    0.44273     168.6503         -3.         ol3 chi gua
+UUOS	UUCT	UAN	UUCP	0.2560200000	4	3.9746000000		!OS-CT-N*-CP   1    0.25602       3.9746          4.         ol3 chi gua
+UUOS	UUCT	UAN	UNC4	1.2250600000	1	146.9892000000		!OS-CT-N*-C4   1    1.22506     146.9892         -1.         ol3 chi cyt
+UUOS	UUCT	UAN	UNC4	1.6345900000	2	16.4766000000		!OS-CT-N*-C4   1    1.63459      16.4766         -2.         ol3 chi cyt
+UUOS	UUCT	UAN	UNC4	0.9374700000	3	185.8774000000		!OS-CT-N*-C4   1    0.93747     185.8774         -3.         ol3 chi cyt
+UUOS	UUCT	UAN	UNC4	0.3103300000	4	32.1590000000		!OS-CT-N*-C4   1    0.31033      32.1590          4.         ol3 chi cyt
+UUOS	UUCT	UAN	UUCS	1.0251400000	1	149.8583000000		!OS-CT-N*-CS   1    1.02514     149.8583         -1.         ol3 chi ura
+UUOS	UUCT	UAN	UUCS	1.7487600000	2	16.7648000000		!OS-CT-N*-CS   1    1.74876      16.7648         -2.         ol3 chi ura
+UUOS	UUCT	UAN	UUCS	0.5815000000	3	179.3474000000		!OS-CT-N*-CS   1    0.58150     179.3474         -3.         ol3 chi ura
+UUOS	UUCT	UAN	UUCS	0.3514800000	4	16.0016000000		!OS-CT-N*-CS   1    0.35148      16.0016          4.         ol3 chi ura
+USC	USN	UUCX	USC	0.0000000000	4	0.0000000000		!C -N -CX-C    1    0.00          0.0            -4.         four amplitudes and
+USC	USN	UUCX	USC	0.4200000000	3	0.0000000000		!C -N -CX-C    1    0.42          0.0            -3.         phases for phi
+USC	USN	UUCX	USC	0.2700000000	2	0.0000000000		!C -N -CX-C    1    0.27          0.0            -2.
+USC	USN	UUCX	USC	0.0000000000	1	0.0000000000		!C -N -CX-C    1    0.00          0.0             1.
+USN	UUCX	USC	USN	0.0000000000	4	0.0000000000		!N -CX-C -N    1    0.00          0.0            -4.         four amplitudes and
+USN	UUCX	USC	USN	0.5500000000	3	180.0000000000		!N -CX-C -N    1    0.55        180.0            -3.         phases for psi
+USN	UUCX	USC	USN	1.5800000000	2	180.0000000000		!N -CX-C -N    1    1.58        180.0            -2.
+USN	UUCX	USC	USN	0.4500000000	1	180.0000000000		!N -CX-C -N    1    0.45        180.0             1.
+UUCT	UUCT	USN	USC	0.0000000000	4	0.0000000000		!CT-CT-N -C    1    0.00          0.0            -4.         four amplitudes and
+UUCT	UUCT	USN	USC	0.4000000000	3	0.0000000000		!CT-CT-N -C    1    0.40          0.0            -3.         phases for phi'
+UUCT	UUCT	USN	USC	2.0000000000	2	0.0000000000		!CT-CT-N -C    1    2.00          0.0            -2.
+UUCT	UUCT	USN	USC	2.0000000000	1	0.0000000000		!CT-CT-N -C    1    2.00          0.0             1.
+UUCT	UUCX	USN	USC	0.0000000000	4	0.0000000000		!CT-CX-N -C    1    0.00          0.0            -4.         four amplitudes and
+UUCT	UUCX	USN	USC	0.4000000000	3	0.0000000000		!CT-CX-N -C    1    0.40          0.0            -3.         phases for phi'
+UUCT	UUCX	USN	USC	2.0000000000	2	0.0000000000		!CT-CX-N -C    1    2.00          0.0            -2.
+UUCT	UUCX	USN	USC	2.0000000000	1	0.0000000000		!CT-CX-N -C    1    2.00          0.0             1.
+UUCT	UUCT	USC	USN	0.0000000000	4	0.0000000000		!CT-CT-C -N    1    0.00          0.0            -4.         four amplitudes and
+UUCT	UUCT	USC	USN	0.4000000000	3	0.0000000000		!CT-CT-C -N    1    0.40          0.0            -3.         phases for psi'
+UUCT	UUCT	USC	USN	0.2000000000	2	0.0000000000		!CT-CT-C -N    1    0.20          0.0            -2.
+UUCT	UUCT	USC	USN	0.2000000000	1	0.0000000000		!CT-CT-C -N    1    0.20          0.0             1.
+UUCT	UUCX	USC	USN	0.0000000000	4	0.0000000000		!CT-CX-C -N    1    0.00          0.0            -4.         four amplitudes and
+UUCT	UUCX	USC	USN	0.4000000000	3	0.0000000000		!CT-CX-C -N    1    0.40          0.0            -3.         phases for psi'
+UUCT	UUCX	USC	USN	0.2000000000	2	0.0000000000		!CT-CX-C -N    1    0.20          0.0            -2.
+UUCT	UUCX	USC	USN	0.2000000000	1	0.0000000000		!CT-CX-C -N    1    0.20          0.0             1.
+UUCX	UUCT	USC	USN	0.0000000000	4	0.0000000000		!CX-CT-C -N    1    0.00          0.0            -4.         four amplitudes and
+UUCX	UUCT	USC	USN	0.4000000000	3	0.0000000000		!CX-CT-C -N    1    0.40          0.0            -3.         phases for psi'
+UUCX	UUCT	USC	USN	0.2000000000	2	0.0000000000		!CX-CT-C -N    1    0.20          0.0            -2.
+UUCX	UUCT	USC	USN	0.2000000000	1	0.0000000000		!CX-CT-C -N    1    0.20          0.0             1.
+USH	USN	USC	USO	2.5000000000	2	180.0000000000		!H -N -C -O    1    2.50        180.0            -2.         JCC,7,(1986),230
+USH	USN	USC	USO	2.0000000000	1	0.0000000000		!H -N -C -O    1    2.00          0.0             1.         J.C.cistrans-NMA DE
+UUCT	USS	USS	UUCT	3.5000000000	2	0.0000000000		!CT-S -S -CT   1    3.50          0.0            -2.         JCC,7,(1986),230
+UUCT	USS	USS	UUCT	0.6000000000	3	0.0000000000		!CT-S -S -CT   1    0.60          0.0             3.         JCC,7,(1986),230
+UUOH	USP	UUOS	UUCT	0.2500000000	3	0.0000000000		!OH-P -OS-CT   1    0.25          0.0            -3.         JCC,7,(1986),230
+UUOH	USP	UUOS	UUCT	1.2000000000	2	0.0000000000		!OH-P -OS-CT   1    1.20          0.0             2.         gg&gt ene.631g*/mp2
+UUOS	USP	UUOS	UUCT	0.2500000000	3	0.0000000000		!OS-P -OS-CT   1    0.25          0.0            -3.         JCC,7,(1986),230
+UUOS	USP	UUOS	UUCT	1.2000000000	2	0.0000000000		!OS-P -OS-CT   1    1.20          0.0             2.         gg&gt ene.631g*/mp2
+UNH1	UUCT	USC	USO	0.8000000000	1	0.0000000000		!H1-CT-C -O    1    0.80          0.0            -1.         Junmei et al, 1999
+UNH1	UUCT	USC	USO	0.0000000000	2	0.0000000000		!H1-CT-C -O    1    0.00          0.0            -2.         Explicit of wild card X-C-CT-X
+UNH1	UUCT	USC	USO	0.0800000000	3	180.0000000000		!H1-CT-C -O    1    0.08        180.0             3.         Junmei et al, 1999
+UNH1	UUCX	USC	USO	0.8000000000	1	0.0000000000		!H1-CX-C -O    1    0.80          0.0            -1.         Junmei et al, 1999 (was H1-CT-C -O )
+UNH1	UUCX	USC	USO	0.0000000000	2	0.0000000000		!H1-CX-C -O    1    0.00          0.0            -2.         Explicit of wild card X-C-CT-X
+UNH1	UUCX	USC	USO	0.0800000000	3	180.0000000000		!H1-CX-C -O    1    0.08        180.0             3.         Junmei et al, 1999 (was H1-CT-C -O )
+UUHC	UUCT	USC	USO	0.8000000000	1	0.0000000000		!HC-CT-C -O    1    0.80          0.0            -1.         Junmei et al, 1999
+UUHC	UUCT	USC	USO	0.0000000000	2	0.0000000000		!HC-CT-C -O    1    0.00          0.0            -2.         Explicit of wild card X-C-CT-X
+UUHC	UUCT	USC	USO	0.0800000000	3	180.0000000000		!HC-CT-C -O    1    0.08        180.0             3.         Junmei et al, 1999
+UUHC	UUCT	UUCT	UUHC	0.1500000000	3	0.0000000000		!HC-CT-CT-HC   1    0.15          0.0             3.         Junmei et al, 1999
+UUHC	UUCT	UUCT	UUCT	0.1600000000	3	0.0000000000		!HC-CT-CT-CT   1    0.16          0.0             3.         Junmei et al, 1999
+UUHC	UUCT	UUCT	UUCX	0.1600000000	3	0.0000000000		!HC-CT-CT-CX   1    0.16          0.0             3.         Junmei et al, 1999 (was HC-CT-CT-CT)
+UUHC	UUCT	UUCM	UUCM	0.3800000000	3	180.0000000000		!HC-CT-CM-CM   1    0.38        180.0            -3.         Junmei et al, 1999
+UUHC	UUCT	UUCM	UUCM	1.1500000000	1	0.0000000000		!HC-CT-CM-CM   1    1.15          0.0             1.         Junmei et al, 1999
+UUHC	UUCT	UUCS	UUCS	0.3800000000	3	180.0000000000		!HC-CT-CS-CS   1    0.38        180.0            -3.         Junmei et al, 1999
+UUHC	UUCT	UUCS	UUCS	1.1500000000	1	0.0000000000		!HC-CT-CS-CS   1    1.15          0.0             1.         Junmei et al, 1999
+UUHO	UUOH	UUCT	UUCT	0.1600000000	3	0.0000000000		!HO-OH-CT-CT   1    0.16          0.0            -3.         Junmei et al, 1999
+UUHO	UUOH	UUCT	UUCT	0.2500000000	1	0.0000000000		!HO-OH-CT-CT   1    0.25          0.0             1.         Junmei et al, 1999
+UUHO	UUOH	UUCT	UUCX	0.1600000000	3	0.0000000000		!HO-OH-CT-CX   1    0.16          0.0            -3.         Junmei et al, 1999 (was HO-OH-CT-CT)
+UUHO	UUOH	UUCT	UUCX	0.2500000000	1	0.0000000000		!HO-OH-CT-CX   1    0.25          0.0             1.         Junmei et al, 1999 (was HO-OH-CT-CT)
+UUHO	UUOH	USC	USO	2.3000000000	2	180.0000000000		!HO-OH-C -O    1    2.30        180.0            -2.         Junmei et al, 1999
+UUHO	UUOH	USC	USO	1.9000000000	1	0.0000000000		!HO-OH-C -O    1    1.90          0.0             1.         Junmei et al, 1999
+UUCM	UUCM	USC	USO	2.1750000000	2	180.0000000000		!CM-CM-C -O    1    2.175       180.0            -2.         Junmei et al, 1999
+UUCM	UUCM	USC	USO	0.3000000000	3	0.0000000000		!CM-CM-C -O    1    0.30          0.0             3.         Junmei et al, 1999
+UUCT	UUCM	UUCM	UUCT	6.6500000000	2	180.0000000000		!CT-CM-CM-CT   1    6.65        180.0            -2.         Junmei et al, 1999
+UUCT	UUCM	UUCM	UUCT	1.9000000000	1	180.0000000000		!CT-CM-CM-CT   1    1.90        180.0             1.         Junmei et al, 1999
+UUCS	UUCS	USC	USO	2.1750000000	2	180.0000000000		!CS-CS-C -O    1    2.175       180.0            -2.         Junmei et al, 1999
+UUCS	UUCS	USC	USO	0.3000000000	3	0.0000000000		!CS-CS-C -O    1    0.30          0.0             3.         Junmei et al, 1999
+UUCT	UUCS	UUCS	UUCT	6.6500000000	2	180.0000000000		!CT-CS-CS-CT   1    6.65        180.0            -2.         Junmei et al, 1999
+UUCT	UUCS	UUCS	UUCT	1.9000000000	1	180.0000000000		!CT-CS-CS-CT   1    1.90        180.0             1.         Junmei et al, 1999
+UUCT	UUCT	UUCT	UUCT	0.1800000000	3	0.0000000000		!CT-CT-CT-CT   1    0.18          0.0            -3.         Junmei et al, 1999
+UUCT	UUCT	UUCT	UUCT	0.2500000000	2	180.0000000000		!CT-CT-CT-CT   1    0.25        180.0            -2.         Junmei et al, 1999
+UUCT	UUCT	UUCT	UUCT	0.2000000000	1	180.0000000000		!CT-CT-CT-CT   1    0.20        180.0             1.         Junmei et al, 1999
+UUCX	UUCT	UUCT	UUCT	0.1800000000	3	0.0000000000		!CX-CT-CT-CT   1    0.18          0.0            -3.         Junmei et al, 1999 (was CT-CT-CT-CT)
+UUCX	UUCT	UUCT	UUCT	0.2500000000	2	180.0000000000		!CX-CT-CT-CT   1    0.25        180.0            -2.         Junmei et al, 1999 (was CT-CT-CT-CT)
+UUCX	UUCT	UUCT	UUCT	0.2000000000	1	180.0000000000		!CX-CT-CT-CT   1    0.20        180.0             1.         Junmei et al, 1999 (was CT-CT-CT-CT)
+UUCT	UUCT	UUNT	UUCT	0.3000000000	3	0.0000000000		!CT-CT-NT-CT   1    0.30          0.0            -3.         Junmei et al, 1999
+UUCT	UUCT	UUNT	UUCT	0.4800000000	2	180.0000000000		!CT-CT-NT-CT   1    0.48        180.0             2.         Junmei et al, 1999
+UUCT	UUCT	UUOS	UUCT	0.3830000000	3	0.0000000000		!CT-CT-OS-CT   1    0.383         0.0            -3.
+UUCT	UUCT	UUOS	UUCT	0.1000000000	2	180.0000000000		!CT-CT-OS-CT   1    0.1         180.0             2.
+UUCT	UUCT	UUOS	USC	0.3830000000	3	0.0000000000		!CT-CT-OS-C    1    0.383         0.0            -3.         Junmei et al, 1999
+UUCT	UUCT	UUOS	USC	0.8000000000	1	180.0000000000		!CT-CT-OS-C    1    0.80        180.0             1.         Junmei et al, 1999
+UUCT	UUOS	UUCT	UUOS	0.1000000000	3	0.0000000000		!CT-OS-CT-OS   1    0.10          0.0            -3.         Junmei et al, 1999
+UUCT	UUOS	UUCT	UUOS	0.8500000000	2	180.0000000000		!CT-OS-CT-OS   1    0.85        180.0            -2.         Junmei et al, 1999
+UUCT	UUOS	UUCT	UUOS	1.3500000000	1	180.0000000000		!CT-OS-CT-OS   1    1.35        180.0             1.         Junmei et al, 1999
+UUCT	UUOS	UUCT	UAN	0.3830000000	3	0.0000000000		!CT-OS-CT-N*   1    0.383         0.0            -3.         parm98.dat, TC,PC,PAK
+UUCT	UUOS	UUCT	UAN	0.6500000000	2	0.0000000000		!CT-OS-CT-N*   1    0.65          0.0             2.         Piotr et al.
+UUCT	UUCZ	UUCZ	UUHZ	0.0000000000	1	0.0000000000		!CT-CZ-CZ-HZ   1    0.00          0.0             1.         Junmei et al, 1999
+USO	USC	UUOS	UUCT	2.7000000000	2	180.0000000000		!O -C -OS-CT   1    2.70        180.0            -2.         Junmei et al, 1999
+USO	USC	UUOS	UUCT	1.4000000000	1	180.0000000000		!O -C -OS-CT   1    1.40        180.0             1.         Junmei et al, 1999
+UUOS	UUCT	UAN	UUCK	0.0000000000	2	0.0000000000		!OS-CT-N*-CK   1    0.00        000.0            -2.         parm98, TC,PC,PAK
+UUOS	UUCT	UAN	UUCK	2.5000000000	1	0.0000000000		!OS-CT-N*-CK   1    2.50          0.0             1.         parm98, TC,PC,PAK
+UUOS	UUCT	UAN	UUCM	0.0000000000	2	0.0000000000		!OS-CT-N*-CM   1    0.00        000.0            -2.         parm98, TC,PC,PAK
+UUOS	UUCT	UAN	UUCM	2.5000000000	1	0.0000000000		!OS-CT-N*-CM   1    2.50          0.0             1.         parm98, TC,PC,PAK
+UUOS	UUCT	UUCT	UUOS	0.1440000000	3	0.0000000000		!OS-CT-CT-OS   1    0.144         0.0            -3.         parm98, TC,PC,PAK
+UUOS	UUCT	UUCT	UUOS	1.1750000000	2	0.0000000000		!OS-CT-CT-OS   1    1.175         0.0             2.         Piotr et al.     
+UUOS	UUCT	UUCT	UUOH	0.1440000000	3	0.0000000000		!OS-CT-CT-OH   1    0.144         0.0            -3.         parm98, TC,PC,PAK
+UUOS	UUCT	UUCT	UUOH	1.1750000000	2	0.0000000000		!OS-CT-CT-OH   1    1.175         0.0             2.         parm98, TC,PC,PAK
+UUOH	UUCT	UUCT	UUOH	0.1440000000	3	0.0000000000		!OH-CT-CT-OH   1    0.144         0.0            -3.         parm98, TC,PC,PAK
+UUOH	UUCT	UUCT	UUOH	1.1750000000	2	0.0000000000		!OH-CT-CT-OH   1    1.175         0.0             2.         parm98, TC,PC,PAK 
+USF	UUCT	UUCT	USF	0.0000000000	3	0.0000000000		!F -CT-CT-F    1    0.000         0.0            -3.         JCC,7,(1986),230
+USF	UUCT	UUCT	USF	1.2000000000	1	180.0000000000		!F -CT-CT-F    1    1.20        180.0             1.         Junmei et al, 1999
+ULCL	UUCT	UUCT	ULCL	0.0000000000	3	0.0000000000		!Cl-CT-CT-Cl   1    0.000         0.0            -3.         JCC,7,(1986),230
+ULCL	UUCT	UUCT	ULCL	0.4500000000	1	180.0000000000		!Cl-CT-CT-Cl   1    0.45        180.0             1.         Junmei et al, 1999
+ULBR	UUCT	UUCT	ULBR	0.0000000000	3	0.0000000000		!Br-CT-CT-Br   1    0.000         0.0            -3.         JCC,7,(1986),230
+ULBR	UUCT	UUCT	ULBR	0.0000000000	1	180.0000000000		!Br-CT-CT-Br   1    0.00        180.0             1.         Junmei et al, 1999
+UNH1	UUCT	UUCT	UUOS	0.0000000000	3	0.0000000000		!H1-CT-CT-OS   1    0.000         0.0            -3.         JCC,7,(1986),230
+UNH1	UUCT	UUCT	UUOS	0.2500000000	1	0.0000000000		!H1-CT-CT-OS   1    0.25          0.0             1.         Junmei et al, 1999
+UNH1	UUCT	UUCT	UUOH	0.0000000000	3	0.0000000000		!H1-CT-CT-OH   1    0.000         0.0            -3.         JCC,7,(1986),230
+UNH1	UUCT	UUCT	UUOH	0.2500000000	1	0.0000000000		!H1-CT-CT-OH   1    0.25          0.0             1.         Junmei et al, 1999
+UNH1	UUCX	UUCT	UUOH	0.0000000000	3	0.0000000000		!H1-CX-CT-OH   1    0.000         0.0            -3.         JCC,7,(1986),230 (was H1-CT-CT-OH)
+UNH1	UUCX	UUCT	UUOH	0.2500000000	1	0.0000000000		!H1-CX-CT-OH   1    0.25          0.0             1.         Junmei et al, 1999 (was H1-CT-CT-OH)
+UNH1	UUCT	UUCT	USF	0.0000000000	3	0.0000000000		!H1-CT-CT-F    1    0.000         0.0            -3.         JCC,7,(1986),230
+UNH1	UUCT	UUCT	USF	0.1900000000	1	0.0000000000		!H1-CT-CT-F    1    0.19          0.0             1.         Junmei et al, 1999
+UNH1	UUCT	UUCT	ULCL	0.0000000000	3	0.0000000000		!H1-CT-CT-Cl   1    0.000         0.0            -3.         JCC,7,(1986),230
+UNH1	UUCT	UUCT	ULCL	0.2500000000	1	0.0000000000		!H1-CT-CT-Cl   1    0.25          0.0             1.         Junmei et al, 1999
+UNH1	UUCT	UUCT	ULBR	0.0000000000	3	0.0000000000		!H1-CT-CT-Br   1    0.000         0.0            -3.         JCC,7,(1986),230
+UNH1	UUCT	UUCT	ULBR	0.5500000000	1	0.0000000000		!H1-CT-CT-Br   1    0.55          0.0             1.         Junmei et al, 1999
+UUHC	UUCT	UUCT	UUOS	0.0000000000	3	0.0000000000		!HC-CT-CT-OS   1    0.000         0.0            -3.         JCC,7,(1986),230
+UUHC	UUCT	UUCT	UUOS	0.2500000000	1	0.0000000000		!HC-CT-CT-OS   1    0.25          0.0             1.         Junmei et al, 1999
+UUHC	UUCT	UUCT	UUOH	0.0000000000	3	0.0000000000		!HC-CT-CT-OH   1    0.000         0.0            -3.         JCC,7,(1986),230
+UUHC	UUCT	UUCT	UUOH	0.2500000000	1	0.0000000000		!HC-CT-CT-OH   1    0.25          0.0             1.         Junmei et al, 1999
+UUHC	UUCT	UUCT	USF	0.0000000000	3	0.0000000000		!HC-CT-CT-F    1    0.000         0.0            -3.         JCC,7,(1986),230
+UUHC	UUCT	UUCT	USF	0.1900000000	1	0.0000000000		!HC-CT-CT-F    1    0.19          0.0             1.         Junmei et al, 1999
+UUHC	UUCT	UUCT	ULCL	0.0000000000	3	0.0000000000		!HC-CT-CT-Cl   1    0.000         0.0            -3.         JCC,7,(1986),230
+UUHC	UUCT	UUCT	ULCL	0.2500000000	1	0.0000000000		!HC-CT-CT-Cl   1    0.25          0.0             1.         Junmei et al, 1999
+UUHC	UUCT	UUCT	ULBR	0.0000000000	3	0.0000000000		!HC-CT-CT-Br   1    0.000         0.0            -3.         JCC,7,(1986),230
+UUHC	UUCT	UUCT	ULBR	0.5500000000	1	0.0000000000		!HC-CT-CT-Br   1    0.55          0.0             1.         Junmei et al, 1999
+UNH1	UUCT	UUNT	UUEP	0.0000000000	3	0.0000000000		!H1-CT-NT-EP   1    0.000         0.000           3.000
+UUCT	UUCT	UUNT	UUEP	0.0000000000	3	0.0000000000		!CT-CT-NT-EP   1    0.000         0.000           3.000
+UUCT	USC	USN	UUEP	0.0000000000	2	180.0000000000		!CT-C -N -EP   1    0.000       180.000           2.000
+USO	USC	USN	UUEP	0.0000000000	2	180.0000000000		!O -C -N -EP   1    0.000       180.000           2.000
+UNH1	UUCT	UUOH	UUEP	0.0000000000	3	0.0000000000		!H1-CT-OH-EP   1    0.000         0.000           3.000
+UUCT	UUCT	UUOH	UUEP	0.0000000000	3	0.0000000000		!CT-CT-OH-EP   1    0.000         0.000           3.000
+UNH1	UUCT	UUOS	UUEP	0.0000000000	3	0.0000000000		!H1-CT-OS-EP   1    0.000         0.000           3.000
+UNH2	UUCT	UUOS	UUEP	0.0000000000	3	0.0000000000		!H2-CT-OS-EP   1    0.000         0.000           3.000
+UUCT	UUCT	UUOS	UUEP	0.0000000000	3	0.0000000000		!CT-CT-OS-EP   1    0.000         0.000           3.000
+UUCM	UUCM	UUOS	UUEP	0.0000000000	2	180.0000000000		!CM-CM-OS-EP   1    0.000       180.000           2.000
+UUHA	UUCM	UUOS	UUEP	0.0000000000	2	180.0000000000		!HA-CM-OS-EP   1    0.000       180.000           2.000
+UNH4	UUCM	UUOS	UUEP	0.0000000000	2	180.0000000000		!H4-CM-OS-EP   1    0.000       180.000           2.000
+UUCS	UUCS	UUOS	UUEP	0.0000000000	2	180.0000000000		!CS-CS-OS-EP   1    0.000       180.000           2.000
+UUHA	UUCS	UUOS	UUEP	0.0000000000	2	180.0000000000		!HA-CS-OS-EP   1    0.000       180.000           2.000
+UNH4	UUCS	UUOS	UUEP	0.0000000000	2	180.0000000000		!H4-CS-OS-EP   1    0.000       180.000           2.000
+USN	UUCT	UUCT	UUOH	0.0000000000	1	0.0000000000		!N -CT-CT-OH   1    0.000         0.000          -1.         HYP
+USN	UUCT	UUCT	UUOH	1.4900000000	2	0.0000000000		!N -CT-CT-OH   1    1.490         0.000          -2.         HYP  (JCC 26:1612,2005)
+USN	UUCT	UUCT	UUOH	0.1560000000	3	0.0000000000		!N -CT-CT-OH   1    0.156         0.000          -3.         HYP
+USN	UUCT	UUCT	UUOH	0.0000000000	4	0.0000000000		!N -CT-CT-OH   1    0.000         0.000           4.         HYP
+UUEP	USS	USS	UUCT	0.0000000000	3	0.0000000000		!EP-S -S -CT   1    0.00          0.0             3.         cyx (dac)
+UUEP	USS	USS	UUEP	0.0000000000	3	0.0000000000		!EP-S -S -EP   1    0.00          0.0             3.         cyx (dac)
+
+IMPHI
+!B1 B2 B3 B4 k type phi 
+X	X	USC	USO	10.5000000000	2	180.0000000000		!X -X -C -O          10.5         180.          2.           JCC,7,(1986),230
+X	UNO2	USC	UNO2	10.5000000000	2	180.0000000000		!X -O2-C -O2         10.5         180.          2.           JCC,7,(1986),230
+X	X	USN	USH	1.0000000000	2	180.0000000000		!X -X -N -H          1.0          180.          2.           JCC,7,(1986),230
+X	X	UNN2	USH	1.0000000000	2	180.0000000000		!X -X -N2-H          1.0          180.          2.           JCC,7,(1986),230
+X	X	UUNA	USH	1.0000000000	2	180.0000000000		!X -X -NA-H          1.0          180.          2.           JCC,7,(1986),230
+X	UNN2	UUCA	UNN2	10.5000000000	2	180.0000000000		!X -N2-CA-N2         10.5         180.          2.           JCC,7,(1986),230
+X	UUCT	USN	UUCT	1.0000000000	2	180.0000000000		!X -CT-N -CT         1.0          180.          2.           JCC,7,(1986),230
+X	UUCT	USN	UUCX	1.0000000000	2	180.0000000000		!X -CT-N -CX         1.0          180.          2.           JCC,7,(1986),230 (was X -CT-N -CT)
+X	X	UUCA	UUHA	1.1000000000	2	180.0000000000		!X -X -CA-HA         1.1          180.          2.           bsd.on C6H6 nmodes
+X	X	UUCW	UNH4	1.1000000000	2	180.0000000000		!X -X -CW-H4         1.1          180.          2.
+X	X	UUCR	UNH5	1.1000000000	2	180.0000000000		!X -X -CR-H5         1.1          180.          2.
+X	X	UUCV	UNH4	1.1000000000	2	180.0000000000		!X -X -CV-H4         1.1          180.          2.
+X	X	UUCQ	UNH5	1.1000000000	2	180.0000000000		!X -X -CQ-H5         1.1          180.          2.
+X	X	UUCK	UNH5	1.1000000000	2	180.0000000000		!X -X -CK-H5         1.1          180.          2.
+X	X	UUCP	UNH5	1.1000000000	2	180.0000000000		!X -X -CP-H5         1.1          180.          2.
+X	X	UUCM	UNH4	1.1000000000	2	180.0000000000		!X -X -CM-H4         1.1          180.          2.
+X	X	UUCM	UUHA	1.1000000000	2	180.0000000000		!X -X -CM-HA         1.1          180.          2.
+X	X	UUCS	UNH4	1.1000000000	2	180.0000000000		!X -X -CS-H4         1.1          180.          2.
+X	X	UUCS	UUHA	1.1000000000	2	180.0000000000		!X -X -CS-HA         1.1          180.          2.
+X	X	UUCA	UNH4	1.1000000000	2	180.0000000000		!X -X -CA-H4         1.1          180.          2.           bsd.on C6H6 nmodes 
+X	X	UUCA	UNH5	1.1000000000	2	180.0000000000		!X -X -CA-H5         1.1          180.          2.           bsd.on C6H6 nmodes
+UUCB	UUCK	UAN	UUCT	1.0000000000	2	180.0000000000		!CB-CK-N*-CT         1.0          180.          2.
+UUCB	UUCP	UAN	UUCT	1.0000000000	2	180.0000000000		!CB-CP-N*-CT         1.0          180.          2.
+USC	UUCM	UAN	UUCT	1.0000000000	2	180.0000000000		!C -CM-N*-CT         1.0          180.          2.           dac guess, 9/94
+USC	UUCS	UAN	UUCT	1.0000000000	2	180.0000000000		!C -CS-N*-CT         1.0          180.          2.           dac guess, 9/94
+USC	UUCS	UUCM	UUCT	1.1000000000	2	180.0000000000		!C -CS-CM-CT         1.1          180.          2. 
+UUCT	USO	USC	UUOH	10.5000000000	2	180.0000000000		!CT-O -C -OH         10.5         180.          2.
+UUCT	UUCV	UUCC	UUNA	1.1000000000	2	180.0000000000		!CT-CV-CC-NA         1.1          180.          2.
+UUCT	UUCW	UUCC	UUNB	1.1000000000	2	180.0000000000		!CT-CW-CC-NB         1.1          180.          2.
+UUCT	UUCW	UUCC	UUNA	1.1000000000	2	180.0000000000		!CT-CW-CC-NA         1.1          180.          2.
+UUCB	UUCT	UAC	UUCW	1.1000000000	2	180.0000000000		!CB-CT-C*-CW         1.1          180.          2.
+UUCA	UUCA	UUCA	UUCT	1.1000000000	2	180.0000000000		!CA-CA-CA-CT         1.1          180.          2. 
+USC	UUCM	UUCM	UUCT	1.1000000000	2	180.0000000000		!C -CM-CM-CT         1.1          180.          2.           dac guess, 9/94
+USC	UUCS	UUCS	UUCT	1.1000000000	2	180.0000000000		!C -CS-CS-CT         1.1          180.          2.           dac guess, 9/94
+UUCM	UNN2	UUCA	UUNC	1.1000000000	2	180.0000000000		!CM-N2-CA-NC         1.1          180.          2.           dac guess, 9/94
+UUCS	UNN2	UUCA	UUNC	1.1000000000	2	180.0000000000		!CS-N2-CA-NC         1.1          180.          2.           dac guess, 9/94
+UUCB	UNN2	UUCA	UUNC	1.1000000000	2	180.0000000000		!CB-N2-CA-NC         1.1          180.          2.           dac, 10/94
+UNN2	UUNA	UUCA	UUNC	1.1000000000	2	180.0000000000		!N2-NA-CA-NC         1.1          180.          2.           dac, 10/94
+UUCA	UUCA	USC	UUOH	1.1000000000	2	180.0000000000		!CA-CA-C -OH         1.1          180.          2.           (not used in tyr!)
+UUCA	UUCA	UUCA	UUOH	1.1000000000	2	180.0000000000		!CA-CA-CA-OH         1.1          180.          2.           in tyr
+UNH5	USO	USC	UUOH	1.1000000000	2	180.0000000000		!H5-O -C -OH         1.1          180.          2.           Junmei et al.1999
+UNH5	USO	USC	UUOS	1.1000000000	2	180.0000000000		!H5-O -C -OS         1.1          180.          2.           
+UUCM	UUCT	UUCM	UUHA	1.1000000000	2	180.0000000000		!CM-CT-CM-HA         1.1          180.          2.           Junmei et al.1999
+UUCS	UUCT	UUCS	UUHA	1.1000000000	2	180.0000000000		!CS-CT-CS-HA         1.1          180.          2.           Junmei et al.1999
+ULBR	UUCA	UUCA	UUCA	1.1000000000	2	180.0000000000		!Br-CA-CA-CA         1.1          180.          2.           Junmei et al.1999
+UUCM	UNH4	USC	USO	1.1000000000	2	180.0000000000		!CM-H4-C -O          1.1          180.          2.           Junmei et al.1999
+UUCS	UNH4	USC	USO	1.1000000000	2	180.0000000000		!CS-H4-C -O          1.1          180.          2.           Junmei et al.1999
+USC	UUCT	USN	USH	1.1000000000	2	180.0000000000		!C -CT-N -H          1.1          180.          2.           Junmei et al.1999
+USC	UUCX	USN	USH	1.1000000000	2	180.0000000000		!C -CX-N -H          1.1          180.          2.           Junmei et al.1999 (was C -CT-N -H )
+USC	UUCT	USN	USO	1.1000000000	2	180.0000000000		!C -CT-N -O          1.1          180.          2.           Junmei et al.1999
+X	X	UNC5	UNH5	1.1000000000	2	180.0000000000		!X -X -C5-H5         1.1          180.          2.
+UUCB	UNC5	UAN	UUCT	1.0000000000	2	180.0000000000		!CB-C5-N*-CT         1.0          180.          2.
+X	X	UNC4	UNH4	1.1000000000	2	180.0000000000		!X -X -C4-H4         1.1          180.          2.
+X	X	UNC4	UUHA	1.1000000000	2	180.0000000000		!X -X -C4-HA         1.1          180.          2.
+USC	UNC4	UAN	UUCT	1.0000000000	2	180.0000000000		!C -C4-N*-CT         1.0          180.          2.           dac guess, 9/94
+USC	UNC4	UNC4	UUCT	1.1000000000	2	180.0000000000		!C -C4-C4-CT         1.1          180.          2.           dac guess, 9/94
+UNC4	UNN2	UUCA	UUNC	1.1000000000	2	180.0000000000		!C4-N2-CA-NC         1.1          180.          2.           dac guess, 9/94
+UUCA	UUCA	USC	UUOS	1.1000000000	2	180.0000000000		!CA-CA-C -OS         1.1          180.          2.           phosphotyrosine
+UUCR	UUCC	UUNA	USP	1.1000000000	2	180.0000000000		!CR-CC-NA-P          1.1          180.          2.           phosphohistine
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+     CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!          Emin       Rmin/2         Emin/2      Rmin  (for 1-4's)
+!       (kcal/mol)     (A) 
+USH	0.0	-0.0157000	0.6000000	0.0	-0.0078500	0.6000000	!  H           0.6000  0.0157            !Ferguson base pair geom.
+UUHO	0.0	-0.0000000	0.0000000	0.0	-0.0000000	0.0000000	!  HO          0.0000  0.0000             OPLS Jorgensen, JACS,110,(1988),1657
+UUHS	0.0	-0.0157000	0.6000000	0.0	-0.0078500	0.6000000	!  HS          0.6000  0.0157             W. Cornell CH3SH --> CH3OH FEP
+UUHC	0.0	-0.0157000	1.4870000	0.0	-0.0078500	1.4870000	!  HC          1.4870  0.0157             OPLS
+UNH1	0.0	-0.0157000	1.3870000	0.0	-0.0078500	1.3870000	!  H1          1.3870  0.0157             Veenstra et al JCC,8,(1992),963 
+UNH2	0.0	-0.0157000	1.2870000	0.0	-0.0078500	1.2870000	!  H2          1.2870  0.0157             Veenstra et al JCC,8,(1992),963 
+UNH3	0.0	-0.0157000	1.1870000	0.0	-0.0078500	1.1870000	!  H3          1.1870  0.0157             Veenstra et al JCC,8,(1992),963 
+UUHP	0.0	-0.0157000	1.1000000	0.0	-0.0078500	1.1000000	!  HP          1.1000  0.0157             Veenstra et al JCC,8,(1992),963
+UUHA	0.0	-0.0150000	1.4590000	0.0	-0.0075000	1.4590000	!  HA          1.4590  0.0150             Spellmeyer 
+UNH4	0.0	-0.0150000	1.4090000	0.0	-0.0075000	1.4090000	!  H4          1.4090  0.0150             Spellmeyer, one electrowithdr. neighbor
+UNH5	0.0	-0.0150000	1.3590000	0.0	-0.0075000	1.3590000	!  H5          1.3590  0.0150             Spellmeyer, two electrowithdr. neighbor
+UUHW	0.0	-0.0000000	0.0000000	0.0	-0.0000000	0.0000000	!  HW          0.0000  0.0000             TIP3P water model
+UUHZ	0.0	-0.0150000	1.4590000	0.0	-0.0075000	1.4590000	!  HZ          1.4590  0.0150             H bonded to sp C (Howard et al JCC 16)
+USO	0.0	-0.2100000	1.6612000	0.0	-0.1050000	1.6612000	!  O           1.6612  0.2100             OPLS
+UNO2	0.0	-0.2100000	1.6612000	0.0	-0.1050000	1.6612000	!  O2          1.6612  0.2100             OPLS
+UUOW	0.0	-0.1520000	1.7683000	0.0	-0.0760000	1.7683000	!  OW          1.7683  0.1520             TIP3P water model
+UUOH	0.0	-0.2104000	1.7210000	0.0	-0.1052000	1.7210000	!  OH          1.7210  0.2104             OPLS 
+UUOS	0.0	-0.1700000	1.6837000	0.0	-0.0850000	1.6837000	!  OS          1.6837  0.1700             OPLS ether
+UUOP	0.0	-0.1700000	1.8500000	0.0	-0.0850000	1.8500000	!  OP          1.8500  0.1700             Steinbrecher/Latzer for 2- phosphate
+UAC	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCA	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCB	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCC	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCD	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCK	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCM	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCN	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCQ	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCR	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCV	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCW	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCY	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCZ	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCP	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCS	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C*          1.9080  0.0860             Spellmeyer
+UUCI	0.0	-0.1094000	1.9080000	0.0	-0.0547000	1.9080000	!  CI          1.9080  0.1094             parmbsc0
+UNC5	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C5          1.9080  0.0860             Spellmeyer
+UNC4	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C4          1.9080  0.0860             Spellmeyer
+UUCT	0.0	-0.1094000	1.9080000	0.0	-0.0547000	1.9080000	!  CT          1.9080  0.1094             Spellmeyer
+UUCX	0.0	-0.1094000	1.9080000	0.0	-0.0547000	1.9080000	!  CX          1.9080  0.1094             Spellmeyer  (was CT)
+USC	0.0	-0.0860000	1.9080000	0.0	-0.0430000	1.9080000	!  C           1.9080  0.0860             OPLS
+USN	0.0	-0.1700000	1.8240000	0.0	-0.0850000	1.8240000	!  N           1.8240  0.1700             OPLS
+UUNA	0.0	-0.1700000	1.8240000	0.0	-0.0850000	1.8240000	!  N           1.8240  0.1700             OPLS
+UNN2	0.0	-0.1700000	1.8240000	0.0	-0.0850000	1.8240000	!  N           1.8240  0.1700             OPLS
+UAN	0.0	-0.1700000	1.8240000	0.0	-0.0850000	1.8240000	!  N           1.8240  0.1700             OPLS
+UUNC	0.0	-0.1700000	1.8240000	0.0	-0.0850000	1.8240000	!  N           1.8240  0.1700             OPLS
+UUNB	0.0	-0.1700000	1.8240000	0.0	-0.0850000	1.8240000	!  N           1.8240  0.1700             OPLS
+UUNT	0.0	-0.1700000	1.8240000	0.0	-0.0850000	1.8240000	!  N           1.8240  0.1700             OPLS
+UUNY	0.0	-0.1700000	1.8240000	0.0	-0.0850000	1.8240000	!  N           1.8240  0.1700             OPLS
+UNN3	0.0	-0.1700000	1.8240000	0.0	-0.0850000	1.8240000	!  N3          1.8240  0.1700             OPLS
+USS	0.0	-0.2500000	2.0000000	0.0	-0.1250000	2.0000000	!  S           2.0000  0.2500             W. Cornell CH3SH and CH3SCH3 FEP's
+UUSH	0.0	-0.2500000	2.0000000	0.0	-0.1250000	2.0000000	!  SH          2.0000  0.2500             W. Cornell CH3SH and CH3SCH3 FEP's
+USP	0.0	-0.2000000	2.1000000	0.0	-0.1000000	2.1000000	!  P           2.1000  0.2000             JCC,7,(1986),230; 
+UUMG	0.0	-0.8947000	0.7926000	0.0	-0.4473500	0.7926000	!  MG          0.7926  0.8947             Mg2+ Aqvist JPC 1990,94,8021.(adapted)
+UNC0	0.0	-0.4597890	1.7131000	0.0	-0.2298945	1.7131000	!  C0          1.7131  0.459789           Ca2+ Aqvist JPC 1990,94,8021.(adapted)
+USF	0.0	-0.0610000	1.7500000	0.0	-0.0305000	1.7500000	!  F           1.75    0.061              Gough et al. JCC 13,(1992),963.
+ULCL	0.0	-0.2650000	1.9480000	0.0	-0.1325000	1.9480000	!  Cl          1.948   0.265              Fox, JPCB,102,8070,(98),flex.mdl CHCl3
+ULBR	0.0	-0.3200000	2.2200000	0.0	-0.1600000	2.2200000	!  Br          2.22    0.320              Junmei(?)
+USI	0.0	-0.4000000	2.3500000	0.0	-0.2000000	2.3500000	!  I           2.35    0.40               JCC,7,(1986),230;  
+
+NBFIX
+!               Emin        Rmin
+!            (kcal/mol)     (A)
+!
+
+!HBOND CUTHB 0.5
+
+END
