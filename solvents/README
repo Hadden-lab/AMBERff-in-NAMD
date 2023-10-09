@@ -1,4 +1,11 @@
 ## SOLVENTS ##
+# TIP3P -  Jorgensen, William L., et al. J Chem Phys (1983) + Neria, Eyal, et al. J Chem Phys (1996) + Chen, Alan A., et al. J Phys Chem B (2007)
+# TIP4PEW - Horn, Hans W., et al. J Chem Phys (2004)
+# FB3/FB4 - Wang, Lee-Ping, et al. J Phys Chem B (2014)
+# SPCE - Berendsen, HJC., et al. J Phys Chem (1987)
+# SPCEB - Takemura, Kazuhiro and Kitao, Akio. J Phys Chem B (2012)
+# OPC -  Izadi, Saeed, et al. J Phys Chem Lett (2014)
+
 
 Topology/Parameter str files included:
  1. tip3p_ions.str
