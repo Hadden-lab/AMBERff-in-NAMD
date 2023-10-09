@@ -6,7 +6,6 @@ Files:
 3. parm99.prm
 4. frcmod.ff99SBildn.prm
 
-Energy Test: ff99SB-ILDN.png
 
 PSFGEN usage:
 1. Load rtf into psfgen prior to generating segments
