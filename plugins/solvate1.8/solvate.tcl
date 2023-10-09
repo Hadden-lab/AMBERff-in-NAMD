@@ -20,6 +20,8 @@
 #   Added experimental support for plugin-based I/O in psfgen, in support of
 #     very large structures
 #
+#   AMBER force field functionality added by Santiago Antolinez, October 2023
+#
 # TODO?
 # Seperate command-line parsing code from solvation code.  solvate{} should
 # still handle the command line, and possibly load the PSF and PDB into VMD.
