@@ -1,5 +1,6 @@
 ## AMBER-DYES ##
-# AMBER-DYES - Graen, Timo, et al. JCTC (2014) + Schepers, Bastian, and Gohlke, Holger. J Chem Phys (2018) 
+# AMBER-DYES - Graen, Timo, et al. JCTC (2014) + Schepers, Bastian, and Gohlke, Holger. J Chem Phys (2020)
+
 Files:
 there are 2 set of files available:
       version = 22 - refactoring of AMBER-DYES version distributed from amber20 onwards
