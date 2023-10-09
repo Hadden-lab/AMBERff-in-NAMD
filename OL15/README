@@ -6,7 +6,6 @@ Files:
 3. parm10.prm
 4. frcmod.DNA.OL15.prm
 
-Energy Test: OL15.png
 
 PSFGEN usage:
 1. Load rtf into psfgen prior to generating segments
