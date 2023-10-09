@@ -5,7 +5,6 @@ Files:
 2. namdrc.lipid21
 3. lipid21.prm
 
-Energy Test: lipid21.png
 
 PSFGEN usage:
 1. Load rtf into psfgen prior to generating segments
