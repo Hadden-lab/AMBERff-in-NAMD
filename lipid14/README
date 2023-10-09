@@ -5,7 +5,6 @@ Files:
 2. namdrc.lipid14
 3. lipid14.prm
 
-Energy Test: lipid14.png
 
 PSFGEN usage:
 1. Load rtf into psfgen prior to generating segments
