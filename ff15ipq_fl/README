@@ -1,0 +1,22 @@
+# PROTEIN ##
+# ff15ipq - Debiec, Karl T., et al. JCTC (2016)
+# ff15ipq_fl - Yang, Darian T., et al. JPCA (2022)
+Files:
+1. ff15ipq_fl.rtf
+2. namdrc.ff15ipq_fl
+3. parm15ipq_10.3.prm
+4. frcmod.ff15ipq-19F.prm
+
+
+PSFGEN usage:
+1. Load rtf into psfgen prior to generating segments
+ - topology $path/to/forcefield/protein/ff15ipq_fl/ff15ipq_fl.rtf
+
+NAMD usage:
+1. Call namdrc.ff15ipq in the NAMD input file to ensure proper loading and replacement of parameters
+ - source         path/to/forcefield/protein/ff15ipq/namdrc.ff15ipq
+2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
+        2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the ff15ipq forcefield.
+ - exclude        scaled1-4
+ - 1-4scaling     0.83333333
+        2.b) Setting up PME, the periodic cell, thermostat, barostat, and output parameters are consistent with a typical NAMD simulation
