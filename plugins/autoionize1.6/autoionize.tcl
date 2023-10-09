@@ -4,10 +4,11 @@
 # 
 # Partially rewritten by Leonardo Trabuco, July 2010
 # $Id: autoionize.tcl,v 1.28 2019/07/23 17:14:26 gumbart Exp $
+#
+# AMBER functionality added by Santiago Antolinez, October 2023
 
 # TODO:
 # - allow user to specify topology file
-# - add switch to use Amber force field instead of CHARMM
 # - remove dead code related to -is option, since that is
 #   no longer supported.
 
