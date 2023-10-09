@@ -54,15 +54,15 @@ proc solvate_usage { } {
   vmdcon -info "    +x <pad positive x>"
   vmdcon -info "    +y <pad positive y>"
   vmdcon -info "    +z <pad positive z>"
-  vmdcon -info "    -model <model> (solvate with AMBER water models allowed values)"
+  vmdcon -info "    -ambersolvent <model> (solvate with AMBER water models)"
   vmdcon -info "     allowed values for <model> include:"
-  vmdcon -info "       1. tip3p (default)"
-  vmdcon -info "       2. tip4pew"
-  vmdcon -info "       3. spce"
-  vmdcon -info "       4. spceb"
-  vmdcon -info "       5. fb3"
-  vmdcon -info "       6. fb4"
-  vmdcon -info "       7. opc"
+  vmdcon -info "       -- tip3p (default)"
+  vmdcon -info "       -- tip4pew"
+  vmdcon -info "       -- spce"
+  vmdcon -info "       -- spceb"
+  vmdcon -info "       -- fb3"
+  vmdcon -info "       -- fb4"
+  vmdcon -info "       -- opc"
   vmdcon -info "" 
   vmdcon -info "    The following options allow the use of solvent other than water:"
   vmdcon -info "      -spsf <solventpsf> (PSF file for nonstandard solvent)"
@@ -76,7 +76,7 @@ proc solvate_usage { } {
 proc solvate {args} {
     global env
     
-    set modelloc [lsearch $args "-model"]
+    set modelloc [lsearch $args "-ambersolvent"]
     if { $modelloc==-1} {
 	return [eval normalsolvate $args]
     } else {    
@@ -84,7 +84,7 @@ proc solvate {args} {
 	foreach flag  $invalidflags {
 	    set key [lsearch $args $flag]
 	    if {$key != -1} {
-		error "flag $flag is incompatible with -model flag"
+		error "flag $flag is incompatible with -ambersolvent flag"
 	    }
 	}
 
