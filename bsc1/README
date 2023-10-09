@@ -6,7 +6,6 @@ Files:
 3. parm10.prm
 4. frcmod.parmbsc1.prm
 
-Energy Test: bsc1.png
 
 PSFGEN usage:
 1. Load rtf into psfgen prior to generating segments
