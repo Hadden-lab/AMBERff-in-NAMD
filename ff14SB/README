@@ -1,5 +1,10 @@
 ## PROTEIN ##
 # ff14SB - Maier, James A., et al. JCTC (2015) 
+
+Please cite:
+Antolínez, S.; Jones, P. E.; Phillips, J. C.; Hadden-Perilla J. A.
+AMBERff at scale: Multimillion-atom simulations with AMBER force fields in NAMD. Submitted (2023)
+
 Files:
 1. ff14SB.rtf
 2. namdrc.ff14SB
