@@ -9,11 +9,11 @@ Files:
 
 PSFGEN usage:
 1. Load rtf into psfgen prior to generating segments
- - topology $path/to/forcefield/nucleic/bsc1/bsc1.rtf
+ - topology path/to/AMBERff-in-NAMD/bsc1/bsc1.rtf
 
 NAMD usage:
 1. Call namdrc.bsc1 in the NAMD input file to ensure proper loading and replacement of parameters
- - source         path/to/forcefield/nucleic/bsc1/namdrc.bsc1
+ - source         path/to/AMBERff-in-NAMD/bsc1/namdrc.bsc1
 2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
         2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the bsc1 forcefield.
  - exclude        scaled1-4
