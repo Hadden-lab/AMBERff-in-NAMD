@@ -1,5 +1,10 @@
 ## PROTEIN ##
 # ff99SB-ILDN - Lindorff-Larsen, Kresten, et al. Proteins (2010) 
+
+Please cite:
+Antolínez, S.; Jones, P. E.; Phillips, J. C.; Hadden-Perilla J. A.
+AMBERff at scale: Multimillion-atom simulations with AMBER force fields in NAMD. Submitted (2023)
+
 Files:
 1. ff99SBildn.rtf
 2. namdrc.ff99SBildn
