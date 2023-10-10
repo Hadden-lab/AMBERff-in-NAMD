@@ -1,6 +1,15 @@
 if {![info exists NAMDRCSETPARM]} {
 	paraTypeCharmm   on
 	set NAMDRCSETPARM 1
+	puts "Info:"
+	puts "Info: ################################################"
+	puts "Info:"
+	puts "Info:  Sourcing AMBERff in NAMD"
+	puts "Info:  Please cite Antolinez et al., Submitted (2023)"
+	puts "Info:  for all publications using AMBERff in NAMD :)"
+	puts "Info:"
+	puts "Info: ################################################"
+	puts "Info:"
 }
 apply {{} {
       set dir [file dirname [file normalize [info script]]]

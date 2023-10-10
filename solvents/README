@@ -7,6 +7,11 @@
 # OPC -  Izadi, Saeed, et al. J Phys Chem Lett (2014)
 
 
+Please cite:
+Antolínez, S.; Jones, P. E.; Phillips, J. C.; Hadden-Perilla J. A.
+AMBERff at scale: Multimillion-atom simulations with AMBER force fields in NAMD. Submitted (2023)
+
+
 Topology/Parameter str files included:
  1. tip3p_ions.str
  2. tip4pew_ions.str
