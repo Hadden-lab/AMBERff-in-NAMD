@@ -1,3 +1,8 @@
-set dir [file dirname [file normalize [info script]]]
-paraTypeCharmm   on
-parameters   $dir/lipid21.prm
+if {![info exists NAMDRCSETPARM]} {
+	paraTypeCharmm   on
+	set NAMDRCSETPARM 1
+}
+apply {{} {
+      set dir [file dirname [file normalize [info script]]]
+      parameters   $dir/lipid21.prm
+}}

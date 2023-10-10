@@ -8,11 +8,11 @@ Files:
 
 PSFGEN usage:
 1. Load rtf into psfgen prior to generating segments
- - topology $path/to/forcefield/lipids/lipid21/lipid21.rtf
+ - topology path/to/AMBERff-in-NAMD/lipid21/lipid21.rtf
 
 NAMD usage:
 1. Call namdrc.lipid21 in the NAMD input file to ensure proper loading and replacement of parameters
- - source         path/to/forcefield/lipids/lipid21/namdrc.lipid21
+ - source         path/to/AMBERff-in-NAMD/lipid21/namdrc.lipid21
 2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
         2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the lipid21 forcefield.
  - exclude        scaled1-4
