@@ -1,6 +1,11 @@
 # PROTEIN ##
 # ff15ipq - Debiec, Karl T., et al. JCTC (2016)
 # ff15ipq_fl - Yang, Darian T., et al. J Phys Chem A (2022)
+
+Please cite:
+Antolínez, S.; Jones, P. E.; Phillips, J. C.; Hadden-Perilla J. A.
+AMBERff at scale: Multimillion-atom simulations with AMBER force fields in NAMD. Submitted (2023)
+
 Files:
 1. ff15ipq_fl.rtf
 2. namdrc.ff15ipq_fl
