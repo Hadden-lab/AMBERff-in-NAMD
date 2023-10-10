@@ -1,0 +1,9 @@
+if {![info exists NAMDRCSETPARM]} {
+	paraTypeCharmm   on
+	set NAMDRCSETPARM 1
+}
+apply {{} {
+      set dir [file dirname [file normalize [info script]]]
+      parameters   $dir/fb3_ions.str
+}}
+

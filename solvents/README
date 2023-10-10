@@ -16,39 +16,37 @@ Topology/Parameter str files included:
  6. spceb_ions.str
  7. opc_ions.str
  
-Additionally, included in solvate_boxes are PSF/PDB of equilibrated water boxes for each model:
- 1. solvate_boxes/tip3p.(psf/pdb)
- 2. solvate_boxes/tip4pew.(psf/pdb)
- 3. solvate_boxes/fb3.(psf/pdb)
- 4. solvate_boxes/fb4.(psf/pdb)
- 5. solvate_boxes/spce.(psf/pdb)
- 6. solvate_boxes/spceb.(psf/pdb)
- 7. solvate_boxes/opc.(psf/pdb)
+Namdrc files:
+ 1. namdrc.tip3p
+ 2. namdrc.tip4pew
+ 3. namdrc.fb3
+ 4. namdrc.fb4
+ 5. namdrc.spce
+ 6. namdrc.spceb
+ 7. namdrc.opc
 
-SOLVATE USAGE:
+PSFGEN usage:
+1. Load appropriate solvent rtf into psfgen prior to generating segments
+ - topology path/to/AMBERff-in-NAMD/solvents/${model}_ions.str
 
-To solvate a system with AMBERff using water model $MODEL, in addition to standard arguments ($args)
-include the following flags for solvating with non-standard solvent:
+NAMD usage:
+1. Call namdrc file in the NAMD input file to ensure proper loading and replacement of parameters
+ - source         path/to/AMBERff-in-NAMD/solvents/namdrc.${model}
+2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
+        2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander'.
+ - exclude        scaled1-4
+ - 1-4scaling     0.83333333
+        2.b) Setting up PME, the periodic cell, thermostat, barostat, and output parameters are consistent with a typical NAMD simulation
 
-	package require sovate
-  	solvate $args -spsf /path/to/solvate_boxes/$MODEL.psf -spdb /path/to/solvate_boxes/$MODEL.pdb -stop /path/to/${MODEL}_ions.str -ks "name O"
 
-Alternatively, use AMBERSOLVATE package.
+SOLVATE usage:
+1. The VMD solvate plugin has been uptated to support AMBER solvent models. To solvate with model $model, in addition to standard solvate
+   arguments $args, include -ambersolvent flag
+ - package require solvate 1.8
+ - solvate $args -ambersolvent $model
 
-AMBERSOLVATE:
-
-AMBERSOLVATE is a wrapper package for SOLVATE for solvating systems with AMBERff water models. It takes all standard
-solvate arguments excluding those related to non-standard solvent and an additional -model flag to specify the model:
-
-	package require ambersolvate
-	ambersolvate $args -model $MODEL
-
-  Possible $MODEL values include:
-   1. tip3p (default)
-   2. tip4pew
-   3. fb3
-   4. fb4
-   5. spce
-   6. spceb
-   7. opc
-	
+AUTOIONIZE usage:
+1. The WMD autoionize plugin has been updated to support AMBER ions. To use AMBER functionality include the -amber flag in addition to
+   standard arguments
+ - package require autoionize 1.6
+ - autoionize $args -amber
