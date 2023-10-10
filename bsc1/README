@@ -1,5 +1,10 @@
 ## NUCLEIC ACIDS ##
 # bsc1 - Ivani, Ivan, et al. Nat Methods (2016) 
+
+Please cite:
+Antolínez, S.; Jones, P. E.; Phillips, J. C.; Hadden-Perilla J. A.
+AMBERff at scale: Multimillion-atom simulations with AMBER force fields in NAMD. Submitted (2023)
+
 Files:
 1. bsc1.rtf
 2. namdrc.bsc1
