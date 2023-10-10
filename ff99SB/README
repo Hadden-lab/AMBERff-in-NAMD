@@ -1,5 +1,10 @@
 ## PROTEIN ##
 # ff99SB - Hornak, Viktor, et al. Proteins (2006) 
+
+Please cite:
+Antolínez, S.; Jones, P. E.; Phillips, J. C.; Hadden-Perilla J. A.
+AMBERff at scale: Multimillion-atom simulations with AMBER force fields in NAMD. Submitted (2023)
+
 Files:
 1. ff99SB.rtf
 2. namdrc.ff99SB
