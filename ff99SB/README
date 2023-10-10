@@ -9,11 +9,11 @@ Files:
 
 PSFGEN usage:
 1. Load rtf into psfgen prior to generating segments
- - topology $path/to/forcefield/protein/ff99SB/ff99SB.rtf
+ - topology path/to/AMBERff-in-NAMD/ff99SB/ff99SB.rtf
 
 NAMD usage:
 1. Call namdrc.ff99SB in the NAMD input file to ensure proper loading and replacement of parameters
- - source         path/to/forcefield/protein/ff99SB/namdrc.ff99SB
+ - source         path/to/AMBERff-in-NAMD/ff99SB/namdrc.ff99SB
 2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
         2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the ff99SB forcefield.
  - exclude        scaled1-4
