@@ -14,13 +14,13 @@ each version includes:
 
 PSFGEN usage:
 1. Load rtf into psfgen prior to generating segments
- - topology $path/to/forcefield/etc/AMBER-DYES/amberdyes{version}.rtf
+ - topology path/to/AMBERff-in-NAMD/amberdyes/amberdyes{version}.rtf
 2. Load bond patch rtfto bond ldye to linker
- - topology $path/to/forcefield/etc/AMBER-DYES/amberdyes{version}_bond_patch.rtf
+ - topology path/to/AMBERff-in-NAMD/amberdyes/amberdyes{version}_bond_patch.rtf
  
 NAMD usage:
 1. Call namdrc.AMBER-DYES in the NAMD input file to ensure proper loading and replacement of parameters
- - source         path/to/forcefield/etc/AMBER-DYES/namdrc.amberdyes{version}
+ - source         path/to/AMBERff-in-NAMD/amberdyes/namdrc.amberdyes{version}
 2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
         2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the AMBER-DYES forcefield.
  - exclude        scaled1-4
@@ -30,3 +30,5 @@ NAMD usage:
 Notes:
 - modifiedamberdyes{version}.prm represent a faithful refactored of all parameters -comparing with distributed AMBER-DYES{version} does not yield energy matches
 - amberdyes{version}.prm represents a refactored version of AMBER-DYES{version} which yields energy matches
+- namdrc files are configured to use amberdyes{version}.prm to use modifiedamberdyes{version}.prm comment and uncomment the appropriate lines in the respective
+  namdrc

@@ -1,0 +1,10 @@
+if {![info exists NAMDRCSETPARM]} {
+        paraTypeCharmm   on
+        set NAMDRCSETPARM 1
+}
+apply {{} {
+      set dir [file dirname [file normalize [info script]]]
+      parameters   $dir/amberdyes18.prm
+      # comment previous line and uncomment the next line to use the modifiedamberdyes18.prm
+      # parameters   $dir/modifiedamberdyes18.prm
+}}
