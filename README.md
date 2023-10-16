@@ -6,4 +6,7 @@ describe molecular motion. Here, we present an implementation of AMBERff for use
 massively-parallel simulations encompassing up to two billion atoms. Single-point potential energy comparisons and case studies on model systems demonstrate
 that the implementation produces results that are as accurate as running AMBERff in its native engine. 
 
-Please cite: Antolínez, S.; Jones, P. E.; Phillips, J. C.; Hadden-Perilla J. A. AMBERff at scale: Multimillion-atom simulations with AMBER force fields in NAMD. Submitted (2023)
+Please cite:
+Antolínez, S.; Jones, P. E.; Phillips, J. C.; Hadden-Perilla J. A.
+AMBERff at scale: Multimillion-atom simulations with AMBER force fields in NAMD. Submitted (2023)
+https://doi.org/10.1101/2023.10.10.561755
