@@ -1,0 +1,32 @@
+## PROTEIN ##
+# ff19SB - Tian, Chaun, et al. JCTC (2020) 
+
+Please cite:
+Antolínez, S.; Jones, P. E.; Phillips, J. C.; Hadden-Perilla J. A.
+AMBERff at scale: Multimillion-atom simulations with AMBER force fields in NAMD. Submitted (2023)
+https://doi.org/10.1101/2023.10.10.561755 
+
+Files:
+1. ff19SB.rtf
+2. namdrc.ff19SB
+3. parm19.prm
+4. frcmod.ff19SB.prm
+
+Energy Test: ff19SB.png
+
+PSFGEN usage:
+1. Load rtf into psfgen prior to generating segments
+ - topology path/to/AMBERff-in-NAMD/ff19SB/ff19SB.rtf
+
+NAMD usage:
+1. Call namdrc.ff19SB in the NAMD input file to ensure proper loading and replacement of parameters
+ - source         path/to/AMBERff-in-NAMD/ff19SB/namdrc.ff19SB
+2. Since this is an amber forcefield, the 1-4 scaling must be manually defined in the NAMD configuration file
+        2.a) Using the parameters below is consistent with the Amber MD engines 'pmemd' and 'sander' for the ff19SB forcefield.
+ - exclude        scaled1-4
+ - 1-4scaling     0.83333333
+        2.b) Setting up PME, the periodic cell, thermostat, barostat, and output parameters are consistent with a typical NAMD simulation
+
+Notes:
+
+if the C-terminal residue of the segment if one of ASH,GLH,LYN,CYM, apply the CTFS patch to this terminal residue, unless it is bonded to either HYP or PRO.

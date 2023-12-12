@@ -1,0 +1,20 @@
+if {![info exists NAMDRCSETPARM]} {
+	paraTypeCharmm   on
+	set NAMDRCSETPARM 1
+	puts "Info:"
+	puts "Info: ###################################################################################################"
+	puts "Info:"
+	puts "Info:  Sourcing AMBERff in NAMD"
+        puts "Info:  Please cite: Antolínez, S.; Jones, P. E.; Phillips, J. C.; Hadden-Perilla J. A."
+        puts "Info:  AMBERff at scale: Multimillion-atom simulations with AMBER force fields in NAMD. Submitted (2023)"
+        puts "Info:  https://doi.org/10.1101/2023.10.10.561755" 
+	puts "Info:  for all publications using AMBERff in NAMD :)"
+	puts "Info:"
+	puts "Info: ###################################################################################################"
+	puts "Info:"
+}
+apply {{} {
+      set dir [file dirname [file normalize [info script]]]
+      parameters   $dir/parm19.prm
+      parameters   $dir/frcmod.ff19SB.prm
+}}
