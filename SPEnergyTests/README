@@ -1,0 +1,17 @@
+### Testing Scripts ####
+
+Please cite:
+Antolínez, S.; Jones, P. E.; Phillips, J. C.; Hadden-Perilla J. A.
+AMBERff at scale: Multimillion-atom simulations with AMBER force fields in NAMD. Submitted (2023)
+https://doi.org/10.1101/2023.10.10.561755 
+
+
+These scripts are made to test the integrity of AMBERff in NAMD through single point energy comparisons.
+
+To make use of these scripts run the singlePoint_energyTests.sh script in a directory  where the scripts directory is located
+and all force field files to be tested are located in the forcefield directory.
+
+Currently there are two test cases available:
+  1. Single-point energy comparison for all residues found in the topology file
+  2. (For protein force fields only ) Single-point energy comparison of all possible tripeptide combinations found in the topology file
+
