@@ -17,132 +17,130 @@ package require readcharmmtop
 package provide autoionize 1.6
 
 namespace eval ::autoionize:: {
-    namespace export autoionize
-    global env
-    # Maximum number of ion placement attempts
-    variable maxTries 10
+  namespace export autoionize
+  global env
 
-    # Minimum distance from molecule
-    variable defaultFromDistance 5
+  # Maximum number of ion placement attempts
+  variable maxTries 10
 
-    # Minimum distance between ions
-    variable defaultBetweenDistance 5
+  # Minimum distance from molecule
+  variable defaultFromDistance 5
 
-    variable defaultPrefix {ionized}
-    variable defaultSegname {ION}
+  # Minimum distance between ions
+  variable defaultBetweenDistance 5
 
-    # AMBER ions being used
-    variable AmberIons 0
-    variable IonNameDefaults {SOD CLA}
+  variable defaultPrefix {ionized}
+  variable defaultSegname {ION}
 
-    # Topology file to use
-    variable topfile [file join $env(CHARMMTOPDIR) toppar_water_ions_namd.str]
+  # AMBER ions being used
+  variable AmberIons 0
+  variable IonNameDefaults {SOD CLA}
 
-    # XXX - Note that the modes neutralize, ionic strength, and salt
-    #       concentration) currently support only ions with charge 
-    #       -2, -1, +1, and +2. If you add an ion with a different charge 
-    #       from the above, make sure you update the code for these modes
-    #       accordingly.
-    variable supportedIons {
-	{SOD SOD 1  sodium    Na+ }
-	{MG  MG  2  magnesium Mg2+}
-	{POT POT 1  potassium K+  }
-	{CES CES 1  cesium    Cs+ }
-	{CAL CAL 2  calcium   Ca2+}
-	{ZN2 ZN  2  zinc      Zn2+}
-	{CLA CLA -1 chloride  Cl- }
-    }
+  # Topology file to use
+  variable topfile [file join $env(CHARMMTOPDIR) toppar_water_ions_namd.str]
 
-    variable supportedIonsCharmm {
-	{SOD SOD 1  sodium    Na+ }
-	{MG  MG  2  magnesium Mg2+}
-	{POT POT 1  potassium K+  }
-	{CES CES 1  cesium    Cs+ }
-	{CAL CAL 2  calcium   Ca2+}
-	{ZN2 ZN  2  zinc      Zn2+}
-	{CLA CLA -1 chloride  Cl- }
-    }
+  # XXX - Note that the modes neutralize, ionic strength, and salt
+  #       concentration) currently support only ions with charge 
+  #       -2, -1, +1, and +2. If you add an ion with a different charge 
+  #       from the above, make sure you update the code for these modes
+  #       accordingly.
+  variable supportedIons {
+    {SOD SOD 1  sodium    Na+ }
+    {MG  MG  2  magnesium Mg2+}
+    {POT POT 1  potassium K+  }
+    {CES CES 1  cesium    Cs+ }
+    {CAL CAL 2  calcium   Ca2+}
+    {ZN2 ZN  2  zinc      Zn2+}
+    {CLA CLA -1 chloride  Cl- }
+  }
 
-    variable supportedIonsAmber {
-	{NA  NA  1  sodium    Na+ }
-	{Na+ Na+ 1  sodium    Na+ }
-	{MG  MG  2  magnesium Mg2+}
-	{K   K   1  potassium K+  }
-	{K+  K+  1  potassium K+  }
-	{CE  CE  1  cesium    Cs+ }
-	{CA  CA  2  calcium   Ca2+}
-	{ZN  ZN  2  zinc      Zn2+}
-	{CL  CL  -1 chloride  Cl- }
-	{Cl- Cl- -1 chloride  Cl- }
-	{F   F   -1 flouride  F-  }
-	{BR  BR  -1 bromide   Br- }
-	{IOD I   -1 iodide    I-  }
-    }
+  variable supportedIonsCharmm {
+    {SOD SOD 1  sodium    Na+ }
+    {MG  MG  2  magnesium Mg2+}
+    {POT POT 1  potassium K+  }
+    {CES CES 1  cesium    Cs+ }
+    {CAL CAL 2  calcium   Ca2+}
+    {ZN2 ZN  2  zinc      Zn2+}
+    {CLA CLA -1 chloride  Cl- }
+  }
 
-
-	    
+  variable supportedIonsAmber {
+    {NA  NA  1  sodium    Na+ }
+    {Na+ Na+ 1  sodium    Na+ }
+    {MG  MG  2  magnesium Mg2+}
+    {K   K   1  potassium K+  }
+    {K+  K+  1  potassium K+  }
+    {CE  CE  1  cesium    Cs+ }
+    {CA  CA  2  calcium   Ca2+}
+    {ZN  ZN  2  zinc      Zn2+}
+    {CL  CL  -1 chloride  Cl- }
+    {Cl- Cl- -1 chloride  Cl- }
+    {F   F   -1 flouride  F-  }
+    {BR  BR  -1 bromide   Br- }
+    {IOD I   -1 iodide    I-  }
+  }	    
 }
 
 proc autoionize { args } { return [eval ::autoionize::autoionize $args] }
 
 proc ::autoionize::autoionize_usage { } {
-    variable defaultFromDistance
-    variable defaultBetweenDistance
-    variable defaultSegname
-    variable defaultPrefix
-    variable supportedIonsAmber
-    variable supportedIonsCharmm
-    variable supportedIons
-    
-    
-    puts "Usage: autoionize -psf file.psf -pdb file.pdb <mode> \[options\]"
-    puts "Ion placement mode (choose one):"
-    puts "  -neutralize              -- only neutralize system"
-    puts "  -sc <salt concentration> -- neutralize and set salt concentration (mol/L)"
-    # puts "  -is <ionic strength>     -- neutralize and set ionic strength (mol/L)"
-    puts "  -nions {{ion1 num1} {ion2 num2} ...} -- user defined number of ions"
-    puts "Other options:"
-    puts "  -amber                   -- use AMBER IONS"
-    puts "  -cation <ion resname>    -- default: SOD/NA (if -amber option)"
-    puts "  -anion <ion resname>     -- default: CLA/CL (if -amber option)"
-    puts "  -o <prefix>              -- output file prefix (default: ionized)"
-    puts "  -from <distance>         -- min. distance from solute (default: 5A)"
-    puts "  -between <distance>      -- min. distance between ions (default: 5A)"
-    puts "  -seg <segname>           -- specify new segment name (default: ION)"
-    puts "Supported ions (CHARMM force field resnames):"
-    foreach ion $supportedIonsCharmm {
-	puts [format "   %-3s -- %-9s (%s)" [lindex $ion 0] [lindex $ion 3] [lindex $ion 4]]
-    }
-    puts "Supported ions (AMBER force field resnames):"
-    foreach ion $supportedIonsAmber {
-	puts [format "   %-3s -- %-9s (%s)" [lindex $ion 0] [lindex $ion 3] [lindex $ion 4]]
-    }
+  variable defaultFromDistance
+  variable defaultBetweenDistance
+  variable defaultSegname
+  variable defaultPrefix
+  variable supportedIons
+  variable supportedIonsAmber
+  variable supportedIonsCharmm
 
-    error ""
+  puts "Usage: autoionize -psf file.psf -pdb file.pdb <mode> \[options\]"
+  puts "Ion placement mode (choose one):"
+
+  puts "  -neutralize              -- only neutralize system"
+  puts "  -sc <salt concentration> -- neutralize and set salt concentration (mol/L)"
+  # puts "  -is <ionic strength>     -- neutralize and set ionic strength (mol/L)"
+  puts "  -nions {{ion1 num1} {ion2 num2} ...} -- user defined number of ions"
+  puts "Other options:"
+  puts "  -amber                   -- use AMBER IONS"
+  puts "  -cation <ion resname>    -- default: SOD/NA (if -amber option)"
+  puts "  -anion <ion resname>     -- default: CLA/CL (if -amber option)"
+  puts "  -o <prefix>              -- output file prefix (default: ionized)"
+  puts "  -from <distance>         -- min. distance from solute (default: 5A)"
+  puts "  -between <distance>      -- min. distance between ions (default: 5A)"
+  puts "  -seg <segname>           -- specify new segment name (default: ION)"
+  puts "Supported ions (CHARMM force field resnames):"
+  foreach ion $supportedIonsCharmm {
+    puts [format "   %-3s -- %-9s (%s)" [lindex $ion 0] [lindex $ion 3] [lindex $ion 4]]
+  }
+  puts "Supported ions (AMBER force field resnames):"
+  foreach ion $supportedIonsAmber {
+    puts [format "   %-3s -- %-9s (%s)" [lindex $ion 0] [lindex $ion 3] [lindex $ion 4]]
+  }
+
+  error ""
 }
 
 proc ::autoionize::set_defaults_amber { } {
     global env
     
-    variable AmberIons
-    variable supportedIons
-    variable supportedIonsCharmm
-    variable supportedIonsAmber
-    variable IonNameDefaults
-    variable topfile
+  variable AmberIons
+  variable supportedIons
+  variable supportedIonsCharmm
+  variable supportedIonsAmber
+  variable IonNameDefaults
+  variable topfile
 
-    if {$AmberIons==1} {
-	set supportedIons $supportedIonsAmber
-	set topfile [file join $env(AUTOIONDIR) amber_ions.rtf];
-	set IonNameDefaults {NA CL}
-	
-	puts "Autoionize) Running with AMBER ions."
+  if {$AmberIons==1} {
+    set supportedIons $supportedIonsAmber
+    set topfile [file join $env(AUTOIONDIR) amber_ions.rtf];
+    set IonNameDefaults {NA CL}
+    puts "Autoionize) Running with AMBER ions."
+
     } else {
-	set supportedIons $supportedIonsCharmm
-	set topfile [file join $env(CHARMMTOPDIR) toppar_water_ions_namd.str];
-	set IonNameDefaults {SOD CLA}
+    set supportedIons $supportedIonsCharmm
+    set topfile [file join $env(CHARMMTOPDIR) toppar_water_ions_namd.str];
+    set IonNameDefaults {SOD CLA}
     }
-} 
+}
 
 proc ::autoionize::autoionize {args} {
   global errorInfo errorCode
@@ -155,36 +153,35 @@ proc ::autoionize::autoionize {args} {
 }
 
 proc ::autoionize::autoionize_core {args} {
-    variable maxTries
-    variable defaultFromDistance
-    variable defaultBetweenDistance
-    variable defaultPrefix
-    variable defaultSegname
-    variable AmberIons
-    variable topfile
-    variable IonNameDefaults
-    
-    global tk_version
-    global env
+  variable maxTries
+  variable defaultFromDistance
+  variable defaultBetweenDistance
+  variable defaultPrefix
+  variable defaultSegname
+  variable AmberIons
+  variable topfile
+  variable IonNameDefaults
+  global tk_version
+  global env
 
-    set n [llength $args]
-    if {$n == 0} {autoionize_usage}
+  set n [llength $args]
+  if {$n == 0} {autoionize_usage}
 
   #####################################################################
-    # Begin of command-line parsing code
+  # Begin of command-line parsing code
 
-    # Search if AMBER ions is on
-    set pos [lsearch -exact $args {-amber}]
-    
-    if { $pos != -1 } {
-	set args [lreplace $args $pos $pos]
-	set AmberIons 1
+  # Search if AMBER ions is on
+  set pos [lsearch -exact $args {-amber}]
+  
+  if { $pos != -1 } {
+    set args [lreplace $args $pos $pos]
+    set AmberIons 1
 	
-	set n [expr $n -1]
+    set n [expr $n -1]
     } else {
-	set AmberIons 0
+    set AmberIons 0
     }
-    set_defaults_amber
+  set_defaults_amber
         
   # Neutralize system?
   set pos [lsearch -exact $args {-neutralize}]
@@ -334,7 +331,7 @@ proc ::autoionize::autoionize_core {args} {
       error "Autoionize) ERROR: Cannot use option -cation together with -nions."
     }
   } else {
-      set cation [lindex $IonNameDefaults 0]
+    set cation [lindex $IonNameDefaults 0]
     set cationCharge 1
   }
 
@@ -348,7 +345,7 @@ proc ::autoionize::autoionize_core {args} {
       error "Autoionize) ERROR: Cannot use option -anion together with -nions."
     }
   } else {
-      set anion [lindex $IonNameDefaults 1]
+    set anion [lindex $IonNameDefaults 1]
     set anionCharge -1
   }
 
@@ -361,7 +358,7 @@ proc ::autoionize::autoionize_core {args} {
   # still use -is with the old (wrong) behavior, provided the salt has not 
   # been changed to anything other than NaCl. 
   if {$mode == {is}} {
-      if {$cation != [lindex $IonNameDefaults 0] || $anion != [lindex $IonNameDefaults 1]} {
+    if {$cation != [lindex $IonNameDefaults 0] || $anion != [lindex $IonNameDefaults 1]} {
       error "Autoionize) The option -is is no longer supported."
     } else {
       puts "Autoionize) WARNING: The option -is is deprecated; please use -sc instead."
@@ -466,13 +463,12 @@ proc ::autoionize::autoionize_core {args} {
     #puts "DEBUG:   Ionized system would have charge $newTotalCharge"
 
   }
-    if {$AmberIons==1} {
-	set watersel "(water or resname TP3 T34 FB3 FB4 SPC OPC)"
-    } else {
-	set watersel "water"
-    }
-    
-    
+  if {$AmberIons==1} {
+    set watersel "(water or resname TP3 T34 FB3 FB4 SPC OPC)"
+  } else {
+    set watersel "water"
+  }
+
   ###
   ### Ion placement modes 'sc' = salt concentration
   ###                     'is' = ionic strength
@@ -662,13 +658,12 @@ proc ::autoionize::autoionize_core {args} {
 
     # Read in topology file
     if { $AmberIons==1 } {
-	puts "Autoionize) Reading AMBER topology file..."
+      puts "Autoionize) Reading AMBER topology file..."
     } else {
-	puts "Autoionize) Reading CHARMM topology file..."
+      puts "Autoionize) Reading CHARMM topology file..."
     }
-    
-    
-    topology $topfile
+
+   topology $topfile
 
     # Make topology entries
     set resid 1
@@ -768,4 +763,3 @@ proc ::autoionize::ionGetName {ion} {
   }
   error "Autoionize) ERROR: Unsupported ion $ion."
 }
-
