@@ -33,7 +33,7 @@ NAMD usage:
         2.b) Setting up PME, the periodic cell, thermostat, barostat, and output parameters are consistent with a typical NAMD simulation
 
 Notes:
-- modifiedamberdyes{version}.prm represent a faithful refactored of all parameters -comparing with distributed AMBER-DYES{version} does not yield energy matches
+- modifiedamberdyes{version}.prm represent a faithful refactored of all parameters in the distributed AMBER-DYES{version} and does not yield energy matches
 - amberdyes{version}.prm represents a refactored version of AMBER-DYES{version} which yields energy matches
 - namdrc files are configured to use amberdyes{version}.prm to use modifiedamberdyes{version}.prm comment and uncomment the appropriate lines in the respective
   namdrc

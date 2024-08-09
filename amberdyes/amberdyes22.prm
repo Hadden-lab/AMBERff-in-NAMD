@@ -11,7 +11,7 @@
 *
 
 ! This parameter file corresponds to the amberdyes.dat file originally distributed with AmberTool20 and AmberTools22 
-! Due to tleap using a column-delimitd fortran parser, an incorrect formatting in the improper dihedrals leads to tleap assingning
+! Due to tleap using a column-delimitd fortran parser, an incorrect formatting in the improper dihedrals leads to tleap assigning
 ! all improper definitions with a force constant of "10.500" a value of "0.500" in the PRMTOP. 
 !
 ! With the aim of reproducing the AMBER forcefield energies, we have chosen to replace all force constants of "10.500" with "0.500" for
